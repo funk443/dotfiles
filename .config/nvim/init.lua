@@ -27,7 +27,6 @@ vim.opt.cc = '+0'
 vim.opt.tabstop = 2
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 0
-vim.opt.termguicolors = true
 vim.opt.background = "light"
 vim.opt.autochdir = true
 
@@ -35,5 +34,4 @@ vim.cmd.syntax "off"
 vim.cmd.filetype "indent off"
 vim.cmd.colorscheme "vim"
 
-vim.g.python_recommended_style = 0
 vim.g.netrw_browsex_viewer = "xdg-open"
