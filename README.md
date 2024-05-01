@@ -9,3 +9,22 @@ font-related commits in here.
 
 Old configs can still be found
 [here](https://www.github.com/funk443/old-dotfiles).
+
+# Usage
+
+Make sure you have "JetBrains Mono" font family installed on your system.  I
+typically clone the repo under my home directory.
+
+```
+mkdir -p ~/.config
+
+ln -sf -t ~/.config ~/dotfiles/.config/nvim ~/dotfiles/.config/kitty
+
+ln -sf ~/dotfiles/.bash_custom ~/
+```
+
+Add this to `.bashrc` (or `.profile`, or things like that):
+
+```
+source ~/.bash_custom
+```
