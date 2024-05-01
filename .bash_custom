@@ -1,0 +1,8 @@
+alias ls="ls -Alsh --color=auto --group-directories-first"
+
+export PATH=~/AppImages:$PATH
+export SUDO_EDITOR=~/AppImages/nvim
+export VISUAL=~/AppImages/nvim
+export EDITOR=~/AppImages/nvim
+
+source ~/.opt/node-v22.0.0-linux-x64/activate.sh
