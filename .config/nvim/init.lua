@@ -35,3 +35,8 @@ vim.cmd.filetype "indent off"
 vim.cmd.colorscheme "vim"
 
 vim.g.netrw_browsex_viewer = "xdg-open"
+
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "gj", "j")
+vim.keymap.set("n", "k", "gk")
+vim.keymap.set("n", "gk", "k")
