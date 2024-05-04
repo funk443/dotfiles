@@ -6,3 +6,4 @@ export VISUAL=~/AppImages/nvim
 export EDITOR=~/AppImages/nvim
 
 . ~/.opt/js-env
+. ~/.opt/java-env
