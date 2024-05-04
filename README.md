@@ -9,9 +9,10 @@ Old configs can still be found [here](https://www.github.com/funk443/old-dotfile
 Make sure you have whatever font family specified in [kitty config file](./.config/kitty/kitty.conf) installed on your system.  I typically clone the repo under my home directory.
 
 ```
-mkdir -p ~/.config
+mkdir -p ~/.config/{nvim,kitty,emacs}
 
-ln -sf -t ~/.config ~/dotfiles/.config/nvim ~/dotfiles/.config/kitty
+# Replace emacs with nvim, kitty, etc.
+ln -sf -t ~/.config/emacs/ ~/dotfiles/.config/emacs/*
 
 ln -sf ~/dotfiles/.bash_custom ~/
 ```
