@@ -23,7 +23,6 @@ vim.api.nvim_create_autocmd(
 
 vim.opt.showbreak = "|"
 vim.opt.tw = 0
-vim.opt.cc = '80'
 vim.opt.tabstop = 2
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 0
