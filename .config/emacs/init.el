@@ -26,6 +26,9 @@
 (use-package magit
   :ensure t)
 
+(use-package markdown-mode
+  :ensure t)
+
 (keymap-global-set "<TAB>" 'tab-to-tab-stop)
 (keymap-global-set "M-i" 'indent-for-tab-command)
 
@@ -47,13 +50,14 @@
  '(backup-directory-alist `((".*" \, rubbish-dir)))
  '(column-number-mode t)
  '(delete-selection-mode t)
+ '(dired-dwim-target t)
  '(indent-tabs-mode nil)
  '(initial-buffer-choice t)
  '(initial-scratch-message
-   (format-time-string ";; lol, imagine using GNU Emacs in %Y, couldn't be me.\12\12"))
+   (format-time-string ";; Imagine using GNU Emacs in %Y, are you a dinosaur?\12;; Still better than using a PROPRIETARY editor in a browser ig.\12\12"))
  '(menu-bar-mode nil)
  '(mode-line-compact t)
- '(package-selected-packages '(magit ligature))
+ '(package-selected-packages '(markdown-mode magit ligature))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 101)
