@@ -6,7 +6,7 @@ Old configs can still be found [here](https://www.github.com/funk443/old-dotfile
 
 # Usage
 
-Make sure you have "IBM Plex Mono" font family installed on your system.  I typically clone the repo under my home directory.
+Make sure you have whatever font family specified in [kitty config file](./.config/kitty/kitty.conf) installed on your system.  I typically clone the repo under my home directory.
 
 ```
 mkdir -p ~/.config
