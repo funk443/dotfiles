@@ -51,8 +51,10 @@
  '(column-number-mode t)
  '(delete-selection-mode t)
  '(dired-dwim-target t)
+ '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
  '(initial-buffer-choice t)
+ '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
  '(initial-scratch-message
    (format-time-string ";; Imagine using GNU Emacs in %Y, are you a dinosaur?\12;; Still better than using a PROPRIETARY editor in a browser ig.\12\12"))
  '(menu-bar-mode nil)
