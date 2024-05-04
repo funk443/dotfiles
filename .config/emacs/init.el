@@ -41,10 +41,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-save-file-name-transforms `((".*" ,rubbish-dir t)))
- '(backup-directory-alist `((".*" . ,rubbish-dir)))
+ '(backup-directory-alist `((".*" \, rubbish-dir)))
  '(column-number-mode t)
  '(delete-selection-mode t)
  '(indent-tabs-mode nil)
+ '(initial-buffer-choice t)
+ '(initial-scratch-message (format-time-string ";; Imagine using GNU Emacs in %Y, couldn't be me.\n\n"))
  '(menu-bar-mode nil)
  '(package-selected-packages '(magit ligature))
  '(save-interprogram-paste-before-kill t)
