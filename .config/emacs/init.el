@@ -55,6 +55,7 @@
  '(dired-dwim-target t)
  '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
+ '(indicate-empty-lines t)
  '(initial-buffer-choice t)
  '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
  '(initial-scratch-message
