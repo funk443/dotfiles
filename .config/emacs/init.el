@@ -29,16 +29,13 @@
 (use-package markdown-mode
   :ensure t)
 
-(keymap-global-set "<TAB>" 'tab-to-tab-stop)
-(keymap-global-set "M-i" 'indent-for-tab-command)
-
 (defconst rubbish-dir (concat user-emacs-directory "rubbish")
   "Directory for Emacs to dump auto save files and backup files.")
 (unless (file-directory-p rubbish-dir)
   (make-directory rubbish-dir))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
-(setq auto-mode-alist nil)
+(add-hook 'prog-mode-hook (lambda () (font-lock-mode -1)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -59,7 +56,7 @@
    (format-time-string ";; Imagine using GNU Emacs in %Y, are you a dinosaur?\12;; Still better than using a PROPRIETARY editor in a browser ig.\12\12"))
  '(menu-bar-mode nil)
  '(mode-line-compact t)
- '(package-selected-packages '(markdown-mode magit ligature))
+ '(package-selected-packages '(treesit-auto markdown-mode magit ligature))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 101)
