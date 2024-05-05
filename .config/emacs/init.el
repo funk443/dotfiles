@@ -23,6 +23,11 @@
                               "<:<" ";;;"))
   (global-ligature-mode t))
 
+(use-package treesit-auto
+  :ensure t
+  :custom (treesit-auto-install 'prompt)
+  :config (global-treesit-auto-mode))
+
 (use-package magit
   :ensure t)
 
