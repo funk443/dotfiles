@@ -29,8 +29,6 @@ vim.opt.shiftwidth = 0
 vim.opt.background = "light"
 vim.opt.autochdir = true
 
-vim.cmd.syntax "off"
-vim.cmd.filetype "indent off"
 vim.cmd.colorscheme "vim"
 
 vim.g.netrw_browsex_viewer = "xdg-open"
