@@ -4,6 +4,6 @@ export PATH=~/AppImages:$PATH
 export SUDO_EDITOR=~/AppImages/nvim
 export VISUAL=~/AppImages/nvim
 export EDITOR=~/AppImages/nvim
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 . ~/.opt/js-env
-. ~/.opt/java-env
