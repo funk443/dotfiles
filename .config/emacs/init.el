@@ -2,31 +2,17 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
-(set-face-attribute 'default nil :family "JetBrains Mono" :height 240)
-(set-face-attribute 'fixed-pitch nil :inherit 'default)
-
-(use-package ligature
-  :ensure t
-  :config
-  (ligature-set-ligatures t '("--" "---" "==" "===" "!=" "!==" "=!="
-                              "=:=" "=/=" "<=" ">=" "&&" "&&&" "&=" "++" "+++" "***" ";;" "!!"
-                              "??" "???" "?:" "?." "?=" "<:" ":<" ":>" ">:" "<:<" "<>" "<<<" ">>>"
-                              "<<" ">>" "||" "-|" "_|_" "|-" "||-" "|=" "||=" "##" "###" "####"
-                              "#{" "#[" "]#" "#(" "#?" "#_" "#_(" "#:" "#!" "#=" "^=" "<$>" "<$"
-                              "$>" "<+>" "<+" "+>" "<*>" "<*" "*>" "</" "</>" "/>" "<!--" "<#--"
-                              "-->" "->" "->>" "<<-" "<-" "<=<" "=<<" "<<=" "<==" "<=>" "<==>"
-                              "==>" "=>" "=>>" ">=>" ">>=" ">>-" ">-" "-<" "-<<" ">->" "<-<" "<-|"
-                              "<=|" "|=>" "|->" "<->" "<~~" "<~" "<~>" "~~" "~~>" "~>" "~-" "-~"
-                              "~@" "[||]" "|]" "[|" "|}" "{|" "[<" ">]" "|>" "<|" "||>" "<||"
-                              "|||>" "<|||" "<|>" "..." ".." ".=" "..<" ".?" "::" ":::" ":=" "::="
-                              ":?" ":?>" "//" "///" "/*" "*/" "/=" "//=" "/==" "@_" "__" "???"
-                              "<:<" ";;;"))
-  (global-ligature-mode t))
+(set-face-attribute 'default nil
+                    :family "IBM Plex Mono"
+                    :height 280)
+(set-face-attribute 'fixed-pitch nil
+                    :inherit 'default)
 
 (use-package treesit-auto
   :ensure t
   :custom (treesit-auto-install 'prompt)
-  :config (global-treesit-auto-mode))
+  :config
+  (global-treesit-auto-mode))
 
 (use-package magit
   :ensure t)
@@ -40,7 +26,7 @@
   (make-directory rubbish-dir))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
-(add-hook 'prog-mode-hook (lambda () (font-lock-mode -1)))
+(keymap-global-set "C-c C-p" #'compile)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -51,6 +37,7 @@
  '(auto-save-file-name-transforms `((".*" ,rubbish-dir t)))
  '(backup-directory-alist `((".*" \, rubbish-dir)))
  '(column-number-mode t)
+ '(dabbrev-case-fold-search nil)
  '(delete-selection-mode t)
  '(dired-dwim-target t)
  '(frame-resize-pixelwise t)
@@ -62,13 +49,14 @@
    (format-time-string ";; Imagine using GNU Emacs in %Y, are you a dinosaur?\12;; Still better than using a PROPRIETARY editor in a browser ig.\12\12"))
  '(menu-bar-mode nil)
  '(mode-line-compact t)
- '(package-selected-packages '(treesit-auto markdown-mode magit ligature))
+ '(package-selected-packages '(treesit-auto markdown-mode magit))
  '(save-interprogram-paste-before-kill t)
+ '(scalable-fonts-allowed t)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 101)
  '(scroll-error-top-bottom t)
+ '(scroll-preserve-screen-position 1)
  '(size-indication-mode t)
- '(tab-width 2)
  '(tool-bar-mode nil)
  '(x-select-enable-clipboard-manager nil))
 (custom-set-faces
