@@ -11,10 +11,32 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-plugins = {
-    "junegunn/vim-easy-align"
+lazy_plugins = {
+    "junegunn/vim-easy-align",
+    { "catppuccin/nvim", name = "catppuccin", lazy = false, priority = 1000 }
 }
-require("lazy").setup(plugins, opts)
+
+lazy_opts = {
+    ui = {
+        icons = {
+            cmd = "⌘",
+            config = "🛠",
+            event = "📅",
+            ft = "📂",
+            init = "⚙",
+            keys = "🗝",
+            plugin = "🔌",
+            runtime = "💻",
+            require = "🌙",
+            source = "📄",
+            start = "🚀",
+            task = "📌",
+            lazy = "💤 ",
+        },
+    },
+}
+
+require("lazy").setup(lazy_plugins, lazy_opts)
 
 vim.api.nvim_create_autocmd(
     { "BufWritePre" },
@@ -34,7 +56,7 @@ vim.opt.shiftwidth = 0
 vim.opt.background = "light"
 vim.opt.autochdir = true
 
-vim.cmd.colorscheme "vim"
+vim.cmd.colorscheme "catppuccin-latte"
 
 vim.g.netrw_browsex_viewer = "xdg-open"
 
