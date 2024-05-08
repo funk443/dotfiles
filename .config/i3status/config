@@ -1,0 +1,25 @@
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 10
+}
+
+order += "volume master"
+order += "battery 0"
+order += "time"
+
+volume master {
+    format = "%volume"
+    format_muted = "MUTED"
+    device = "pulse"
+    mixer = "Master"
+}
+
+battery 0 {
+    format = "%status %percentage"
+    format_percentage = "%.00f%s"
+}
+
+time {
+    format = "%Y-%m-%d %a %H:%M:%S"
+}
