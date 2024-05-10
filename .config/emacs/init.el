@@ -3,10 +3,33 @@
 (package-initialize)
 
 (set-face-attribute 'default nil
-                    :family "IBM Plex Mono"
+                    :family "JetBrains Mono"
                     :height 280)
 (set-face-attribute 'fixed-pitch nil
                     :inherit 'default)
+
+(use-package catppuccin-theme
+  :ensure t
+  :custom (catppuccin-flavor 'latte)
+  :config (load-theme 'catppuccin t))
+
+(use-package ligature
+  :ensure t
+  :config
+  (ligature-set-ligatures t '("--" "---" "==" "===" "!=" "!==" "=!="
+                              "=:=" "=/=" "<=" ">=" "&&" "&&&" "&=" "++" "+++" "***" ";;" "!!"
+                              "??" "???" "?:" "?." "?=" "<:" ":<" ":>" ">:" "<:<" "<>" "<<<" ">>>"
+                              "<<" ">>" "||" "-|" "_|_" "|-" "||-" "|=" "||=" "##" "###" "####"
+                              "#{" "#[" "]#" "#(" "#?" "#_" "#_(" "#:" "#!" "#=" "^=" "<$>" "<$"
+                              "$>" "<+>" "<+" "+>" "<*>" "<*" "*>" "</" "</>" "/>" "<!--" "<#--"
+                              "-->" "->" "->>" "<<-" "<-" "<=<" "=<<" "<<=" "<==" "<=>" "<==>"
+                              "==>" "=>" "=>>" ">=>" ">>=" ">>-" ">-" "-<" "-<<" ">->" "<-<" "<-|"
+                              "<=|" "|=>" "|->" "<->" "<~~" "<~" "<~>" "~~" "~~>" "~>" "~-" "-~"
+                              "~@" "[||]" "|]" "[|" "|}" "{|" "[<" ">]" "|>" "<|" "||>" "<||"
+                              "|||>" "<|||" "<|>" "..." ".." ".=" "..<" ".?" "::" ":::" ":=" "::="
+                              ":?" ":?>" "//" "///" "/*" "*/" "/=" "//=" "/==" "@_" "__" "???"
+                              "<:<" ";;;"))
+  (global-ligature-mode t))
 
 (use-package treesit-auto
   :ensure t
@@ -46,7 +69,7 @@
  '(initial-buffer-choice t)
  '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
  '(initial-scratch-message
-   (format-time-string ";; Imagine using GNU Emacs in %Y, are you a dinosaur?\12;; Still better than using a PROPRIETARY editor in a browser ig.\12\12"))
+   ";; Imagine using a niche editor which runs in a browser, couldn't be me...\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
  '(package-selected-packages '(treesit-auto markdown-mode magit))
