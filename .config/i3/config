@@ -11,6 +11,10 @@ exec --no-startup-id ibus-daemon -drxR
 exec --no-startup-id pipewire
 exec --no-startup-id picom
 exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.jpg
+exec --no-startup-id flameshot
+
+bindsym Print exec flameshot gui
+bindsym $mod+Print exec flameshot screen
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -59,6 +63,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
+bindsym $mod+Shift+a focus child
 
 set $ws1 "1"
 set $ws2 "2"
