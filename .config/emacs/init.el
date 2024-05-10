@@ -50,6 +50,8 @@
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 (keymap-global-set "C-c C-p" #'compile)
+(keymap-global-unset "C-z")
+(keymap-global-unset "C-x C-z")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
