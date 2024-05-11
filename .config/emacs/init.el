@@ -40,6 +40,9 @@
 (use-package magit
   :ensure t)
 
+(use-package vterm
+  :ensure t)
+
 (use-package markdown-mode
   :ensure t)
 
@@ -52,6 +55,7 @@
 (keymap-global-set "C-c C-p" #'compile)
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
+(add-to-list 'auto-mode-alist '("\\.[mc]js\\'" . javascript-mode))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -61,6 +65,7 @@
  '(auth-source-save-behavior nil)
  '(auto-save-file-name-transforms `((".*" ,rubbish-dir t)))
  '(backup-directory-alist `((".*" \, rubbish-dir)))
+ '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(dabbrev-case-fold-search nil)
  '(delete-selection-mode t)
@@ -74,7 +79,7 @@
    ";; Imagine using a niche editor which runs in a browser, couldn't be me...\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
- '(package-selected-packages '(treesit-auto markdown-mode magit))
+ '(package-selected-packages '(vterm treesit-auto markdown-mode magit))
  '(save-interprogram-paste-before-kill t)
  '(scalable-fonts-allowed t)
  '(scroll-bar-mode nil)
