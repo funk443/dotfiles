@@ -12,8 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 lazy_plugins = {
+    { "catppuccin/nvim", name = "catppuccin", lazy = false, priority = 1000 },
     "junegunn/vim-easy-align",
-    { "catppuccin/nvim", name = "catppuccin", lazy = false, priority = 1000 }
 }
 
 lazy_opts = {
@@ -39,20 +39,19 @@ lazy_opts = {
 require("lazy").setup(lazy_plugins, lazy_opts)
 
 vim.api.nvim_create_autocmd(
-    { "BufWritePre" },
-    { command = "%s/\\s\\+$//e" }
+{ "BufWritePre" },
+{ command = "%s/\\s\\+$//e" }
 )
 
 vim.api.nvim_create_autocmd(
-    { "BufWinEnter" },
-    { command = 'silent! normal! g`"zz' }
+{ "BufWinEnter" },
+{ command = 'silent! normal! g`"zz' }
 )
 
-vim.opt.showbreak = "|"
-vim.opt.tw = 0
-vim.opt.expandtab = true
-vim.opt.ts = 4
+vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
+vim.opt.expandtab = true
+vim.opt.showbreak = "|"
 vim.opt.background = "light"
 vim.opt.autochdir = true
 
