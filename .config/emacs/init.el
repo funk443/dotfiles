@@ -13,29 +13,10 @@
   :custom (catppuccin-flavor 'latte)
   :config (load-theme 'catppuccin t))
 
-(use-package ligature
-  :ensure t
-  :config
-  (ligature-set-ligatures t '("--" "---" "==" "===" "!=" "!==" "=!="
-                              "=:=" "=/=" "<=" ">=" "&&" "&&&" "&=" "++" "+++" "***" ";;" "!!"
-                              "??" "???" "?:" "?." "?=" "<:" ":<" ":>" ">:" "<:<" "<>" "<<<" ">>>"
-                              "<<" ">>" "||" "-|" "_|_" "|-" "||-" "|=" "||=" "##" "###" "####"
-                              "#{" "#[" "]#" "#(" "#?" "#_" "#_(" "#:" "#!" "#=" "^=" "<$>" "<$"
-                              "$>" "<+>" "<+" "+>" "<*>" "<*" "*>" "</" "</>" "/>" "<!--" "<#--"
-                              "-->" "->" "->>" "<<-" "<-" "<=<" "=<<" "<<=" "<==" "<=>" "<==>"
-                              "==>" "=>" "=>>" ">=>" ">>=" ">>-" ">-" "-<" "-<<" ">->" "<-<" "<-|"
-                              "<=|" "|=>" "|->" "<->" "<~~" "<~" "<~>" "~~" "~~>" "~>" "~-" "-~"
-                              "~@" "[||]" "|]" "[|" "|}" "{|" "[<" ">]" "|>" "<|" "||>" "<||"
-                              "|||>" "<|||" "<|>" "..." ".." ".=" "..<" ".?" "::" ":::" ":=" "::="
-                              ":?" ":?>" "//" "///" "/*" "*/" "/=" "//=" "/==" "@_" "__" "???"
-                              "<:<" ";;;"))
-  (global-ligature-mode t))
-
 (use-package treesit-auto
   :ensure t
   :custom (treesit-auto-install 'prompt)
-  :config
-  (global-treesit-auto-mode))
+  :config (global-treesit-auto-mode))
 
 (use-package magit
   :ensure t)
@@ -71,6 +52,7 @@
  '(delete-selection-mode t)
  '(dired-dwim-target t)
  '(frame-resize-pixelwise t)
+ '(garbage-collection-messages t)
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
  '(initial-buffer-choice t)
@@ -79,7 +61,7 @@
    ";; Imagine using a niche editor which runs in a browser, couldn't be me...\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
- '(package-selected-packages '(vterm treesit-auto markdown-mode magit))
+ '(package-selected-packages '(vterm treesit-auto markdown-mode magit catppuccin-theme))
  '(save-interprogram-paste-before-kill t)
  '(scalable-fonts-allowed t)
  '(scroll-bar-mode nil)
