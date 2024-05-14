@@ -15,8 +15,7 @@
 
 (use-package treesit-auto
   :ensure t
-  :custom (treesit-auto-install 'prompt)
-  :config (global-treesit-auto-mode))
+  :config (treesit-auto-add-to-auto-mode-alist))
 
 (use-package magit
   :ensure t)
@@ -61,7 +60,7 @@
    ";; Imagine using a niche editor which runs in a browser, couldn't be me...\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
- '(package-selected-packages '(vterm treesit-auto markdown-mode magit catppuccin-theme))
+ '(package-selected-packages '(treesit-auto vterm markdown-mode magit catppuccin-theme))
  '(save-interprogram-paste-before-kill t)
  '(scalable-fonts-allowed t)
  '(scroll-bar-mode nil)
