@@ -5,8 +5,8 @@
                     :inherit 'default)
 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(package-initialize)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
 
 (use-package catppuccin-theme
   :ensure t
@@ -57,8 +57,7 @@
  '(indicate-empty-lines t)
  '(initial-buffer-choice t)
  '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
- '(initial-scratch-message
-   ";; Imagine using a niche editor which runs in a browser, couldn't be me...\12\12")
+ '(initial-scratch-message ";; EMACS: Escape, Meta, Alt, Control, and Shift.\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
  '(package-selected-packages '(treesit-auto vterm markdown-mode magit catppuccin-theme))
