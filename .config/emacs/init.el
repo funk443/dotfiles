@@ -1,12 +1,12 @@
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(package-initialize)
-
 (set-face-attribute 'default nil
                     :family "JetBrains Mono"
                     :height 280)
 (set-face-attribute 'fixed-pitch nil
                     :inherit 'default)
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(package-initialize)
 
 (use-package catppuccin-theme
   :ensure t
@@ -21,7 +21,8 @@
   :ensure t)
 
 (use-package vterm
-  :ensure t)
+  :ensure t
+  :custom (vterm-copy-mode-remove-fake-newlines t))
 
 (use-package markdown-mode
   :ensure t)
