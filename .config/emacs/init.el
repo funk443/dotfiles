@@ -1,8 +1,11 @@
 (set-face-attribute 'default nil
-                    :family "JetBrains Mono"
+                    :family "IBM Plex Mono"
                     :height 280)
 (set-face-attribute 'fixed-pitch nil
                     :inherit 'default)
+(set-face-attribute 'variable-pitch nil
+                    :inherit 'default
+                    :family "IBM Plex Sans")
 
 (require 'package)
 (add-to-list 'package-archives
@@ -48,6 +51,7 @@
  '(backup-directory-alist `((".*" \, rubbish-dir)))
  '(blink-cursor-mode nil)
  '(column-number-mode t)
+ '(current-language-environment "UTF-8")
  '(dabbrev-case-fold-search nil)
  '(delete-selection-mode t)
  '(dired-dwim-target t)
