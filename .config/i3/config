@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:JetBrains Mono Regular 8
+font pango: IBM Plex Sans Text 8
 
 focus_follows_mouse no
 
