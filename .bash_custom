@@ -15,3 +15,4 @@ export EDITOR=~/AppImages/nvim
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 . ~/.opt/js-env
+. ~/.opt/emacs-env
