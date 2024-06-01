@@ -2,7 +2,8 @@
                     :family "IBM Plex Mono"
                     :height 280)
 (set-face-attribute 'fixed-pitch nil
-                    :inherit 'default)
+                    :inherit 'default
+                    :family "IBM Plex Mono")
 (set-face-attribute 'variable-pitch nil
                     :inherit 'default
                     :family "IBM Plex Sans")
@@ -15,6 +16,15 @@
   :ensure t
   :custom (catppuccin-flavor 'latte)
   :config (load-theme 'catppuccin t))
+
+(use-package paredit
+  :ensure t
+  :hook (lisp-mode emacs-lisp-mode scheme-mode))
+
+(use-package paren-face
+  :ensure t
+  :custom-face (parenthesis ((nil (:foreground "gainsboro"))))
+  :config (global-paren-face-mode 1))
 
 (use-package treesit-auto
   :ensure t
@@ -64,7 +74,9 @@
  '(initial-scratch-message ";; EMACS: Escape, Meta, Alt, Control, and Shift.\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
- '(package-selected-packages '(treesit-auto vterm markdown-mode magit catppuccin-theme))
+ '(org-startup-truncated nil)
+ '(package-selected-packages
+   '(paren-face paredit treesit-auto vterm markdown-mode magit catppuccin-theme))
  '(save-interprogram-paste-before-kill t)
  '(scalable-fonts-allowed t)
  '(scroll-bar-mode nil)
@@ -78,3 +90,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'scroll-left 'disabled nil)
