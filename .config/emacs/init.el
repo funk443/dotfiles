@@ -17,15 +17,6 @@
   :custom (catppuccin-flavor 'latte)
   :config (load-theme 'catppuccin t))
 
-(use-package paredit
-  :ensure t
-  :hook (lisp-mode emacs-lisp-mode scheme-mode))
-
-(use-package paren-face
-  :ensure t
-  :custom-face (parenthesis ((nil (:foreground "gainsboro"))))
-  :config (global-paren-face-mode 1))
-
 (use-package treesit-auto
   :ensure t
   :config (treesit-auto-add-to-auto-mode-alist))
@@ -36,6 +27,17 @@
 (use-package vterm
   :ensure t
   :custom (vterm-copy-mode-remove-fake-newlines t))
+
+(use-package paredit
+  :ensure t
+  :hook (lisp-mode emacs-lisp-mode scheme-mode clojure-mode))
+
+(use-package cider
+  :ensure t
+  :custom
+  (cider-clojure-cli-command (expand-file-name "~/.opt/clojure/bin/clojure"))
+  (cider-jack-in-default 'clojure-cli)
+  (cider-use-tooltips nil))
 
 (use-package markdown-mode
   :ensure t)
@@ -59,7 +61,6 @@
  '(auth-source-save-behavior nil)
  '(auto-save-file-name-transforms `((".*" ,rubbish-dir t)))
  '(backup-directory-alist `((".*" \, rubbish-dir)))
- '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(current-language-environment "UTF-8")
  '(dabbrev-case-fold-search nil)
@@ -76,7 +77,7 @@
  '(mode-line-compact t)
  '(org-startup-truncated nil)
  '(package-selected-packages
-   '(paren-face paredit treesit-auto vterm markdown-mode magit catppuccin-theme))
+   '(company cider paredit magit treesit-auto vterm markdown-mode catppuccin-theme))
  '(save-interprogram-paste-before-kill t)
  '(scalable-fonts-allowed t)
  '(scroll-bar-mode nil)
