@@ -13,6 +13,6 @@ export VISUAL=~/AppImages/nvim
 export EDITOR=~/AppImages/nvim
 
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+export XDG_DATA_DIRS=/var/lib/flatpak/exports/share:/home/id/.local/share/flatpak/exports/share:$XDG_DATA_DIRS
 
 . ~/.opt/js-env
-. ~/.opt/emacs-env
