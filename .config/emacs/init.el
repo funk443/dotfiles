@@ -66,6 +66,7 @@
  '(modus-themes-mixed-fonts t)
  '(org-startup-truncated nil)
  '(package-selected-packages '(company magit treesit-auto vterm markdown-mode))
+ '(read-buffer-completion-ignore-case t)
  '(save-interprogram-paste-before-kill t)
  '(scalable-fonts-allowed t)
  '(scroll-bar-mode nil)
