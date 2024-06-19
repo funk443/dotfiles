@@ -1,3 +1,4 @@
+(load-theme 'modus-vivendi)
 (set-face-attribute 'default nil
                     :family "IBM Plex Mono"
                     :height 280)
@@ -12,11 +13,6 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 
-(use-package catppuccin-theme
-  :ensure t
-  :custom (catppuccin-flavor 'latte)
-  :config (load-theme 'catppuccin t))
-
 (use-package treesit-auto
   :ensure t
   :config (treesit-auto-add-to-auto-mode-alist))
@@ -27,17 +23,6 @@
 (use-package vterm
   :ensure t
   :custom (vterm-copy-mode-remove-fake-newlines t))
-
-(use-package paredit
-  :ensure t
-  :hook (lisp-mode emacs-lisp-mode scheme-mode clojure-mode))
-
-(use-package cider
-  :ensure t
-  :custom
-  (cider-clojure-cli-command (expand-file-name "~/.opt/clojure/bin/clojure"))
-  (cider-jack-in-default 'clojure-cli)
-  (cider-use-tooltips nil))
 
 (use-package markdown-mode
   :ensure t)
@@ -51,7 +36,7 @@
 (keymap-global-set "C-c C-p" #'compile)
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
-(add-to-list 'auto-mode-alist '("\\.[mc]js\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.[mc]js\\'" . js-ts-mode))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -75,9 +60,12 @@
  '(initial-scratch-message ";; EMACS: Escape, Meta, Alt, Control, and Shift.\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
+ '(modus-themes-bold-constructs t)
+ '(modus-themes-inhibit-reload nil)
+ '(modus-themes-italic-constructs t)
+ '(modus-themes-mixed-fonts t)
  '(org-startup-truncated nil)
- '(package-selected-packages
-   '(company cider paredit magit treesit-auto vterm markdown-mode catppuccin-theme))
+ '(package-selected-packages '(company magit treesit-auto vterm markdown-mode))
  '(save-interprogram-paste-before-kill t)
  '(scalable-fonts-allowed t)
  '(scroll-bar-mode nil)
@@ -92,3 +80,4 @@
  ;; If there is more than one, they won't work right.
  )
 (put 'scroll-left 'disabled nil)
+(put 'dired-find-alternate-file 'disabled nil)
