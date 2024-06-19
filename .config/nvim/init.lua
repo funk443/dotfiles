@@ -12,7 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 lazy_plugins = {
-    { "catppuccin/nvim", name = "catppuccin", lazy = false, priority = 1000 },
     "junegunn/vim-easy-align",
 }
 
@@ -52,10 +51,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
 vim.opt.expandtab = true
 vim.opt.showbreak = "|"
-vim.opt.background = "light"
 vim.opt.autochdir = true
-
-vim.cmd.colorscheme "catppuccin-latte"
 
 vim.g.netrw_browsex_viewer = "xdg-open"
 
