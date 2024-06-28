@@ -1,18 +1,10 @@
-alias ls="ls -Alsh --color=auto --group-directories-first"
-
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export GLFW_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
+alias ls="ls -Alsh --color=auto"
 
 export PATH=~/AppImages:$PATH
-export PATH=~/.local/bin:$PATH
-
-export SUDO_EDITOR=~/AppImages/nvim
-export VISUAL=~/AppImages/nvim
-export EDITOR=~/AppImages/nvim
-
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-export XDG_DATA_DIRS=/var/lib/flatpak/exports/share:/home/id/.local/share/flatpak/exports/share:$XDG_DATA_DIRS
 
-. ~/.opt/js-env
+if [[ "$INSIDE_EMACS" = 'vterm' ]] \
+    && [[ -n ${EMACS_VTERM_PATH} ]] \
+    && [[ -f ${EMACS_VTERM_PATH}/etc/emacs-vterm-bash.sh ]]; then
+	source ${EMACS_VTERM_PATH}/etc/emacs-vterm-bash.sh
+fi
