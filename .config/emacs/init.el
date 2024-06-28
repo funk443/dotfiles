@@ -73,6 +73,7 @@
  '(scroll-error-top-bottom t)
  '(size-indication-mode t)
  '(tool-bar-mode nil)
+ '(which-key-mode t)
  '(x-select-enable-clipboard-manager nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
