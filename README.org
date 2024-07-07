@@ -1,0 +1,30 @@
+#+TITLE: ID's GNU/Linux dotfiles
+#+AUTHOR: CToID
+
+I started this new repository, because the git history on the old one is a fucking overnight dumpster fire.
+
+All of that is because I used to use Git to sync fonts, and that increases the size of the Git directory by A LOT, cause Git doesn't like binary files.
+
+Big Git directory leads to longer clone time and more spaces on my disk occupied.  So to the end, I simply clone with ~--depth=1~, and I can ignore this problem.
+
+But later, I started some branches for my new Thinkpad.  And cloning with ~--depth=1~ doesn't really work well with branches if I want to merge them.
+
+That's why I created this new repository.  I promise I won't track binary font files with Git this time.  And I'll try to make my configs cleaner, instead of throwing a lot of random config files for programs that I only used once.
+
+* Quick start
+
+I typically clone the repository under my home directory.
+
+#+BEGIN_SRC
+$ mkdir ~/.config/{emacs,nvim,kitty}
+$ ln -t ~/.config/emacs ~/dotfiles/.config/emacs/*
+#+END_SRC
+
+I also have some Bash customisation.  Just put this in =.bashrc=.
+
+#+BEGIN_SRC
+# Or whatever path to that file.
+# Optionally just paste the contents in that file into .bashrc.
+
+. ~/dotfiles/.bash_custom
+#+END_SRC
