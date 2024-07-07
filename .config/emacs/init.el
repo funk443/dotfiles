@@ -1,4 +1,4 @@
-(load-theme 'modus-vivendi)
+(load-theme 'modus-operandi)
 (set-face-attribute 'default nil
                     :family "IBM Plex Mono"
                     :height 280)
@@ -13,16 +13,16 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 
-(use-package treesit-auto
-  :ensure t
-  :config (treesit-auto-add-to-auto-mode-alist))
-
 (use-package magit
   :ensure t)
 
 (use-package vterm
   :ensure t
   :custom (vterm-copy-mode-remove-fake-newlines t))
+
+(use-package treesit-auto
+  :ensure t
+  :config (treesit-auto-add-to-auto-mode-alist))
 
 (use-package markdown-mode
   :ensure t)
@@ -64,9 +64,11 @@
  '(modus-themes-inhibit-reload nil)
  '(modus-themes-italic-constructs t)
  '(modus-themes-mixed-fonts t)
+ '(org-src-preserve-indentation t)
  '(org-startup-truncated nil)
- '(package-selected-packages '(company magit treesit-auto vterm markdown-mode))
+ '(package-selected-packages '(magit markdown-mode treesit-auto vterm))
  '(read-buffer-completion-ignore-case t)
+ '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)
  '(scalable-fonts-allowed t)
  '(scroll-bar-mode nil)
