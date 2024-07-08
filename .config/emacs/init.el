@@ -25,7 +25,12 @@
   :config (treesit-auto-add-to-auto-mode-alist))
 
 (use-package markdown-mode
-  :ensure t)
+  :ensure t
+  :config (add-to-list 'major-mode-remap-alist '(markdown-mode . gfm-mode)))
+
+(use-package visual-fill-column
+  :ensure t
+  :hook ((markdown-mode org-mode gfm-mode) . visual-line-fill-column-mode))
 
 (defconst rubbish-dir (concat user-emacs-directory "rubbish")
   "Directory for Emacs to dump auto save files and backup files.")
@@ -66,7 +71,8 @@
  '(modus-themes-mixed-fonts t)
  '(org-src-preserve-indentation t)
  '(org-startup-truncated nil)
- '(package-selected-packages '(magit markdown-mode treesit-auto vterm))
+ '(package-selected-packages
+   '(magit markdown-mode treesit-auto visual-fill-column vterm))
  '(read-buffer-completion-ignore-case t)
  '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)
