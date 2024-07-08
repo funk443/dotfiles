@@ -28,6 +28,10 @@
   :ensure t
   :config (add-to-list 'major-mode-remap-alist '(markdown-mode . gfm-mode)))
 
+(use-package edit-indirect
+  :ensure t
+  :after markdown-mode)
+
 (use-package visual-fill-column
   :ensure t
   :hook ((markdown-mode org-mode gfm-mode) . visual-line-fill-column-mode))
@@ -72,7 +76,8 @@
  '(org-src-preserve-indentation t)
  '(org-startup-truncated nil)
  '(package-selected-packages
-   '(magit markdown-mode treesit-auto visual-fill-column vterm))
+   '(edit-indirect magit markdown-mode treesit-auto visual-fill-column
+                   vterm))
  '(read-buffer-completion-ignore-case t)
  '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)
