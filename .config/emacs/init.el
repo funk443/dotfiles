@@ -32,15 +32,12 @@
   :ensure t
   :after markdown-mode)
 
-(use-package visual-fill-column
-  :ensure t
-  :hook ((markdown-mode org-mode gfm-mode) . visual-line-fill-column-mode))
-
 (defconst rubbish-dir (concat user-emacs-directory "rubbish")
   "Directory for Emacs to dump auto save files and backup files.")
 (unless (file-directory-p rubbish-dir)
   (make-directory rubbish-dir))
 
+(add-hook 'markdown-mode-hook #'visual-line-mode)
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 (keymap-global-set "C-c C-p" #'compile)
 (keymap-global-unset "C-z")
@@ -75,17 +72,17 @@
  '(modus-themes-mixed-fonts t)
  '(org-src-preserve-indentation t)
  '(org-startup-truncated nil)
- '(package-selected-packages
-   '(edit-indirect magit markdown-mode treesit-auto visual-fill-column
-                   vterm))
+ '(package-selected-packages '(edit-indirect magit markdown-mode treesit-auto vterm))
  '(read-buffer-completion-ignore-case t)
  '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)
  '(scalable-fonts-allowed t)
  '(scroll-bar-mode nil)
  '(scroll-error-top-bottom t)
+ '(show-paren-delay 0)
  '(size-indication-mode t)
  '(tool-bar-mode nil)
+ '(visual-line-fringe-indicators '(right-triangle right-curly-arrow))
  '(which-key-mode t)
  '(x-select-enable-clipboard-manager nil))
 (custom-set-faces
