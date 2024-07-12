@@ -37,7 +37,8 @@
 (unless (file-directory-p rubbish-dir)
   (make-directory rubbish-dir))
 
-(add-hook 'markdown-mode-hook #'visual-line-mode)
+(add-hook 'visual-line-mode-hook (lambda () (visual-wrap-prefix-mode 1)))
+(add-hook 'markdown-mode-hook (lambda () (visual-line-mode 1)))
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 (keymap-global-set "C-c C-p" #'compile)
 (keymap-global-unset "C-z")
