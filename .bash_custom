@@ -5,6 +5,7 @@ export PATH=~/AppImages:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 export EDITOR=/home/id/AppImages/nvim
 export VISUAL=/home/id/AppImages/nvim
+export PS1='\W> '
 
 if [[ "$INSIDE_EMACS" = 'vterm' ]] \
     && [[ -n ${EMACS_VTERM_PATH} ]] \
