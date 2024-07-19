@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 lazy_plugins = {
+    { "miikanissi/modus-themes.nvim", priority = 1000 },
     "junegunn/vim-easy-align",
 }
 
@@ -54,6 +55,8 @@ vim.opt.showbreak = "|"
 vim.opt.autochdir = true
 
 vim.g.netrw_browsex_viewer = "xdg-open"
+vim.cmd.colorscheme "modus_operandi"
+vim.cmd.filetype "indent off"
 
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "gj", "j")
