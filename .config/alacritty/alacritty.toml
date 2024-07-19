@@ -11,10 +11,6 @@ startup_mode = "Maximized"
 normal = {family = "Iosevka Slab"}
 size = 30
 
-[cursor]
-
-style = {shape = "Beam"}
-
 [keyboard]
 
 bindings = [
