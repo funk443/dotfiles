@@ -12,8 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 lazy_plugins = {
-    { "miikanissi/modus-themes.nvim", priority = 1000 },
-    "junegunn/vim-easy-align",
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    {"junegunn/vim-easy-align"}
 }
 
 lazy_opts = {
@@ -39,13 +39,13 @@ lazy_opts = {
 require("lazy").setup(lazy_plugins, lazy_opts)
 
 vim.api.nvim_create_autocmd(
-{ "BufWritePre" },
-{ command = "%s/\\s\\+$//e" }
+    {"BufWritePre"},
+    {command = "%s/\\s\\+$//e"}
 )
 
 vim.api.nvim_create_autocmd(
-{ "BufWinEnter" },
-{ command = 'silent! normal! g`"zz' }
+    {"BufWinEnter"},
+    {command = 'silent! normal! g`"zz'}
 )
 
 vim.opt.tabstop = 4
@@ -55,7 +55,7 @@ vim.opt.showbreak = "|"
 vim.opt.autochdir = true
 
 vim.g.netrw_browsex_viewer = "xdg-open"
-vim.cmd.colorscheme "modus_operandi"
+vim.cmd.colorscheme "catppuccin-latte"
 vim.cmd.filetype "indent off"
 
 vim.keymap.set("n", "j", "gj")
