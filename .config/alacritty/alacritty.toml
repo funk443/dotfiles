@@ -14,3 +14,9 @@ size = 30
 [cursor]
 
 style = {shape = "Beam"}
+
+[keyboard]
+
+bindings = [
+    {key = "N", mods = "Control|Shift", action = "CreateNewWindow"}
+]
