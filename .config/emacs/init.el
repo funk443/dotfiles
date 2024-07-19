@@ -1,17 +1,25 @@
 (load-theme 'modus-operandi)
 (set-face-attribute 'default nil
-                    :family "IBM Plex Mono"
+                    :family "Iosevka Slab"
                     :height 280)
 (set-face-attribute 'fixed-pitch nil
                     :inherit 'default
-                    :family "IBM Plex Mono")
+                    :family "Iosevka Slab")
 (set-face-attribute 'variable-pitch nil
                     :inherit 'default
-                    :family "IBM Plex Sans")
+                    :family "Iosevka Etoile")
 
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
+
+(use-package markdown-mode
+  :ensure t
+  :config (add-to-list 'major-mode-remap-alist '(markdown-mode . gfm-mode)))
+
+(use-package edit-indirect
+  :ensure t
+  :after markdown-mode)
 
 (use-package magit
   :ensure t)
@@ -24,14 +32,6 @@
   :ensure t
   :config (treesit-auto-add-to-auto-mode-alist))
 
-(use-package markdown-mode
-  :ensure t
-  :config (add-to-list 'major-mode-remap-alist '(markdown-mode . gfm-mode)))
-
-(use-package edit-indirect
-  :ensure t
-  :after markdown-mode)
-
 (defconst rubbish-dir (concat user-emacs-directory "rubbish")
   "Directory for Emacs to dump auto save files and backup files.")
 (unless (file-directory-p rubbish-dir)
@@ -40,9 +40,12 @@
 (add-hook 'visual-line-mode-hook (lambda () (visual-wrap-prefix-mode 1)))
 (add-hook 'markdown-mode-hook (lambda () (visual-line-mode 1)))
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
+(add-hook 'python-ts-mode-hook (lambda () (eldoc-mode -1)))
+
 (keymap-global-set "C-c C-p" #'compile)
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
+
 (add-to-list 'auto-mode-alist '("\\.[mc]js\\'" . js-ts-mode))
 
 (custom-set-variables
@@ -53,6 +56,7 @@
  '(auth-source-save-behavior nil)
  '(auto-save-file-name-transforms `((".*" ,rubbish-dir t)))
  '(backup-directory-alist `((".*" \, rubbish-dir)))
+ '(c-ts-mode-indent-offset 4)
  '(column-number-mode t)
  '(current-language-environment "UTF-8")
  '(dabbrev-case-fold-search nil)
@@ -62,6 +66,7 @@
  '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
+ '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
  '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
  '(initial-scratch-message ";; EMACS: Escape, Meta, Alt, Control, and Shift.\12\12")
@@ -73,7 +78,8 @@
  '(modus-themes-mixed-fonts t)
  '(org-src-preserve-indentation t)
  '(org-startup-truncated nil)
- '(package-selected-packages '(edit-indirect magit markdown-mode treesit-auto vterm))
+ '(package-selected-packages
+   '(edit-indirect fsharp-mode magit markdown-mode treesit-auto vterm))
  '(read-buffer-completion-ignore-case t)
  '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)
