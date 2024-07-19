@@ -9,9 +9,8 @@ Also, I'll try to keep the content of these new configs simple, nice, and clean.
 I usually clone this repositoy under my home directory.
 
 ``` console
-$ mkdir ~/.config/{emacs,nvim,kitty}
-
 # Replace emacs with other things.
+$ mkdir ~/.config/emacs
 $ ln -s -t ~/.config/emacs ~/dotfiles/.config/emacs/*
 ```
 
@@ -20,3 +19,20 @@ There is also a `.bash_custom` file for my bash customisation, e. g. `vterm` int
 ``` console
 $ ln ~/dotfiles/.bash_custom ~/
 ```
+
+## Softwares I have config for
+
+- Terminals:
+  - Alacritty
+  - Kitty
+  - Foot
+
+- Editors:
+  - Emacs
+  - Neovim
+
+- Others:
+  - Bash
+  - i3wm
+  - dunst
+  - git
