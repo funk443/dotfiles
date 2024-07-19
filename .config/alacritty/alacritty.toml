@@ -1,0 +1,16 @@
+import = [
+    "~/dotfiles/.config/alacritty/modus-operandi.toml"
+]
+
+[window]
+
+startup_mode = "Maximized"
+
+[font]
+
+normal = {family = "Iosevka Slab"}
+size = 30
+
+[cursor]
+
+style = {shape = "Beam"}
