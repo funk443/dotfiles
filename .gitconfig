@@ -1,0 +1,7 @@
+[user]
+	email = funk443@yahoo.com.tw
+	name = CToID
+[init]
+	defaultBranch = master
+[alias]
+	lg = log --graph --oneline --all
