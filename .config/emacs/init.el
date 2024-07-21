@@ -1,13 +1,13 @@
 (load-theme 'modus-operandi)
 (set-face-attribute 'default nil
-                    :family "JetBrains Mono"
+                    :family "Iosevka Slab"
                     :height 280)
 (set-face-attribute 'fixed-pitch nil
                     :inherit 'default
-                    :family "JetBrains Mono")
+                    :family "Iosevka Slab")
 (set-face-attribute 'variable-pitch nil
                     :inherit 'default
-                    :family "JetBrains Mono")
+                    :family "Iosevka Etoile")
 
 (require 'package)
 (add-to-list 'package-archives
