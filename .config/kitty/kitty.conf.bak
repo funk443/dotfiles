@@ -1,4 +1,5 @@
-font_family Iosevka Slab
+font_family JetBrains Mono
+disable_ligatures always
 font_size 28
 
 map ctrl+shift+equal change_font_size current +1
@@ -6,9 +7,10 @@ map ctrl+shift+minus change_font_size current -1
 map ctrl+shift+backspace change_font_size current 0
 
 active_tab_font_style bold
+cursor_blink_interval 0
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Latte
+# Modus Operandi
 include current-theme.conf
 # END_KITTY_THEME

@@ -8,7 +8,7 @@ startup_mode = "Maximized"
 
 [font]
 
-normal = {family = "Iosevka Slab"}
+normal = {family = "JetBrains Mono"}
 size = 30
 
 [keyboard]
