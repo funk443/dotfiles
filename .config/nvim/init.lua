@@ -12,8 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 lazy_plugins = {
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    {"junegunn/vim-easy-align"},
+    {"catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false},
+    {"junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign"},
 }
 
 lazy_opts = {
