@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 lazy_plugins = {
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    {"junegunn/vim-easy-align"}
+    {"junegunn/vim-easy-align"},
 }
 
 lazy_opts = {
@@ -51,14 +51,11 @@ vim.api.nvim_create_autocmd(
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
 vim.opt.expandtab = true
+vim.opt.linebreak = true
 vim.opt.showbreak = "|"
 vim.opt.autochdir = true
+vim.opt.undofile = true
 
 vim.g.netrw_browsex_viewer = "xdg-open"
 vim.cmd.colorscheme "catppuccin-latte"
 vim.cmd.filetype "indent off"
-
-vim.keymap.set("n", "j", "gj")
-vim.keymap.set("n", "gj", "j")
-vim.keymap.set("n", "k", "gk")
-vim.keymap.set("n", "gk", "k")
