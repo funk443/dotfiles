@@ -1,13 +1,13 @@
 (load-theme 'modus-operandi)
 (set-face-attribute 'default nil
-                    :family "Iosevka Slab"
+                    :family "Iosevka"
                     :height 280)
 (set-face-attribute 'fixed-pitch nil
                     :inherit 'default
-                    :family "Iosevka Slab")
+                    :family "Iosevka")
 (set-face-attribute 'variable-pitch nil
                     :inherit 'default
-                    :family "Iosevka Etoile")
+                    :family "Iosevka Aile")
 
 (require 'package)
 (add-to-list 'package-archives

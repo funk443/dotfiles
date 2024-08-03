@@ -8,7 +8,7 @@ startup_mode = "Maximized"
 
 [font]
 
-normal = {family = "Iosevka Slab"}
+normal = {family = "Iosevka"}
 size = 34
 
 [keyboard]
