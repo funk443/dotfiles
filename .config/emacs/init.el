@@ -1,4 +1,3 @@
-(load-theme 'modus-operandi)
 (set-face-attribute 'default nil
                     :family "Iosevka"
                     :height 280)
@@ -12,6 +11,11 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
+
+(use-package catppuccin-theme
+  :ensure t
+  :custom (catppuccin-flavor 'latte)
+  :config (load-theme 'catppuccin t))
 
 (use-package markdown-mode
   :ensure t
@@ -40,7 +44,7 @@
 (add-hook 'visual-line-mode-hook (lambda () (visual-wrap-prefix-mode 1)))
 (add-hook 'markdown-mode-hook (lambda () (visual-line-mode 1)))
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
-(add-hook 'python-ts-mode-hook (lambda () (eldoc-mode -1)))
+(add-hook 'python-ts-mode-hook (lambda () (setq python-eldoc-get-doc nil)))
 
 (keymap-global-set "C-c C-p" #'compile)
 (keymap-global-unset "C-z")
@@ -63,6 +67,7 @@
  '(delete-selection-mode t)
  '(dired-dwim-target t)
  '(dired-listing-switches "-alh")
+ '(font-lock-maximum-decoration nil)
  '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
@@ -79,7 +84,8 @@
  '(org-src-preserve-indentation t)
  '(org-startup-truncated nil)
  '(package-selected-packages
-   '(edit-indirect fsharp-mode magit markdown-mode treesit-auto vterm))
+   '(catppuccin-theme edit-indirect magit markdown-mode treesit-auto
+                      vterm))
  '(read-buffer-completion-ignore-case t)
  '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)
@@ -89,6 +95,7 @@
  '(show-paren-delay 0)
  '(size-indication-mode t)
  '(tool-bar-mode nil)
+ '(treesit-font-lock-level 1)
  '(visual-line-fringe-indicators '(right-triangle right-curly-arrow))
  '(which-key-mode t)
  '(x-select-enable-clipboard-manager nil))
