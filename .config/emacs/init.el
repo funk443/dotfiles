@@ -17,6 +17,16 @@
   :custom (catppuccin-flavor 'latte)
   :config (load-theme 'catppuccin t))
 
+(use-package magit
+  :ensure t)
+
+(use-package vterm
+  :ensure t)
+
+(use-package treesit-auto
+  :ensure t
+  :config (treesit-auto-add-to-auto-mode-alist))
+
 (use-package markdown-mode
   :ensure t
   :config (add-to-list 'major-mode-remap-alist '(markdown-mode . gfm-mode)))
@@ -24,17 +34,6 @@
 (use-package edit-indirect
   :ensure t
   :after markdown-mode)
-
-(use-package magit
-  :ensure t)
-
-(use-package vterm
-  :ensure t
-  :custom (vterm-copy-mode-remove-fake-newlines t))
-
-(use-package treesit-auto
-  :ensure t
-  :config (treesit-auto-add-to-auto-mode-alist))
 
 (defconst rubbish-dir (concat user-emacs-directory "rubbish")
   "Directory for Emacs to dump auto save files and backup files.")
@@ -45,6 +44,20 @@
 (add-hook 'markdown-mode-hook (lambda () (visual-line-mode 1)))
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 (add-hook 'python-ts-mode-hook (lambda () (setq python-eldoc-get-doc nil)))
+
+(defun my-remove-fireworks ()
+  "Syntax highlighting is harmful.
+
+This function removes syntax highlighting for most of the things
+(except string and comments) in tree-sitter major modes when
+`treesit-font-lock-level' is set to 1."
+  (when (and treesit-font-lock-feature-list
+             (< treesit-font-lock-level 2))
+    (setq-local treesit-font-lock-feature-list
+                (cons '(string comment)
+                      treesit-font-lock-feature-list))
+    (treesit-font-lock-recompute-features)))
+(add-hook 'prog-mode-hook #'my-remove-fireworks)
 
 (keymap-global-set "C-c C-p" #'compile)
 (keymap-global-unset "C-z")
@@ -71,6 +84,7 @@
  '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
+ '(inferior-lisp-program "sbcl")
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
  '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
