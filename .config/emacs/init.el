@@ -1,3 +1,10 @@
+;; Configuration options:
+;;   --prefix=/home/id/.local
+;;   --with-native-compilation=yes
+;;   --with-pgtk=yes
+;;   --with-tree-sitter=yes
+;;   CFLAGS=-O2
+
 (set-face-attribute 'default nil
                     :family "Iosevka"
                     :height 280)
@@ -14,7 +21,7 @@
 
 (use-package catppuccin-theme
   :ensure t
-  :custom (catppuccin-flavor 'latte)
+  :custom (catppuccin-flavor 'mocha)
   :config (load-theme 'catppuccin t))
 
 (use-package magit

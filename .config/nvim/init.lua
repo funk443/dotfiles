@@ -57,5 +57,5 @@ vim.opt.autochdir = true
 vim.opt.undofile = true
 
 vim.g.netrw_browsex_viewer = "xdg-open"
-vim.cmd.colorscheme "catppuccin-latte"
+vim.cmd.colorscheme "catppuccin-mocha"
 vim.cmd.filetype "indent off"
