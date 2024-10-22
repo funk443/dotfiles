@@ -5,6 +5,7 @@
 ;;   --with-tree-sitter=yes
 ;;   CFLAGS=-O2
 
+(load-theme 'modus-vivendi t)
 (set-face-attribute 'default nil
                     :family "Iosevka"
                     :height 280)
@@ -19,11 +20,6 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 
-(use-package catppuccin-theme
-  :ensure t
-  :custom (catppuccin-flavor 'mocha)
-  :config (load-theme 'catppuccin t))
-
 (use-package magit
   :ensure t)
 
@@ -36,7 +32,8 @@
 
 (use-package markdown-mode
   :ensure t
-  :config (add-to-list 'major-mode-remap-alist '(markdown-mode . gfm-mode)))
+  :config
+  (add-to-list 'major-mode-remap-alist '(markdown-mode . gfm-mode)))
 
 (use-package edit-indirect
   :ensure t
@@ -47,11 +44,6 @@
 (unless (file-directory-p rubbish-dir)
   (make-directory rubbish-dir))
 
-(add-hook 'visual-line-mode-hook (lambda () (visual-wrap-prefix-mode 1)))
-(add-hook 'markdown-mode-hook (lambda () (visual-line-mode 1)))
-(add-hook 'before-save-hook #'delete-trailing-whitespace)
-(add-hook 'python-ts-mode-hook (lambda () (setq python-eldoc-get-doc nil)))
-
 (defun my-remove-fireworks ()
   "Syntax highlighting is harmful.
 
@@ -61,10 +53,14 @@ This function removes syntax highlighting for most of the things
   (when (and treesit-font-lock-feature-list
              (< treesit-font-lock-level 2))
     (setq-local treesit-font-lock-feature-list
-                (cons '(string comment)
-                      treesit-font-lock-feature-list))
+                '((string comment)))
     (treesit-font-lock-recompute-features)))
+
 (add-hook 'prog-mode-hook #'my-remove-fireworks)
+(add-hook 'markdown-mode-hook (lambda () (auto-fill-mode 1)))
+(add-hook 'before-save-hook #'delete-trailing-whitespace)
+(add-hook 'python-ts-mode-hook
+          (lambda () (setq python-eldoc-get-doc nil)))
 
 (keymap-global-set "C-c C-p" #'compile)
 (keymap-global-unset "C-z")
@@ -81,12 +77,16 @@ This function removes syntax highlighting for most of the things
  '(auto-save-file-name-transforms `((".*" ,rubbish-dir t)))
  '(backup-directory-alist `((".*" \, rubbish-dir)))
  '(c-ts-mode-indent-offset 4)
+ '(case-fold-search nil)
+ '(case-replace nil)
  '(column-number-mode t)
  '(current-language-environment "UTF-8")
  '(dabbrev-case-fold-search nil)
  '(delete-selection-mode t)
  '(dired-dwim-target t)
  '(dired-listing-switches "-alh")
+ '(fill-column 72)
+ '(find-ls-option '("-exec ls -alh {} +" . "-alh"))
  '(font-lock-maximum-decoration nil)
  '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
@@ -104,9 +104,7 @@ This function removes syntax highlighting for most of the things
  '(modus-themes-mixed-fonts t)
  '(org-src-preserve-indentation t)
  '(org-startup-truncated nil)
- '(package-selected-packages
-   '(catppuccin-theme edit-indirect magit markdown-mode treesit-auto
-                      vterm))
+ '(package-selected-packages '(edit-indirect magit markdown-mode treesit-auto vterm))
  '(read-buffer-completion-ignore-case t)
  '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)
@@ -115,6 +113,7 @@ This function removes syntax highlighting for most of the things
  '(scroll-error-top-bottom t)
  '(show-paren-delay 0)
  '(size-indication-mode t)
+ '(tab-width 4)
  '(tool-bar-mode nil)
  '(treesit-font-lock-level 1)
  '(visual-line-fringe-indicators '(right-triangle right-curly-arrow))
