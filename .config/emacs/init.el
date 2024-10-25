@@ -7,14 +7,14 @@
 
 (load-theme 'modus-vivendi t)
 (set-face-attribute 'default nil
-                    :family "Iosevka"
+                    :family "IBM Plex Mono"
                     :height 280)
 (set-face-attribute 'fixed-pitch nil
                     :inherit 'default
-                    :family "Iosevka")
+                    :family "IBM Plex Mono")
 (set-face-attribute 'variable-pitch nil
                     :inherit 'default
-                    :family "Iosevka Aile")
+                    :family "IBM Plex Sans")
 
 (require 'package)
 (add-to-list 'package-archives
