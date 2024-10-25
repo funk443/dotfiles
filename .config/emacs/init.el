@@ -94,7 +94,8 @@ This function removes syntax highlighting for most of the things
  '(inferior-lisp-program "sbcl")
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
- '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
+ '(initial-frame-alist
+   '((fullscreen . maximized) (vertical-scroll-bars) (cursor-type . bar)))
  '(initial-scratch-message ";; EMACS: Escape, Meta, Alt, Control, and Shift.\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
