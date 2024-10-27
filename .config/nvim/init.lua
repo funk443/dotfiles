@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 lazy_plugins = {
+    {"challenger-deep-theme/vim", priority = 1000},
     {"junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign"},
 }
 
@@ -56,5 +57,5 @@ vim.opt.autochdir = true
 vim.opt.undofile = true
 
 vim.g.netrw_browsex_viewer = "xdg-open"
-vim.cmd.colorscheme "vim"
+vim.cmd.colorscheme "challenger_deep"
 vim.cmd.filetype "indent off"
