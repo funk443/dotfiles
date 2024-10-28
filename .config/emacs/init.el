@@ -5,6 +5,7 @@
 ;;   --with-tree-sitter=yes
 ;;   CFLAGS=-O2
 
+(load-theme 'modus-vivendi t)
 (set-face-attribute 'default nil
                     :family "IBM Plex Mono"
                     :height 280)
@@ -18,16 +19,6 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
-
-(use-package challenger-deep-theme
-  :ensure t
-  :custom-face
-  (font-lock-comment-face
-   ((t (:foreground unspecified :inherit bold-italic))))
-  (font-lock-comment-delimiter-face
-   ((t (:foreground unspecified :inherit font-lock-comment-face))))
-  :config
-  (load-theme 'challenger-deep t))
 
 (use-package magit
   :ensure t)
@@ -103,7 +94,7 @@ This function removes syntax highlighting for most of the things
  '(inferior-lisp-program "sbcl")
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
- '(initial-frame-alist '((fullscreen . maximized) (cursor-type . bar)))
+ '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
  '(initial-scratch-message ";; EMACS: Escape, Meta, Alt, Control, and Shift.\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
@@ -113,9 +104,7 @@ This function removes syntax highlighting for most of the things
  '(modus-themes-mixed-fonts t)
  '(org-src-preserve-indentation t)
  '(org-startup-truncated nil)
- '(package-selected-packages
-   '(challenger-deep-theme edit-indirect magit markdown-mode treesit-auto
-                           vterm))
+ '(package-selected-packages '(edit-indirect magit markdown-mode treesit-auto vterm))
  '(read-buffer-completion-ignore-case t)
  '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)

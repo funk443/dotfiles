@@ -1,5 +1,5 @@
 {
   "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
-  "vim": { "branch": "master", "commit": "e3d5b7d9711c7ebbf12c63c2345116985656da0d" },
+  "modus-themes.nvim": { "branch": "master", "commit": "566af300a3dfdefa64cbe7a0b205ad5bfcb4c337" },
   "vim-easy-align": { "branch": "master", "commit": "9815a55dbcd817784458df7a18acacc6f82b1241" }
 }
