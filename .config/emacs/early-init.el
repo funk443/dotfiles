@@ -1,1 +1,1 @@
-(setq gc-cons-threshold 16777216)
+(setq gc-cons-threshold 1048576)
