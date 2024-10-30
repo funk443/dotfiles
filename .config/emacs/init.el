@@ -23,12 +23,13 @@
 (use-package magit
   :ensure t)
 
-(use-package vterm
-  :ensure t)
-
 (use-package treesit-auto
   :ensure t
-  :config (treesit-auto-add-to-auto-mode-alist))
+  :config
+  (treesit-auto-add-to-auto-mode-alist 'all))
+
+(use-package vterm
+  :ensure t)
 
 (use-package markdown-mode
   :ensure t
@@ -44,29 +45,14 @@
 (unless (file-directory-p rubbish-dir)
   (make-directory rubbish-dir))
 
-(defun my-remove-fireworks ()
-  "Syntax highlighting is harmful.
-
-This function removes syntax highlighting for most of the things
-(except string and comments) in tree-sitter major modes when
-`treesit-font-lock-level' is set to 1."
-  (when (and treesit-font-lock-feature-list
-             (< treesit-font-lock-level 2))
-    (setq-local treesit-font-lock-feature-list
-                '((string comment)))
-    (treesit-font-lock-recompute-features)))
-
-(add-hook 'prog-mode-hook #'my-remove-fireworks)
-(add-hook 'markdown-mode-hook (lambda () (auto-fill-mode 1)))
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
-(add-hook 'python-ts-mode-hook
-          (lambda () (setq python-eldoc-get-doc nil)))
+(add-hook 'markdown-mode-hook (lambda () (auto-fill-mode 1)))
 
 (keymap-global-set "C-c C-p" #'compile)
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
 
-(add-to-list 'auto-mode-alist '("\\.[mc]js\\'" . js-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c-ts-mode))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
