@@ -86,7 +86,7 @@ This function removes syntax highlighting for most of the things
  '(dired-dwim-target t)
  '(dired-listing-switches "-alh")
  '(fill-column 72)
- '(find-ls-option '("-exec ls -alh {} +" . "-alh"))
+ '(find-ls-option '("-exec ls -ldh {} +" . "-ldh"))
  '(font-lock-maximum-decoration nil)
  '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
