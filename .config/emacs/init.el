@@ -3,7 +3,7 @@
 ;;   --with-native-compilation=yes
 ;;   --with-pgtk=yes
 ;;   --with-tree-sitter=yes
-;;   CFLAGS=-O2
+;;   CFLAGS="-O2 -g3"
 
 (load-theme 'modus-vivendi t)
 (set-face-attribute 'default nil
@@ -33,6 +33,8 @@
 
 (use-package markdown-mode
   :ensure t
+  :hook
+  (markdown-mode . auto-fill-mode)
   :config
   (add-to-list 'major-mode-remap-alist '(markdown-mode . gfm-mode)))
 
@@ -45,14 +47,37 @@
 (unless (file-directory-p rubbish-dir)
   (make-directory rubbish-dir))
 
+(defun my-remove-fireworks ()
+  (when (< treesit-font-lock-level 2)
+    (setq-local treesit-font-lock-feature-list
+                '((string comment)))
+    (treesit-font-lock-recompute-features)))
+
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
-(add-hook 'markdown-mode-hook (lambda () (auto-fill-mode 1)))
+(add-hook 'prog-mode-hook #'my-remove-fireworks)
 
 (keymap-global-set "C-c C-p" #'compile)
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
 
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c-ts-mode))
+(defun my-c-format-buffer ()
+  (interactive)
+  (if (executable-find "astyle")
+      (let ((line (line-number-at-pos)))
+        (shell-command-on-region
+         (point-min) (point-max)
+         "astyle --style=kr"
+         nil
+         'no-mark)
+        (goto-line line))
+    (message "ERROR: `astyle` not found.")))
+
+(use-package c-ts-mode
+  :bind
+  (:map c-ts-mode-map
+        ("C-c C-\\" . my-c-format-buffer))
+  :init
+  (add-to-list 'auto-mode-alist '("\\.h\\'" . c-ts-mode)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -63,6 +88,7 @@
  '(auto-save-file-name-transforms `((".*" ,rubbish-dir t)))
  '(backup-directory-alist `((".*" \, rubbish-dir)))
  '(c-ts-mode-indent-offset 4)
+ '(c-ts-mode-indent-style 'k&r)
  '(case-fold-search nil)
  '(case-replace nil)
  '(column-number-mode t)
