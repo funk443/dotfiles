@@ -23,4 +23,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "git.defaultBranchName": "master",
     "git.verboseCommit": true,
+    "window.restoreWindows": "none",
+    "workbench.startupEditor": "none",
+    "diffEditor.hideUnchangedRegions.enabled": true,
 }
