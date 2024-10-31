@@ -1,0 +1,21 @@
+{
+    "editor.fontFamily": "'IBM Plex Mono', 'monospace', monospace, 'Noto Sans CJK TC', 'Noto Sans TC'",
+    "editor.fontSize": 28,
+    "window.zoomLevel": 1,
+    "terminal.integrated.mouseWheelZoom": true,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "editor.lineNumbers": "off",
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "terminal.integrated.allowChords": false,
+    "window.commandCenter": false,
+    "workbench.iconTheme": "catppuccin-mocha",
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.fontSize": 28,
+    "clang-format.style": "{'BasedOnStyle': 'LLVM', 'IndentWidth': 4, 'ColumnLimit': 72}",
+    "editor.wordWrapColumn": 72,
+    "editor.rulers": [
+        72
+    ],
+    "editor.formatOnSave": true,
+    "clang-format.executable": "clang-format-18",
+}
