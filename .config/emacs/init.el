@@ -54,6 +54,15 @@
 (use-package vterm
   :ensure t)
 
+(use-package clang-format
+  :ensure t
+  :custom
+  (clang-format-executable "clang-format-18")
+  (clang-format-style (format "{%s: %s, %s: %d, %s: %d}"
+                              "BasedOnStyle" "LLVM"
+                              "IndentWidth" tab-width
+                              "ColumnLimit" fill-column)))
+
 ;;; Programming languages configurations
 (use-package markdown-mode
   :ensure t
@@ -71,10 +80,9 @@
   (add-to-list 'auto-mode-alist '("\\.h\\'" . c-ts-mode))
   :custom
   (c-ts-mode-indent-offset 4)
-  (c-ts-mode-indent-style 'k&r)
   :bind
   (:map c-ts-mode-map
-        ("C-c C-\\" . my-c-format-buffer)))
+        ("C-c C-\\" . #'clang-format-buffer)))
 
 ;;; My defined variables and functions.
 (defconst rubbish-dir (concat user-emacs-directory "rubbish")
@@ -87,18 +95,6 @@
     (setq-local treesit-font-lock-feature-list
                 '((string comment preprocessor)))
     (treesit-font-lock-recompute-features)))
-
-(defun my-c-format-buffer ()
-  (interactive)
-  (if (executable-find "astyle")
-      (let ((line (line-number-at-pos)))
-        (shell-command-on-region
-         (point-min) (point-max)
-         "astyle --style=kr"
-         nil
-         'no-mark)
-        (goto-line line))
-    (message "ERROR: `astyle` not found.")))
 
 ;;; Hooks and keymaps.
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
@@ -135,8 +131,7 @@
  '(initial-scratch-message ";; EMACS: Escape, Meta, Alt, Control, and Shift.\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
- '(package-selected-packages
-   '(catppuccin-theme edit-indirect magit markdown-mode treesit-auto vterm))
+ '(package-selected-packages nil)
  '(read-buffer-completion-ignore-case t)
  '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)
