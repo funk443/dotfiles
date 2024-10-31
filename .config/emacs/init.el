@@ -24,16 +24,12 @@
                     :inherit 'default
                     :family "IBM Plex Sans")
 
-(use-package modus-themes
-  :init
-  (require-theme 'modus-themes)
+(use-package catppuccin-theme
+  :ensure t
   :custom
-  (modus-themes-bold-constructs t)
-  (modus-themes-inhibit-reload nil)
-  (modus-themes-italic-constructs t)
-  (modus-themes-mixed-fonts t)
+  (catppuccin-italic-comments t)
   :config
-  (load-theme 'modus-vivendi t))
+  (load-theme 'catppuccin t))
 
 ;;; Built-in packages configurations.
 (use-package dired
@@ -139,7 +135,8 @@
  '(initial-scratch-message ";; EMACS: Escape, Meta, Alt, Control, and Shift.\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
- '(package-selected-packages '(edit-indirect magit markdown-mode treesit-auto vterm))
+ '(package-selected-packages
+   '(catppuccin-theme edit-indirect magit markdown-mode treesit-auto vterm))
  '(read-buffer-completion-ignore-case t)
  '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)

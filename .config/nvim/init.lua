@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 lazy_plugins = {
-    {"miikanissi/modus-themes.nvim", priority = 1000},
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     {"junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign"},
 }
 
@@ -57,5 +57,5 @@ vim.opt.autochdir = true
 vim.opt.undofile = true
 
 vim.g.netrw_browsex_viewer = "xdg-open"
-vim.cmd.colorscheme "modus_vivendi"
+vim.cmd.colorscheme "catppuccin"
 vim.cmd.filetype "indent off"
