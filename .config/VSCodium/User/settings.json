@@ -21,4 +21,6 @@
     "catppuccin.accentColor": "teal",
     "files.trimTrailingWhitespace": true,
     "diffEditor.ignoreTrimWhitespace": false,
+    "git.defaultBranchName": "master",
+    "git.verboseCommit": true,
 }
