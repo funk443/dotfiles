@@ -26,4 +26,5 @@
     "window.restoreWindows": "none",
     "workbench.startupEditor": "none",
     "diffEditor.hideUnchangedRegions.enabled": true,
+    "telemetry.telemetryLevel": "off",
 }
