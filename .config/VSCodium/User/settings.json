@@ -18,4 +18,7 @@
     ],
     "editor.formatOnSave": true,
     "clang-format.executable": "clang-format-18",
+    "catppuccin.accentColor": "teal",
+    "files.trimTrailingWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false,
 }
