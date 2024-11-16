@@ -1,10 +1,9 @@
 alias ls="ls -Alsh --color=auto"
 alias go-ptt="ssh bbsu@ptt.cc"
 
-export PATH=~/AppImages:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-export EDITOR=/home/id/AppImages/nvim
-export VISUAL=/home/id/AppImages/nvim
+export VISUAL=emacs
+export EDITOR=emacs
 
 export PS1="\[\e[32;1m\]\W>\[\e[0m\] "
 

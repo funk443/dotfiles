@@ -54,15 +54,6 @@
 (use-package vterm
   :ensure t)
 
-(use-package clang-format
-  :ensure t
-  :custom
-  (clang-format-executable "clang-format-18")
-  (clang-format-style (format "{%s: %s, %s: %d, %s: %d}"
-                              "BasedOnStyle" "LLVM"
-                              "IndentWidth" tab-width
-                              "ColumnLimit" fill-column)))
-
 ;;; Programming languages configurations
 (use-package markdown-mode
   :ensure t
@@ -74,15 +65,6 @@
 (use-package edit-indirect
   :ensure t
   :after markdown-mode)
-
-(use-package c-ts-mode
-  :init
-  (add-to-list 'auto-mode-alist '("\\.h\\'" . c-ts-mode))
-  :custom
-  (c-ts-mode-indent-offset 4)
-  :bind
-  (:map c-ts-mode-map
-        ("C-c C-\\" . #'clang-format-buffer)))
 
 ;;; My defined variables and functions.
 (defconst rubbish-dir (concat user-emacs-directory "rubbish")
@@ -131,7 +113,8 @@
  '(initial-scratch-message ";; EMACS: Escape, Meta, Alt, Control, and Shift.\12\12")
  '(menu-bar-mode nil)
  '(mode-line-compact t)
- '(package-selected-packages nil)
+ '(package-selected-packages
+   '(catppuccin-theme edit-indirect magit markdown-mode treesit-auto vterm))
  '(read-buffer-completion-ignore-case t)
  '(ring-bell-function 'ignore)
  '(save-interprogram-paste-before-kill t)
