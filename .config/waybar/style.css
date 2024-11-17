@@ -1,0 +1,29 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: 'IBM Plex Mono', 'IBM Plex Sans TC';
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: black;
+    color: white;
+}
+
+#workspaces button{
+    padding: 0;
+    color: white;
+}
+
+#workspaces button.focused {
+    background-color: #285577;
+}
+
+#mode {
+    background-color: red;
+}
+
+#clock, #battery, #pulseaudio {
+    padding-left: 10px;
+}

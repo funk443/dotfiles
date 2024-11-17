@@ -1,0 +1,13 @@
+{
+    "height": 24,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["tray", "pulseaudio", "battery", "clock"],
+    "clock": {
+        "interval": 5,
+        "format": "{:%Y-%m-%d %H:%M:%S}"
+    },
+    "tray": {
+        "spacing": 10
+    }
+}
