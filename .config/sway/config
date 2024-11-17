@@ -1,9 +1,11 @@
 exec --no-startup-id brightnessctl set 30%
 exec --no-startup-id pipewire
 exec --no-startup-id mako
-exec --no-startup-id fcitx5 -d
+exec --no-startup-id fcitx5 -dr
 
 font pango:IBM Plex Mono 10
+
+focus_follows_mouse no
 
 # Super key as mod.
 set $mod Mod4
