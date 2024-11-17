@@ -119,6 +119,10 @@ vim.api.nvim_set_keymap(
     {noremap = true, silent = true}
 )
 vim.api.nvim_set_keymap(
+    "n", "<Leader>fb", ":Telescope buffers<CR>",
+    {noremap = true, silent = true}
+)
+vim.api.nvim_set_keymap(
     "n", "<Space>", "<NOP>",
     {noremap = true}
 )
