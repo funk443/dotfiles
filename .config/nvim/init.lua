@@ -128,7 +128,7 @@ vim.api.nvim_set_keymap(
 )
 
 if vim.g.neovide then
-    vim.o.guifont = "IBM Plex Mono,IBM Plex Sans TC,Noto Sans CJK TC:h28"
+    vim.o.guifont = "IBM Plex Mono,IBM Plex Sans TC,Noto Sans CJK TC:h30"
     vim.g.neovide_hide_mouse_when_typing = true
     vim.g.neovide_no_idle = false
     vim.g.neovide_input_ime = true
