@@ -1,5 +1,6 @@
 alias ls="ls -Alsh --color=auto"
 alias go-ptt="ssh bbsu@ptt.cc"
+alias nv='neovide --fork'
 
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 export VISUAL=neovide
