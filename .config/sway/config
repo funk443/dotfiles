@@ -7,6 +7,8 @@ exec --no-startup-id fcitx5 -dr
 font pango:IBM Plex Mono 10
 
 focus_follows_mouse no
+workspace_layout tabbed
+xwayland enable
 
 # Super key as mod.
 set $mod Mod4
@@ -124,6 +126,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 bindsym $mod+a focus parent
+bindsym $mod+Shift+a focus child
 
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
