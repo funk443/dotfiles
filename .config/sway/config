@@ -1,6 +1,7 @@
 exec --no-startup-id brightnessctl set 30%
 exec --no-startup-id pipewire
 exec --no-startup-id mako
+exec --no-startup-id flameshot
 exec --no-startup-id fcitx5 -dr
 
 font pango:IBM Plex Mono 10
@@ -151,7 +152,7 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ to
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
-bindsym Print exec grim
+bindsym Print exec flameshot gui
 
 bar {
     swaybar_command waybar
