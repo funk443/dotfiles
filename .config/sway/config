@@ -161,7 +161,8 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ to
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
-bindsym Print exec flameshot gui
+bindsym $mod+Print exec grim -t jpeg -q 90 -c
+bindsym Print exec grim -t jpeg -q 90 -c - | wl-copy
 
 bar {
     swaybar_command waybar
