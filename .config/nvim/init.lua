@@ -25,18 +25,6 @@ lazy_plugins = {
             trasparent_background = false,
             show_end_of_buffer = true,
             default_integrations = true,
-            custom_highlights = function(colors)
-                return {
-                    Function = {link = "Normal"},
-                    Conditional = {link = "Normal"},
-                    Boolean = {link = "Normal"},
-                    Number = {link = "Normal"},
-                    Keyword = {link = "Normal"},
-                    Statement = {link = "Normal"},
-                    Repeat = {link = "Normal"},
-                    Operator = {link = "Normal"},
-                }
-            end,
         }
     },
     {"junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", config = true},
