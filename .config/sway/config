@@ -1,7 +1,8 @@
+include /etc/sway/config.d/*
+
 exec --no-startup-id brightnessctl set 30%
 exec --no-startup-id pipewire
 exec --no-startup-id mako
-exec --no-startup-id flameshot
 exec --no-startup-id fcitx5 -dr
 
 font pango:IBM Plex Mono 10
@@ -165,5 +166,3 @@ bindsym Print exec flameshot gui
 bar {
     swaybar_command waybar
 }
-
-include /etc/sway/config.d/*
