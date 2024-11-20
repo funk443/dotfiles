@@ -94,7 +94,6 @@ vim.opt.shiftwidth = 0
 vim.opt.expandtab = true
 vim.opt.linebreak = true
 vim.opt.showbreak = "|"
-vim.opt.autochdir = true
 vim.opt.undofile = true
 
 vim.g.netrw_browsex_viewer = "xdg-open"
