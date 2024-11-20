@@ -3,6 +3,9 @@
     "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
     "modules-center": ["sway/window"],
     "modules-right": ["tray", "pulseaudio", "battery", "clock"],
+    "pulseaudio": {
+        "format-muted": "muted"
+    },
     "clock": {
         "interval": 5,
         "format": "{:%Y-%m-%d %H:%M:%S}"
