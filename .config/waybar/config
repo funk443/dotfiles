@@ -8,7 +8,11 @@
     },
     "clock": {
         "interval": 5,
-        "format": "{:%Y-%m-%d %H:%M:%S}"
+        "format": "{:%Y-%m-%d %a %H:%M:%S}",
+        "tooltip-format": "time",
+    },
+    "sway/window": {
+        "max-length": 72
     },
     "tray": {
         "spacing": 10
