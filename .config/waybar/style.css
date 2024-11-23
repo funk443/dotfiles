@@ -7,14 +7,13 @@
     min-height: 0;
 }
 
-window#waybar {
+window#waybar, tooltip, #tray menu {
     background-color: black;
     color: white;
 }
 
 #workspaces button{
     padding: 0 5px;
-    color: white;
 }
 
 #workspaces button.focused {
