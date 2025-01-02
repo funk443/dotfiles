@@ -42,6 +42,10 @@
   (make-directory rubbish-dir))
 (setopt backup-directory-alist `((".*" . ,rubbish-dir)))
 
+(defun my-format-buffer (formatter)
+  (interactive "sExec: ")
+  (call-process formatter nil nil t buffer-file-name))
+
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 
 (keymap-global-unset "C-z")
