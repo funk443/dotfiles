@@ -25,6 +25,11 @@
 (use-package magit
   :ensure t)
 
+(use-package treesit-auto
+  :ensure t
+  :config
+  (treesit-auto-add-to-auto-mode-alist))
+
 (use-package markdown-mode
   :ensure t
   :hook
@@ -58,7 +63,7 @@
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
  '(menu-bar-mode nil)
- '(package-selected-packages '(catppuccin-theme magit markdown-mode vterm))
+ '(package-selected-packages '(catppuccin-theme magit markdown-mode treesit-auto vterm))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
