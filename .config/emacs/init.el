@@ -42,9 +42,15 @@
   (make-directory rubbish-dir))
 (setopt backup-directory-alist `((".*" . ,rubbish-dir)))
 
-(defun my-format-buffer (formatter)
-  (interactive "sExec: ")
-  (call-process formatter nil nil t buffer-file-name))
+(defconst my-formatters-alist '((python-ts-mode . ("black"))
+                                (java-ts-mode   . ("google-java-format" "-r"))))
+(defun my-format-buffer ()
+  (interactive)
+  (let* ((formatter (append (alist-get major-mode my-formatters-alist)
+                            (list buffer-file-name)))
+         (command (car formatter))
+         (args (cdr formatter)))
+    (apply #'call-process command nil nil t args)))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 
