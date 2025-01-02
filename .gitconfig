@@ -1,12 +1,3 @@
 [user]
 	email = funk443@yahoo.com.tw
 	name = CToID
-[init]
-	defaultBranch = master
-[alias]
-	lg = log --graph --oneline --all
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
