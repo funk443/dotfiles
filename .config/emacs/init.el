@@ -3,10 +3,10 @@
                     :height 160)
 (set-face-attribute 'fixed-pitch nil
                     :family "Iosevka"
-		    :height 160)
+                    :inherit 'default)
 (set-face-attribute 'variable-pitch nil
                     :family "Iosevka Slab"
-                    :height 160)
+                    :inherit 'default)
 
 (use-package package
   :custom
