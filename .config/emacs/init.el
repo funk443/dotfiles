@@ -52,10 +52,12 @@
      (formatter
       (let ((command (car formatter))
             (args (append (cdr formatter) (list buffer-file-name))))
-        (apply #'call-process command nil nil t args))
+        (if (= (apply #'call-process command nil nil t args) 0)
+            (message "Done formatting.")
+          (message "Error formatting.")))
       (revert-buffer t t t))
      (t
-      (message "No formatter found for major mode: %s" major-mode)))))
+      (message "No formatter found for major mode: %s." major-mode)))))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 (add-hook 'prog-mode-hook
