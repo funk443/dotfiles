@@ -67,7 +67,6 @@
  '(case-replace nil)
  '(column-number-mode t)
  '(current-language-environment "UTF-8")
- '(cursor-type 'bar)
  '(delete-selection-mode t)
  '(font-lock-maximum-decoration nil)
  '(frame-resize-pixelwise t)
