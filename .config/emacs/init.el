@@ -50,7 +50,8 @@
                             (list buffer-file-name)))
          (command (car formatter))
          (args (cdr formatter)))
-    (apply #'call-process command nil nil t args)))
+    (apply #'call-process command nil nil t args))
+  (revert-buffer t t t))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 
