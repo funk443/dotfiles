@@ -72,6 +72,7 @@
  '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
+ '(java-ts-mode-indent-offset 2)
  '(menu-bar-mode nil)
  '(package-selected-packages '(catppuccin-theme magit markdown-mode treesit-auto vterm))
  '(save-interprogram-paste-before-kill t)
