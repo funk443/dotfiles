@@ -37,10 +37,10 @@
   :config
   (add-to-list 'major-mode-remap-alist '(markdown-mode . gfm-mode)))
 
-(defconst rubbish-dir (concat user-emacs-directory "rubbish"))
-(unless (file-directory-p rubbish-dir)
-  (make-directory rubbish-dir))
-(setopt backup-directory-alist `((".*" . ,rubbish-dir)))
+(defconst my-rubbish-dir (concat user-emacs-directory "rubbish"))
+(unless (file-directory-p my-rubbish-dir)
+  (make-directory my-rubbish-dir))
+(setopt backup-directory-alist `((".*" . ,my-rubbish-dir)))
 
 (defconst my-formatters-alist '((python-ts-mode . ("black"))
                                 (java-ts-mode   . ("google-java-format" "-r"))))
