@@ -26,6 +26,7 @@
   :ensure t)
 
 (use-package treesit-auto
+  :when (treesit-available-p)
   :ensure t
   :config
   (treesit-auto-add-to-auto-mode-alist))
@@ -60,14 +61,15 @@
       (message "No formatter found for major mode: %s." major-mode)))))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
-(add-hook 'prog-mode-hook
-          (lambda ()
-            (when (and treesit-font-lock-feature-list
-                       (<= treesit-font-lock-level 1))
-              (setq-local treesit-font-lock-feature-list
-                          (cons '(string comment)
-                                treesit-font-lock-feature-list))
-              (treesit-font-lock-recompute-features))))
+(when (treesit-available-p)
+  (add-hook 'prog-mode-hook
+            (lambda ()
+              (when (and treesit-font-lock-feature-list
+                         (<= treesit-font-lock-level 1))
+                (setq-local treesit-font-lock-feature-list
+                            (cons '(string comment)
+                                  treesit-font-lock-feature-list))
+                (treesit-font-lock-recompute-features)))))
 
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
