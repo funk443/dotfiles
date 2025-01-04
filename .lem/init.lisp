@@ -2,7 +2,8 @@
 
 (load-theme "grayscale-dark")
 
-(setf lem/line-numbers:*relative-line* t)
+(setf lem/line-numbers:*relative-line* t
+      *auto-format* t)
 
 (lem-if:update-cursor-shape (lem:implementation) :bar)
 (lem/line-numbers:toggle-line-numbers)
