@@ -4,10 +4,6 @@
 
 (setf lem/line-numbers:*relative-line* t)
 
-(define-keys *global-keymap*
-  ("C-_" 'undo)
-  ("C-\\" 'redo))
-
 (lem-if:update-cursor-shape (lem:implementation) :bar)
 (lem/line-numbers:toggle-line-numbers)
 
@@ -20,7 +16,6 @@
                                 (lem-sdl2/font:make-font-config
                                  :size 20
                                  :latin-normal-file "/home/id/.local/share/fonts/Iosevka-Regular.ttf"
-                                 :latin-bold-file "/home/id/.local/share/fonts/Iosevka-Bold.ttf"))
-  (define-key *global-keymap* "C-/" 'undo))
+                                 :latin-bold-file "/home/id/.local/share/fonts/Iosevka-Bold.ttf")))
 
 (remove-hook *after-init-hook* 'lem/frame-multiplexer::enable-frame-multiplexer)
