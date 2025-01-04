@@ -8,7 +8,7 @@
   ("C-_" 'undo)
   ("C-\\" 'redo))
 
-(lem-ncurses/term:update-cursor-shape :bar)
+(lem-if:update-cursor-shape (lem:implementation) :bar)
 (lem/line-numbers:toggle-line-numbers)
 
 (remove-hook *after-init-hook* 'lem/frame-multiplexer::enable-frame-multiplexer)
