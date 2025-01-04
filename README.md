@@ -40,6 +40,7 @@ $ ln ~/dotfiles/.bash_custom ~/
 
 - Editors:
   - Emacs
+  - Lem
   - Neovim
 
 - Others:
