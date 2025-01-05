@@ -3,7 +3,9 @@
 (load-theme "grayscale-dark")
 
 (setf lem/line-numbers:*relative-line* t
-      *auto-format* t)
+      *auto-format* t
+      (variable-value 'add-newline-at-eof-on-writing-file) t
+      (variable-value 'lem-core/commands/file::delete-trailing-whitespace-on-writing-file) t)
 
 (lem-if:update-cursor-shape (lem:implementation) :bar)
 (lem/line-numbers:toggle-line-numbers)
