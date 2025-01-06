@@ -4,6 +4,7 @@
 
 (setf lem/line-numbers:*relative-line* t
       *auto-format* t
+      lem-lisp-mode/hyperspec::*hyperspec-root* "https://funk443.github.io/CLHS/HyperSpec/"
       (variable-value 'add-newline-at-eof-on-writing-file :global) t
       (variable-value 'lem-core/commands/file::delete-trailing-whitespace-on-writing-file :global) t)
 
