@@ -1,6 +1,28 @@
 (in-package :lem-user)
 
-(load-theme "grayscale-dark")
+(lem/themes::define-color-theme "black" nil
+  (:display-background-mode :dark)
+  (:foreground "#ffffff")
+  (:background "#000000")
+  (:inactive-window-background nil)
+  (region :foreground nil :background "#404040")
+  (modeline :background "#404040" :foreground "#ffffff")
+  (modeline-inactive :background "#303030" :foreground "#eeeeee")
+  (syntax-string-attribute :foreground "#ffff00")
+  (syntax-builtin-attribute :foreground "#ffffff")
+  (syntax-comment-attribute :foreground "#ff0000")
+  (syntax-keyword-attribute :foreground "#ffffff")
+  (syntax-constant-attribute :foreground "#ffffff")
+  (syntax-function-name-attribute :foreground "#ffffff")
+  (syntax-variable-attribute :foreground "#ffffff")
+  (syntax-type-attribute :foreground "#ffffff")
+  (lem/isearch:isearch-highlight-attribute :background "#ff0000")
+  (lem/isearch:isearch-highlight-active-attribute :background "#707070")
+  (lem/listener-mode:listener-prompt-attribute :foreground "#ff0000")
+  (lem/line-numbers:active-line-number-attribute :bold t)
+  (lem-lisp-mode/internal::compilation-region-highlight :bold t))
+
+(load-theme "black")
 
 (setf lem/line-numbers:*relative-line* t
       *auto-format* t
