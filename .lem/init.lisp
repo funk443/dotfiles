@@ -32,7 +32,6 @@
       (variable-value 'lem-core/commands/file::delete-trailing-whitespace-on-writing-file :global) t
       (variable-value 'lem-core::highlight-line-color :global) "#202020")
 
-(lem-if:update-cursor-shape (lem:implementation) :bar)
 (lem/line-numbers:toggle-line-numbers)
 
 (defmacro make-formatters ((name &rest commands) &rest modes)
