@@ -19,7 +19,7 @@
   (lem/isearch:isearch-highlight-attribute :background "#ff0000")
   (lem/isearch:isearch-highlight-active-attribute :background "#707070")
   (lem/listener-mode:listener-prompt-attribute :foreground "#ff0000")
-  (lem/line-numbers:active-line-number-attribute :bold t)
+  (lem/line-numbers:active-line-number-attribute :background "#202020")
   (lem-lisp-mode/internal::compilation-region-highlight :bold t))
 
 (load-theme "black")
