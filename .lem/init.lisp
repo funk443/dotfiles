@@ -34,22 +34,26 @@
 (lem-if:update-cursor-shape (lem:implementation) :bar)
 (lem/line-numbers:toggle-line-numbers)
 
-(defmacro make-formatter (mode name commands)
-  `(progn
-     (defun ,name (buf)
-       (let ((file (buffer-filename buf)))
-         (uiop:run-program
-          (list ,@commands file)
-          :ignore-error-status t))
-       (revert-buffer t))
-     (lem:register-formatter ,mode (function ,name))))
+(defmacro make-formatters ((name &rest commands) &rest modes)
+  (let ((register-list
+          (loop :for mode :in modes
+                :collect `(,mode (function ,name)))))
+    `(progn
+       (defun ,name (buf)
+         (let ((file (buffer-filename buf)))
+           (uiop:run-program
+            (list ,@commands file)
+            :ignore-error-status t))
+         (revert-buffer t))
+       (lem:register-formatters ,@register-list))))
 
-(make-formatter lem-python-mode:python-mode
-                my-python-formatter
-                ("black"))
-(make-formatter lem-java-mode:java-mode
-                my-java-formatter
-                ("google-java-format" "-r"))
+(make-formatters (my-python-formatter "black")
+                 lem-python-mode:python-mode)
+(make-formatters (my-java-formatter "google-java-format" "-r")
+                 lem-java-mode:java-mode)
+(make-formatters (my-javascript-formatter "npx" "prettier" "-w")
+                 lem-js-mode:js-mode
+                 lem-html-mode:html-mode)
 
 #+lem-sdl2
 (when (typep (lem:implementation) 'lem-sdl2/sdl2:sdl2)
