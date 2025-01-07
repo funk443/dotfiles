@@ -29,7 +29,8 @@
       lem-lisp-mode/hyperspec::*hyperspec-root* "https://funk443.github.io/CLHS/HyperSpec/"
       lem-core/commands/edit::*save-interprogram-clipboard-before-kill-p* t
       (variable-value 'add-newline-at-eof-on-writing-file :global) t
-      (variable-value 'lem-core/commands/file::delete-trailing-whitespace-on-writing-file :global) t)
+      (variable-value 'lem-core/commands/file::delete-trailing-whitespace-on-writing-file :global) t
+      (variable-value 'lem-core::highlight-line-color :global) "#202020")
 
 (lem-if:update-cursor-shape (lem:implementation) :bar)
 (lem/line-numbers:toggle-line-numbers)
