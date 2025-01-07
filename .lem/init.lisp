@@ -12,20 +12,22 @@
 (lem-if:update-cursor-shape (lem:implementation) :bar)
 (lem/line-numbers:toggle-line-numbers)
 
-(defmacro make-formatter (name commands)
-  `(defun ,name (buf)
-     (let ((file (buffer-filename buf)))
-       (uiop:run-program
-        (list ,@commands file)
-        :ignore-error-status t))
-     (revert-buffer t)))
+(defmacro make-formatter (mode name commands)
+  `(progn
+     (defun ,name (buf)
+       (let ((file (buffer-filename buf)))
+         (uiop:run-program
+          (list ,@commands file)
+          :ignore-error-status t))
+       (revert-buffer t))
+     (lem:register-formatter ,mode (function ,name))))
 
-(make-formatter my-python-formatter ("black"))
-(make-formatter my-java-formatter ("google-java-format" "-r"))
-
-(lem:register-formatters
-  (lem-python-mode:python-mode #'my-python-formatter)
-  (lem-java-mode:java-mode #'my-java-formatter))
+(make-formatter lem-python-mode:python-mode
+                my-python-formatter
+                ("black"))
+(make-formatter lem-java-mode:java-mode
+                my-java-formatter
+                ("google-java-format" "-r"))
 
 #+lem-sdl2
 (when (typep (lem:implementation) 'lem-sdl2/sdl2:sdl2)
