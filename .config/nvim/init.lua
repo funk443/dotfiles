@@ -12,48 +12,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 lazy_plugins = {
-    {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        priority = 1000 ,
-        opts = {
-            flavor = "mocha",
-            background = {
-                light = "latte",
-                dark = "mocha"
-            },
-            trasparent_background = false,
-            show_end_of_buffer = true,
-            default_integrations = true,
-        }
-    },
-    {"junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", config = true},
-    {
-        "NeogitOrg/neogit",
-        dependencies = {
-            "nvim-lua/plenary.nvim",         -- required
-            "sindrets/diffview.nvim",        -- optional - Diff integration
-            "nvim-telescope/telescope.nvim"
-        },
-        lazy = true,
-        cmd = "Neogit",
-        config = true
-    },
-    {
-        "nvim-telescope/telescope.nvim",
-        lazy = true,
-        cmd = "Telescope",
-        opts = {
-            pickers = {
-                fd = {
-                    find_command = {
-                        "rg", "--files", "--hidden",
-                        "--glob", "!**/.git/*"
-                    },
-                },
-            },
-        },
-    },
+	{
+		"stevearc/conform.nvim",
+		opts = {
+			formatters_by_ft = {
+				python = { "black" },
+				lua = { "stylua" },
+			},
+			format_on_save = {},
+		},
+	},
+	{ "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", config = true },
 }
 
 lazy_opts = {
