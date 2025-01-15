@@ -18,6 +18,7 @@ lazy_plugins = {
 			formatters_by_ft = {
 				python = { "black" },
 				lua = { "stylua" },
+				java = { "google-java-format" },
 			},
 			format_on_save = {},
 		},
