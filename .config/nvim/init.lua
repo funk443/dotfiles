@@ -14,6 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 lazy_plugins = {
 	{
 		"stevearc/conform.nvim",
+		event = { "BufWritePre" },
+		cmd = { "ConformInfo" },
 		opts = {
 			formatters_by_ft = {
 				python = { "black" },
