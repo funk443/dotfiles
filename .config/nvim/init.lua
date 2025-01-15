@@ -21,6 +21,8 @@ lazy_plugins = {
 				python = { "black" },
 				lua = { "stylua" },
 				java = { "google-java-format" },
+				c = { "clang-format" },
+				go = { "gofmt" },
 			},
 			format_on_save = {},
 		},
