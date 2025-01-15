@@ -51,10 +51,6 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	command = "%s/\\s\\+$//e",
 })
 
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-	command = 'silent! normal! g`"zz',
-})
-
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
 vim.opt.expandtab = true
