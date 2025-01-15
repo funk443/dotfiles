@@ -58,6 +58,7 @@ vim.opt.expandtab = true
 vim.opt.linebreak = true
 vim.opt.showbreak = "|"
 vim.opt.undofile = true
+vim.opt.relativenumber = true
 
 vim.g.netrw_browsex_viewer = "xdg-open"
 vim.cmd.colorscheme("industry")
