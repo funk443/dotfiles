@@ -23,6 +23,7 @@ lazy_plugins = {
 				java = { "google-java-format" },
 				c = { "clang-format" },
 				go = { "gofmt" },
+				["_"] = { "trim_whitespace" },
 			},
 			format_on_save = {},
 		},
@@ -51,10 +52,6 @@ lazy_opts = {
 }
 
 require("lazy").setup(lazy_plugins, lazy_opts)
-
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	command = "%s/\\s\\+$//e",
-})
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
