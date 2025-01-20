@@ -64,7 +64,6 @@ vim.opt.relativenumber = true
 
 vim.g.netrw_browsex_viewer = "xdg-open"
 vim.cmd.colorscheme("industry")
-vim.cmd.filetype("indent off")
 
 vim.g.mapleader = " "
 
