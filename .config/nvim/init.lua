@@ -30,7 +30,7 @@ lazy_plugins = {
 			format_on_save = {},
 		},
 	},
-	{ "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", config = true },
+	{ "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
 }
 
 lazy_opts = {
