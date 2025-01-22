@@ -15,10 +15,6 @@
      ("gnu"    . "https://elpa.gnu.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/"))))
 
-(use-package catppuccin-theme
-  :ensure t
-  :config (load-theme 'catppuccin t))
-
 (use-package vterm
   :ensure t)
 
@@ -80,6 +76,7 @@
  '(case-replace nil)
  '(column-number-mode t)
  '(current-language-environment "UTF-8")
+ '(custom-enabled-themes '(modus-vivendi))
  '(delete-selection-mode t)
  '(font-lock-maximum-decoration nil)
  '(frame-resize-pixelwise t)
