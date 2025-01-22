@@ -47,7 +47,7 @@
 
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
-(keymap-global-set "C-c C-x C-c" #'compile)
+(keymap-global-set "C-c C-u C-c" #'compile)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
