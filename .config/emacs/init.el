@@ -44,18 +44,10 @@
 (setopt backup-directory-alist `((".*" . ,my-rubbish-dir)))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
-(add-hook 'prog-mode-hook
-          (lambda ()
-            (when (and treesit-font-lock-feature-list
-                       (<= treesit-font-lock-level 1))
-              (setq-local treesit-font-lock-feature-list
-                          (cons '(string comment)
-                                treesit-font-lock-feature-list))
-              (treesit-font-lock-recompute-features))))
 
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
-(keymap-global-set "C-c C-<return> C-c" #'compile)
+(keymap-global-set "C-c C-x C-c" #'compile)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -68,17 +60,14 @@
  '(current-language-environment "UTF-8")
  '(custom-enabled-themes '(modus-vivendi))
  '(delete-selection-mode t)
- '(font-lock-maximum-decoration nil)
  '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
- '(java-ts-mode-indent-offset 2)
  '(menu-bar-mode nil)
- '(package-selected-packages '(catppuccin-theme magit markdown-mode treesit-auto vterm))
+ '(package-selected-packages '(apheleia magit markdown-mode treesit-auto vterm))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
- '(treesit-font-lock-level 1)
  '(x-select-enable-clipboard-manager nil))
 
 (custom-set-faces
