@@ -26,6 +26,11 @@
   :config
   (treesit-auto-add-to-auto-mode-alist))
 
+(use-package apheleia
+  :ensure t
+  :config
+  (apheleia-global-mode 1))
+
 (use-package markdown-mode
   :ensure t
   :hook
@@ -37,21 +42,6 @@
 (unless (file-directory-p my-rubbish-dir)
   (make-directory my-rubbish-dir))
 (setopt backup-directory-alist `((".*" . ,my-rubbish-dir)))
-
-(defconst my-formatters-alist
-  '((python-ts-mode . ("black"))
-    (java-ts-mode   . ("google-java-format" "-r"))))
-(defun my-format-buffer ()
-  (interactive)
-  (let ((formatter (alist-get major-mode my-formatters-alist)))
-    (cond
-     (formatter
-      (let ((command (car formatter))
-            (args (append (cdr formatter) (list buffer-file-name))))
-        (apply #'call-process command nil nil t args))
-      (revert-buffer t t t))
-     (t
-      (message "No formatter found for major mode: %s" major-mode)))))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 (add-hook 'prog-mode-hook
