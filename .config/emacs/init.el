@@ -1,6 +1,6 @@
 (set-face-attribute 'default nil
                     :family "Iosevka"
-                    :height 160)
+                    :height 200)
 (set-face-attribute 'fixed-pitch nil
                     :family "Iosevka"
                     :inherit 'default)
