@@ -25,6 +25,7 @@ lazy_plugins = {
 				go = { "gofmt" },
 				html = { "prettier" },
 				javascript = { "prettier" },
+				css = { "prettier" },
 				["_"] = { "trim_whitespace" },
 			},
 			format_on_save = {},
