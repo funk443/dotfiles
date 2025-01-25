@@ -64,6 +64,10 @@ controls{
       keyboardKey:i=57
     }
 
+    ID_CONTROL_MODE_HELICOPTER{
+      keyboardKey:i=23
+    }
+
     ID_EXIT_SHOOTING_CYCLE_MODE{
       keyboardKey:i=56
       keyboardKey:i=4
@@ -227,6 +231,11 @@ controls{
       keyboardKey:i=23
     }
 
+    ID_TOGGLE_ENGINE_HELICOPTER{
+      keyboardKey:i=56
+      keyboardKey:i=23
+    }
+
     ID_TOGGLE_GM_CROSSHAIR_LIGHTING{
       keyboardKey:i=53
     }
@@ -237,6 +246,10 @@ controls{
     }
 
     ID_TOGGLE_LASER_DESIGNATOR{
+      keyboardKey:i=35
+    }
+
+    ID_TOGGLE_LASER_DESIGNATOR_HELICOPTER{
       keyboardKey:i=35
     }
 
@@ -311,6 +324,14 @@ controls{
 
     gm_zoom{
       mouseAxisId:i=-1
+    }
+
+    helicopter_collective{
+      mouseAxisId:i=-1
+    }
+
+    helicopter_zoom{
+      mouseAxisId:i=6
     }
 
     throttle{
@@ -397,7 +418,7 @@ settings{
   aimAccelerationDelayShip:r=0.5
   aimAccelerationDelaySubmarine:r=0.5
   mouseZMultAir:r=1
-  mouseZMultHelicopter:r=0.5
+  mouseZMultHelicopter:r=1
   mouseZMultTank:r=0.31
   mouseZMultShip:r=0.5
   mouseZMultSubmarine:r=0.5
