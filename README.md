@@ -27,7 +27,7 @@ There is also a `.bash_custom` file for my bash customisation, e. g. `vterm`
 integration.
 
 ```console
-$ ln ~/dotfiles/.bash_custom ~/
+$ ln -s ~/dotfiles/.bash_custom ~/
 ```
 
 ## Softwares I have config for
