@@ -1,2 +1,7 @@
 export VISUAL=nvim
-export PS1="\[\e[36m\]\u\[\e[0m\] at \[\e[34m\]\h\[\e[0m\] in \[\e[32m\]\w\[\e[0m\]\n╰ \[\e[33m\]\A\[\e[0m\] "
+
+user='\[\e[36m\]\u\[\e[0m\]'
+hostname='\[\e[34m\]\h\[\e[0m\]'
+working_dir='\[\e[32m\]\w\[\e[0m\]'
+the_time='\[\e[33m\]\A\[\e[0m\]'
+export PS1="$user at $hostname in $working_dir\n╰ $the_time "
