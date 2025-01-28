@@ -113,6 +113,10 @@ controls{
       keyboardKey:i=45
     }
 
+    ID_HELI_GUNNER_NIGHT_VISION{
+      keyboardKey:i=49
+    }
+
     ID_LOCK_TARGET{
       mouseButton:i=2
     }
