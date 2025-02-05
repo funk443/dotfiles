@@ -67,6 +67,7 @@ vim.g.netrw_browsex_viewer = "xdg-open"
 vim.cmd.colorscheme("industry")
 
 vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>b", ":b ", { noremap = true })
 
 if vim.g.neovide then
 	vim.o.guifont = "Iosevka,Noto Sans CJK TC:h30"
