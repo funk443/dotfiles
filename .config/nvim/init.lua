@@ -93,6 +93,10 @@ vim.keymap.set("n", "<leader>b", ":b ", { noremap = true })
 vim.keymap.set("n", "<c-i>", vim.lsp.buf.hover, { noremap = true })
 vim.keymap.set("i", "<c-i>", "<c-x><c-o>", { noremap = true })
 
+vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { noremap = true })
+vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { noremap = true })
+vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
+
 -- }}}
 
 -- LSP configs {{{
