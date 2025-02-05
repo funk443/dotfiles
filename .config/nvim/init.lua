@@ -1,17 +1,9 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
-		lazypath,
-	})
-end
-vim.opt.rtp:prepend(lazypath)
+-- vim: foldmethod=marker
 
-lazy_plugins = {
+-- Lazy.nvim {{{
+
+-- Plugin list {{{
+local plugins = {
 	{
 		"stevearc/conform.nvim",
 		event = { "BufWritePre" },
@@ -34,7 +26,24 @@ lazy_plugins = {
 	{ "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
 }
 
-lazy_opts = {
+-- }}}
+
+-- Other Lazy.nvim stuffs {{{
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
+
+local lazy_opts = {
 	ui = {
 		icons = {
 			cmd = "⌘",
@@ -56,6 +65,12 @@ lazy_opts = {
 
 require("lazy").setup(lazy_plugins, lazy_opts)
 
+-- }}}
+
+-- }}}
+
+-- General configs {{{
+
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
 vim.opt.expandtab = true
@@ -66,11 +81,19 @@ vim.opt.relativenumber = true
 vim.g.netrw_browsex_viewer = "xdg-open"
 vim.cmd.colorscheme("industry")
 
+-- }}}
+
+-- Keybindings {{{
+
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>b", ":b ", { noremap = true })
 
 vim.keymap.set("n", "<c-i>", vim.lsp.buf.hover, { noremap = true })
 vim.keymap.set("i", "<c-i>", "<c-x><c-o>", { noremap = true })
+
+-- }}}
+
+-- LSP configs {{{
 
 local lsp_program_path = "/home/id/Documents/softwares/lsps/"
 vim.api.nvim_create_autocmd("FileType", {
@@ -83,6 +106,10 @@ vim.api.nvim_create_autocmd("FileType", {
 		})
 	end,
 })
+
+-- }}}
+
+-- Neovide config {{{
 
 if vim.g.neovide then
 	vim.o.guifont = "Iosevka,Noto Sans CJK TC:h30"
@@ -101,3 +128,5 @@ if vim.g.neovide then
 		change_scale_factor(1 / 1.25)
 	end)
 end
+
+-- }}}
