@@ -27,6 +27,14 @@ local plugins = {
 	},
 	{ "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
 	{ "neovim/nvim-lspconfig" },
+	{
+		"miikanissi/modus-themes.nvim",
+		priority = 1000,
+		config = function(_, opts)
+			require("modus-themes").setup(opts)
+			vim.cmd("colorscheme modus")
+		end,
+	},
 }
 
 -- }}}
@@ -82,7 +90,6 @@ vim.opt.undofile = true
 vim.opt.relativenumber = true
 
 vim.g.netrw_browsex_viewer = "xdg-open"
-vim.cmd.colorscheme("industry")
 
 -- }}}
 
