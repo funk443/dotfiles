@@ -69,6 +69,9 @@ vim.cmd.colorscheme("industry")
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>b", ":b ", { noremap = true })
 
+vim.keymap.set("n", "<c-i>", vim.lsp.buf.hover, { noremap = true })
+vim.keymap.set("i", "<c-i>", "<c-x><c-o>", { noremap = true })
+
 local lsp_program_path = "/home/id/Documents/softwares/lsps/"
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "java",
