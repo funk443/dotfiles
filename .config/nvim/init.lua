@@ -3,6 +3,7 @@
 -- Lazy.nvim {{{
 
 -- Plugin list {{{
+
 local plugins = {
 	{
 		"stevearc/conform.nvim",
@@ -24,6 +25,7 @@ local plugins = {
 		},
 	},
 	{ "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
+	{ "neovim/nvim-lspconfig" },
 }
 
 -- }}}
@@ -63,7 +65,7 @@ local lazy_opts = {
 	},
 }
 
-require("lazy").setup(lazy_plugins, lazy_opts)
+require("lazy").setup(plugins, lazy_opts)
 
 -- }}}
 
@@ -95,17 +97,11 @@ vim.keymap.set("i", "<c-i>", "<c-x><c-o>", { noremap = true })
 
 -- LSP configs {{{
 
-local lsp_program_path = "/home/id/Documents/softwares/lsps/"
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "java",
-	callback = function(ev)
-		vim.lsp.start({
-			name = "jdtls",
-			cmd = { lsp_program_path .. "jdtls/bin/jdtls" },
-			root_dir = vim.fs.root(ev.buf, { "gradlew" }),
-		})
-	end,
-})
+local lsp_path = "/home/id/Documents/softwares/lsps/"
+local lsp = require("lspconfig")
+
+lsp.pyright.setup({})
+lsp.jdtls.setup({ cmd = { lsp_path .. "jdtls/bin/jdtls" } })
 
 -- }}}
 
