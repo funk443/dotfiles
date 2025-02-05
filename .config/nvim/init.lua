@@ -6,6 +6,14 @@
 
 local plugins = {
 	{
+		"miikanissi/modus-themes.nvim",
+		priority = 1000,
+		config = function(_, opts)
+			require("modus-themes").setup(opts)
+			vim.cmd.colorscheme("modus")
+		end,
+	},
+	{
 		"stevearc/conform.nvim",
 		lazy = true,
 		event = { "BufWritePre" },
@@ -27,14 +35,6 @@ local plugins = {
 	},
 	{ "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
 	{ "neovim/nvim-lspconfig" },
-	{
-		"miikanissi/modus-themes.nvim",
-		priority = 1000,
-		config = function(_, opts)
-			require("modus-themes").setup(opts)
-			vim.cmd("colorscheme modus")
-		end,
-	},
 }
 
 -- }}}
