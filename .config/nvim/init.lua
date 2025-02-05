@@ -7,6 +7,7 @@
 local plugins = {
 	{
 		"stevearc/conform.nvim",
+		lazy = true,
 		event = { "BufWritePre" },
 		cmd = { "ConformInfo" },
 		opts = {
@@ -90,8 +91,8 @@ vim.cmd.colorscheme("industry")
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>b", ":b ", { noremap = true })
 
-vim.keymap.set("n", "<c-i>", vim.lsp.buf.hover, { noremap = true })
-vim.keymap.set("i", "<c-i>", "<c-x><c-o>", { noremap = true })
+vim.keymap.set("n", "<c-h>", vim.lsp.buf.hover, { noremap = true })
+vim.keymap.set("i", "<c-h>", "<c-x><c-o>", { noremap = true })
 
 vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { noremap = true })
 vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { noremap = true })
@@ -101,11 +102,9 @@ vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
 
 -- LSP configs {{{
 
-local lsp_path = "/home/id/Documents/softwares/lsps/"
 local lsp = require("lspconfig")
-
 lsp.pyright.setup({})
-lsp.jdtls.setup({ cmd = { lsp_path .. "jdtls/bin/jdtls" } })
+lsp.jdtls.setup({})
 
 -- }}}
 
