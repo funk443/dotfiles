@@ -69,6 +69,18 @@ vim.cmd.colorscheme("industry")
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>b", ":b ", { noremap = true })
 
+local lsp_program_path = "/home/id/Documents/softwares/lsps/"
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "java",
+	callback = function(ev)
+		vim.lsp.start({
+			name = "jdtls",
+			cmd = { lsp_program_path .. "jdtls/bin/jdtls" },
+			root_dir = vim.fs.root(ev.buf, { "gradlew" }),
+		})
+	end,
+})
+
 if vim.g.neovide then
 	vim.o.guifont = "Iosevka,Noto Sans CJK TC:h30"
 	vim.g.neovide_hide_mouse_when_typing = true
