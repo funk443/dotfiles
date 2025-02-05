@@ -116,6 +116,17 @@ local lsp = require("lspconfig")
 lsp.pyright.setup({})
 lsp.jdtls.setup({})
 
+if vim.version().minor >= 11 then
+	vim.api.nvim_create_autocmd("LspAttach", {
+		callback = function(args)
+			local client = vim.lsp.get_client_by_id(args.data.client_id)
+			if client:supports_method("textDocument/completion") then
+				vim.lsp.completion.enable(true, client.id, args.buf, {})
+			end
+		end,
+	})
+end
+
 -- }}}
 
 -- Neovide config {{{
