@@ -2,5 +2,9 @@
 	email = funk443@yahoo.com.tw
 	name = CToID
 
+[init]
+    defaultBranch = main
+
 [alias]
-    get-wtfpl = "!curl -LO https://raw.githubusercontent.com/funk443/dotfiles/refs/heads/master/COPYING"
+    get-wtfpl = !curl -LO https://raw.githubusercontent.com/funk443/dotfiles/refs/heads/master/COPYING
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
