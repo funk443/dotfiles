@@ -16,6 +16,16 @@ vim.g.netrw_browsex_viewer = "xdg-open"
 -- Keybindings {{{
 
 vim.g.mapleader = " "
+
+vim.keymap.set("n", "<leader>fh", function()
+	local cwd = vim.fn.expand("%:h")
+	if 0 == #cwd then
+		cwd = "."
+	end
+	vim.api.nvim_input(string.format(":e %s/", cwd))
+end, { noremap = true })
+vim.keymap.set("n", "<leader>ff", ":e ", { noremap = true })
+
 vim.keymap.set("n", "<leader>bb", ":b ", { noremap = true })
 vim.keymap.set("n", "<leader>bd", ":bd<return>", { noremap = true })
 vim.keymap.set("n", "<leader>bn", ":bn<return>", { noremap = true })
