@@ -82,7 +82,7 @@ require("lazy").setup(plugins, lazy_opts)
 
 -- General configs {{{
 
-vim.opt.textwidth = 72
+vim.opt.textwidth = 80
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
 vim.opt.expandtab = true
