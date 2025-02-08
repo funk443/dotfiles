@@ -1,5 +1,35 @@
 -- vim: foldmethod=marker
 
+-- General configs {{{
+
+vim.opt.textwidth = 80
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 0
+vim.opt.expandtab = true
+vim.opt.undofile = true
+vim.opt.relativenumber = true
+
+vim.g.netrw_browsex_viewer = "xdg-open"
+
+-- }}}
+
+-- Keybindings {{{
+
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>bb", ":b ", { noremap = true })
+vim.keymap.set("n", "<leader>bd", ":bd<return>", { noremap = true })
+vim.keymap.set("n", "<leader>bn", ":bn<return>", { noremap = true })
+vim.keymap.set("n", "<leader>bp", ":bp<return>", { noremap = true })
+
+vim.keymap.set("n", "<c-h>", vim.lsp.buf.hover, { noremap = true })
+vim.keymap.set("i", "<c-h>", "<c-x><c-o>", { noremap = true })
+
+vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { noremap = true })
+vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { noremap = true })
+vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
+
+-- }}}
+
 -- Lazy.nvim {{{
 
 -- Plugin list {{{
@@ -77,36 +107,6 @@ local lazy_opts = {
 require("lazy").setup(plugins, lazy_opts)
 
 -- }}}
-
--- }}}
-
--- General configs {{{
-
-vim.opt.textwidth = 80
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 0
-vim.opt.expandtab = true
-vim.opt.undofile = true
-vim.opt.relativenumber = true
-
-vim.g.netrw_browsex_viewer = "xdg-open"
-
--- }}}
-
--- Keybindings {{{
-
-vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>bb", ":b ", { noremap = true })
-vim.keymap.set("n", "<leader>bd", ":bd<return>", { noremap = true })
-vim.keymap.set("n", "<leader>bn", ":bn<return>", { noremap = true })
-vim.keymap.set("n", "<leader>bp", ":bp<return>", { noremap = true })
-
-vim.keymap.set("n", "<c-h>", vim.lsp.buf.hover, { noremap = true })
-vim.keymap.set("i", "<c-h>", "<c-x><c-o>", { noremap = true })
-
-vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { noremap = true })
-vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { noremap = true })
-vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
 
 -- }}}
 
