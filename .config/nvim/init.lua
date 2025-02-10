@@ -139,6 +139,17 @@ end
 
 -- }}}
 
+-- Autocmds {{{
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+	pattern = { "*.go" },
+	callback = function(ev)
+		vim.opt_local.expandtab = false
+	end,
+})
+
+-- }}}
+
 -- Neovide config {{{
 
 if vim.g.neovide then
