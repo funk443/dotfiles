@@ -2,7 +2,7 @@
     all: unset;
     border: none;
     border-radius: 0;
-    font-family: 'IBM Plex Mono', 'IBM Plex Sans TC';
+    font-family: 'Iosevka', 'Noto Sans CJK TC';
     font-size: 14px;
     min-height: 0;
 }
