@@ -8,3 +8,8 @@
 [alias]
     get-wtfpl = !curl -LO https://raw.githubusercontent.com/funk443/dotfiles/refs/heads/master/COPYING
     tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
