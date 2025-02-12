@@ -1,7 +1,7 @@
 {
     "height": 24,
     "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
-    "modules-center": ["sway/window"],
+    "modules-center": [],
     "modules-right": ["tray", "pulseaudio", "battery", "clock"],
     "pulseaudio": {
         "format-muted": "muted"
@@ -10,9 +10,6 @@
         "interval": 5,
         "format": "{:%Y-%m-%d %a %H:%M:%S}",
         "tooltip-format": "time",
-    },
-    "sway/window": {
-        "max-length": 72
     },
     "tray": {
         "spacing": 10
