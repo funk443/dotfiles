@@ -1,3 +1,4 @@
+7zip
 amd-ucode
 base
 base-devel
@@ -7,6 +8,7 @@ bluez-utils
 btrfs-progs
 cups
 efibootmgr
+fcitx5-array
 fcitx5-chewing
 fcitx5-configtool
 firefox
@@ -63,6 +65,7 @@ swaybg
 swayidle
 swaylock
 tk
+tree
 ttc-iosevka
 ttc-iosevka-slab
 ufw
