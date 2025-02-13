@@ -1,5 +1,6 @@
 include /etc/sway/config.d/*
 
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec --no-startup-id mako
 exec --no-startup-id fcitx5 -dr
 
