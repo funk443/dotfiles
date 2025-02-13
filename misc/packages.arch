@@ -16,11 +16,12 @@ flatpak
 gimp
 git
 google-java-format
+gradle
 grim
 gst-plugin-pipewire
 gvfs
 htop
-jdk-openjdk
+jdk21-openjdk
 jdtls
 kcmutils
 kdeclarative
