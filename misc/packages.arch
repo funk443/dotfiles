@@ -71,6 +71,7 @@ tree
 ttc-iosevka
 ttc-iosevka-slab
 ufw
+unzip
 vlc
 vulkan-radeon
 waybar
@@ -86,4 +87,5 @@ xf86-video-amdgpu
 xorg-xwayland
 yay-bin
 yay-bin-debug
+zip
 zram-generator
