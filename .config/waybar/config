@@ -1,5 +1,4 @@
 {
-    "height": 24,
     "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
     "modules-center": [],
     "modules-right": ["tray", "pulseaudio", "battery", "clock"],

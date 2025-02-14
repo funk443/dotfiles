@@ -21,7 +21,7 @@ set $up k
 set $right l
 
 set $term kitty
-set $menu wmenu-run -f "Iosevka 12"
+set $menu wmenu-run -f "Iosevka 10"
 
 ### Output configuration
 
