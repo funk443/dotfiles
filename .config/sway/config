@@ -10,7 +10,7 @@ focus_follows_mouse no
 workspace_layout tabbed
 
 xwayland enable
-for_window [shell="xwayland"] title_format "[X] %title"
+for_window [shell="xwayland"] title_format "[X11] %title"
 
 # Super key as mod.
 set $mod Mod4
