@@ -8,7 +8,9 @@ font pango:Iosevka 10
 
 focus_follows_mouse no
 workspace_layout tabbed
+
 xwayland enable
+for_window [shell="xwayland"] title_format "[X] %title"
 
 # Super key as mod.
 set $mod Mod4
