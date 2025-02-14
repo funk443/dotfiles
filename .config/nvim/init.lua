@@ -141,8 +141,8 @@ end
 
 -- Autocmds {{{
 
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-	pattern = { "*.go" },
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "go" },
 	callback = function(ev)
 		vim.opt_local.expandtab = false
 	end,
