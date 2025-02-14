@@ -152,6 +152,7 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 bindsym $mod+Print exec grim -c
 bindsym Print exec grim -c - | wl-copy
+bindsym $mod+Shift+Print exec grim -g "$(slurp)" - | wl-copy
 
 bar {
     swaybar_command waybar
