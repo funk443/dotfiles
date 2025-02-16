@@ -2,6 +2,7 @@
     "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
     "modules-center": [],
     "include": "~/.config/waybar/machines/thinkpad.jsonc",
+    "include": "~/.config/waybar/machines/amd-pc.jsonc",
     "pulseaudio": {
         "format-muted": "muted"
     },
