@@ -5,21 +5,18 @@ base-devel
 bash-completion
 btrfs-progs
 efibootmgr
-fcitx5-array
 fcitx5-chewing
 fcitx5-configtool
 firefox
 flatpak
 gimp
 git
-google-java-format
 gradle
 grim
 gst-plugin-pipewire
 gvfs
 htop
 jdk21-openjdk
-jdtls
 kcmutils
 kdeclarative
 keepassxc
@@ -37,7 +34,6 @@ mako
 man-db
 mpv
 nano
-neovim-git
 networkmanager
 noto-fonts
 noto-fonts-cjk
@@ -46,8 +42,6 @@ obs-studio
 openssh
 pavucontrol
 pcmanfm
-piper-tts-bin
-piper-voices-en-us
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -82,7 +76,5 @@ xdg-user-dirs
 xdg-utils
 xf86-video-amdgpu
 xorg-xwayland
-yay-bin
-yay-bin-debug
 zip
 zram-generator
