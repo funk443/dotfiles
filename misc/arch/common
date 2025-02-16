@@ -1,5 +1,4 @@
 7zip
-amd-ucode
 base
 base-devel
 bash-completion
@@ -64,7 +63,6 @@ ttc-iosevka-slab
 ufw
 unzip
 vlc
-vulkan-radeon
 waybar
 wireplumber
 wl-clipboard
@@ -74,7 +72,6 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
-xf86-video-amdgpu
 xorg-xwayland
 zip
 zram-generator
