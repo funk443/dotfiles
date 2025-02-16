@@ -50,6 +50,7 @@ pipewire-pulse
 pyright
 python-black
 python-pip
+qt5-wayland
 slurp
 sof-firmware
 speech-dispatcher
