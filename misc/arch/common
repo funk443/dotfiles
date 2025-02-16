@@ -1,12 +1,8 @@
 7zip
-amd-ucode
 base
 base-devel
 bash-completion
-bluez
-bluez-utils
 btrfs-progs
-cups
 efibootmgr
 fcitx5-chewing
 fcitx5-configtool
@@ -52,7 +48,6 @@ pipewire-pulse
 pyright
 python-black
 python-pip
-sane
 slurp
 sof-firmware
 speech-dispatcher
@@ -68,7 +63,6 @@ ttc-iosevka-slab
 ufw
 unzip
 vlc
-vulkan-radeon
 waybar
 wireplumber
 wl-clipboard
@@ -78,7 +72,6 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
-xf86-video-amdgpu
 xorg-xwayland
 zip
 zram-generator

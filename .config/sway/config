@@ -1,4 +1,5 @@
 include /etc/sway/config.d/*
+include machines/amd-pc.conf
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec mako
@@ -34,10 +35,6 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-set $laptop eDP-1
-bindswitch --reload --locked lid:on output $laptop disable
-bindswitch --reload --locked lid:off output $laptop enable
-
 ### Idle configuration
 
 exec --no-startup-id swayidle -w \
@@ -63,6 +60,7 @@ input "type:pointer" {
 input "type:keyboard" {
       repeat_delay 250
       repeat_rate 50
+      xkb_numlock enabled
 }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
