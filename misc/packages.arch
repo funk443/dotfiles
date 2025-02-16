@@ -3,10 +3,7 @@ amd-ucode
 base
 base-devel
 bash-completion
-bluez
-bluez-utils
 btrfs-progs
-cups
 efibootmgr
 fcitx5-array
 fcitx5-chewing
@@ -58,7 +55,6 @@ pipewire-pulse
 pyright
 python-black
 python-pip
-sane
 slurp
 sof-firmware
 speech-dispatcher
