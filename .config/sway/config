@@ -1,4 +1,5 @@
 include /etc/sway/config.d/*
+include machines/amd-pc.conf
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec mako
