@@ -38,10 +38,21 @@ vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { noremap = true })
 vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { noremap = true })
 vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
 
-vim.keymap.set("n", "<leader>cc", ":make ", { noremap = true })
-vim.keymap.set("n", "<leader>cs", function()
-	local prog = vim.fn.input("Program: ", vim.opt.makeprg:get(), "file")
+vim.keymap.set("n", "<leader>cc", function()
+	local prog = vim.fn.input({
+		prompt = "Program: ",
+		default = vim.opt.makeprg:get(),
+		completion = "file",
+		cancelreturn = "",
+	})
+
+	if prog == "" then
+		print("Canceled.")
+		return
+	end
+
 	vim.opt.makeprg = prog
+	vim.cmd.make()
 end, { noremap = true })
 
 -- }}}
