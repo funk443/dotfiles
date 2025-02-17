@@ -48,7 +48,10 @@ vim.keymap.set("n", "<leader>cc", function()
 			end
 
 			vim.opt.makeprg = result
-			vim.cmd.make()
+
+			-- See https://github.com/neovim/neovim/issues/28562
+			vim.api.nvim_input(":make<return>")
+			-- vim.cmd.make()
 		end
 	)
 end, { noremap = true })
