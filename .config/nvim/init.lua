@@ -38,6 +38,12 @@ vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { noremap = true })
 vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { noremap = true })
 vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
 
+vim.keymap.set("n", "<leader>cc", ":make ", { noremap = true })
+vim.keymap.set("n", "<leader>cs", function()
+	local prog = vim.fn.input("Program: ", vim.opt.makeprg:get(), "file")
+	vim.opt.makeprg = prog
+end, { noremap = true })
+
 -- }}}
 
 -- Lazy.nvim {{{
