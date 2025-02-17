@@ -39,20 +39,18 @@ vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { noremap = true })
 vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
 
 vim.keymap.set("n", "<leader>cc", function()
-	local prog = vim.fn.input({
-		prompt = "Program: ",
-		default = vim.opt.makeprg:get(),
-		completion = "file",
-		cancelreturn = "",
-	})
+	vim.ui.input(
+		{ prompt = "Program: ", default = vim.opt.makeprg:get(), completion = "shellcmdline" },
+		function(result)
+			if not result or result == "" then
+				print("Canceled.")
+				return
+			end
 
-	if prog == "" then
-		print("Canceled.")
-		return
-	end
-
-	vim.opt.makeprg = prog
-	vim.cmd.make()
+			vim.opt.makeprg = result
+			vim.cmd.make()
+		end
+	)
 end, { noremap = true })
 
 -- }}}
