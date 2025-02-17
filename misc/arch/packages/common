@@ -11,13 +11,12 @@ flatpak
 fuse2
 gimp
 git
-gradle
 grim
 gst-plugin-pipewire
 gvfs
 htop
 imagemagick
-jdk21-openjdk
+jre21-openjdk
 kcmutils
 kdeclarative
 keepassxc
