@@ -125,6 +125,7 @@ require("lazy").setup(plugins, lazy_opts)
 local lsp = require("lspconfig")
 lsp.pyright.setup({})
 lsp.jdtls.setup({})
+lsp.gopls.setup({})
 
 if vim.version().minor >= 11 then
 	vim.api.nvim_create_autocmd("LspAttach", {

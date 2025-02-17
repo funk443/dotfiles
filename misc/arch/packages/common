@@ -11,6 +11,8 @@ flatpak
 fuse2
 gimp
 git
+go
+gopls
 grim
 gst-plugin-pipewire
 gvfs
