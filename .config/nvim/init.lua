@@ -3,7 +3,7 @@
 -- General configs {{{
 
 vim.opt.textwidth = 80
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
 vim.opt.expandtab = true
 vim.opt.undofile = true
