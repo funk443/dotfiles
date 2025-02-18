@@ -38,9 +38,9 @@ vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { noremap = true })
 vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { noremap = true })
 vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
 
-vim.keymap.set("n", "<leader>cc", function()
+vim.keymap.set("n", "<leader>c", function()
 	vim.ui.input(
-		{ prompt = "Program: ", default = vim.opt.makeprg:get(), completion = "shellcmdline" },
+		{ prompt = "Command: ", default = vim.opt.makeprg:get(), completion = "shellcmdline" },
 		function(result)
 			if not result or result == "" then
 				print("Canceled.")
