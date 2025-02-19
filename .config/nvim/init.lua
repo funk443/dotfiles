@@ -8,6 +8,7 @@ vim.opt.shiftwidth = 0
 vim.opt.expandtab = true
 vim.opt.undofile = true
 vim.opt.relativenumber = true
+vim.opt.formatoptions:append("mM")
 
 vim.g.netrw_browsex_viewer = "xdg-open"
 
