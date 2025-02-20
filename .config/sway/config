@@ -21,7 +21,7 @@ set $down j
 set $up k
 set $right l
 
-set $term kitty
+set $term alacritty
 set $menu wmenu-run -f "Source Code Pro 10"
 
 ### Output configuration

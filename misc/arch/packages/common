@@ -1,5 +1,6 @@
 7zip
 adobe-source-code-pro-fonts
+alacritty
 base
 base-devel
 bash-completion
@@ -24,7 +25,6 @@ kcmutils
 kdeclarative
 keepassxc
 kirigami
-kitty
 ksvg
 libnotify
 libpulse
