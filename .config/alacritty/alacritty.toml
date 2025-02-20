@@ -10,6 +10,11 @@ bindings = [
 ]
 
 [general]
+
 import = [
     "~/dotfiles/.config/alacritty/xterm.toml"
 ]
+
+[mouse]
+
+hide_when_typing = true
