@@ -1,4 +1,5 @@
 7zip
+adobe-source-code-pro-fonts
 base
 base-devel
 bash-completion
@@ -63,8 +64,6 @@ swaylock
 tk
 transmission-gtk
 tree
-ttc-iosevka
-ttc-iosevka-slab
 ufw
 unzip
 vlc
