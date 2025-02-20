@@ -1,18 +1,15 @@
-import = [
-    "~/dotfiles/.config/alacritty/modus-operandi.toml"
-]
-
-[window]
-
-startup_mode = "Maximized"
-
 [font]
 
-normal = {family = "Iosevka"}
-size = 34
+normal = {family = "Source Code Pro"}
+size = 24
 
 [keyboard]
 
 bindings = [
     {key = "N", mods = "Control|Shift", action = "CreateNewWindow"}
+]
+
+[general]
+import = [
+    "~/dotfiles/.config/alacritty/xterm.toml"
 ]
