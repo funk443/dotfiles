@@ -2,7 +2,7 @@
     all: unset;
     border: none;
     border-radius: 0;
-    font-family: 'Source Code Pro', 'Noto Sans CJK TC';
+    font-family: 'Iosevka', 'Noto Sans CJK TC';
     font-size: 10pt;
     min-height: 0;
 }

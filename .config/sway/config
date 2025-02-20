@@ -5,7 +5,7 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 exec mako
 exec fcitx5 -dr
 
-font pango:Source Code Pro 10
+font pango:Iosevka 10
 
 focus_follows_mouse no
 workspace_layout tabbed
@@ -22,7 +22,7 @@ set $up k
 set $right l
 
 set $term alacritty
-set $menu wmenu-run -f "Source Code Pro 10"
+set $menu wmenu-run -f "Iosevka 10"
 
 ### Output configuration
 
