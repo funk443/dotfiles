@@ -5,7 +5,7 @@
                     :family "Iosevka"
                     :inherit 'default)
 (set-face-attribute 'variable-pitch nil
-                    :family "Iosevka Slab"
+                    :family "Noto Sans"
                     :inherit 'default)
 
 (use-package package
@@ -42,6 +42,7 @@
 
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
+
 (keymap-global-set "C-c C-u C-c" #'compile)
 
 (custom-set-variables
@@ -57,8 +58,9 @@
  '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
+ '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(package-selected-packages '(apheleia magit markdown-mode treesit-auto vterm))
+ '(package-selected-packages nil)
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
