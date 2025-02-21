@@ -4,6 +4,7 @@ base
 base-devel
 bash-completion
 btrfs-progs
+cmake
 efibootmgr
 fcitx5-chewing
 fcitx5-configtool
@@ -25,6 +26,7 @@ kdeclarative
 keepassxc
 kirigami
 ksvg
+libgccjit
 libnotify
 libpulse
 libreoffice-fresh

@@ -21,9 +21,6 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty
-set $menu wmenu-run -f "Iosevka 10"
-
 ### Output configuration
 
 # Wallpaper
@@ -63,7 +60,12 @@ input "type:keyboard" {
 
 ### Key bindings
 
-bindsym $mod+Return exec $term
+set $term alacritty
+set $menu wmenu-run -f "Iosevka 10"
+set $emacs emacsclient -a "" -c
+
+bindsym $mod+Return exec $emacs
+bindsym $mod+t exec $term
 bindsym $mod+d exec $menu
 
 bindsym $mod+Shift+q kill
