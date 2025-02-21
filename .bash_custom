@@ -3,15 +3,10 @@
 alias ls="ls -Alh --color=auto"
 alias grep="grep --color=auto"
 
-export VISUAL='emacsclient -a "" -c'
+export VISUAL=nvim
 
 user='\[\e[36m\]\u\[\e[0m\]'
 hostname='\[\e[34m\]\h\[\e[0m\]'
 working_dir='\[\e[32m\]\w\[\e[0m\]'
 the_time='\[\e[33m\]\A\[\e[0m\]'
 export PS1="$user at $hostname in $working_dir\n╰ $the_time "
-
-
-# Local Variables:
-# major-mode: bash-ts-mode
-# End:

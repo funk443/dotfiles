@@ -63,8 +63,7 @@ input "type:keyboard" {
 
 ### Key bindings
 
-bindsym $mod+t exec $term
-bindsym $mod+Return exec emacsclient -a "" -c
+bindsym $mod+Return exec $term
 bindsym $mod+d exec $menu
 
 bindsym $mod+Shift+q kill
