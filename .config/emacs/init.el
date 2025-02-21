@@ -15,6 +15,10 @@
      ("gnu"    . "https://elpa.gnu.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/"))))
 
+(use-package eglot
+  :custom
+  (eglot-autoshutdown t))
+
 (use-package vterm
   :ensure t)
 
