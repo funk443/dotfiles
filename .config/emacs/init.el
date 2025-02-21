@@ -60,9 +60,10 @@
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(package-selected-packages nil)
+ '(package-selected-packages '(magit markdown-mode treesit-auto vterm))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
+ '(tab-width 4)
  '(tool-bar-mode nil)
  '(x-select-enable-clipboard-manager nil))
 
