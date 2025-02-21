@@ -17,6 +17,8 @@ EnumerateGroupBackwardKeys=
 ActivateKeys=
 # Deactivate Input Method
 DeactivateKeys=
+# Toggle embedded preedit
+TogglePreedit=
 # Time limit in milliseconds for triggering modifier key shortcuts
 ModifierOnlyKeyTimeout=250
 
@@ -34,9 +36,6 @@ ModifierOnlyKeyTimeout=250
 
 [Hotkey/NextCandidate]
 0=Tab
-
-[Hotkey/TogglePreedit]
-0=Control+Alt+P
 
 [Behavior]
 # Active By Default
