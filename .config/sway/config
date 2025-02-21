@@ -63,10 +63,14 @@ input "type:keyboard" {
 
 ### Key bindings
 
-bindsym $mod+Return exec $term
-bindsym $mod+Shift+q kill
+bindsym $mod+t exec $term
+bindsym $mod+Return exec emacsclient -a "" -c
 bindsym $mod+d exec $menu
+
+bindsym $mod+Shift+q kill
+
 floating_modifier $mod normal
+
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
