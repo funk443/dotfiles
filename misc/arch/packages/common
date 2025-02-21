@@ -20,6 +20,7 @@ gst-plugin-pipewire
 gvfs
 htop
 imagemagick
+inetutils
 jre21-openjdk
 kcmutils
 kdeclarative
