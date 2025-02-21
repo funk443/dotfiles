@@ -56,6 +56,7 @@
  '(custom-enabled-themes '(modus-vivendi))
  '(delete-selection-mode t)
  '(frame-resize-pixelwise t)
+ '(go-ts-mode-indent-offset tab-width)
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
