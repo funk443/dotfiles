@@ -10,3 +10,8 @@ hostname='\[\e[34m\]\h\[\e[0m\]'
 working_dir='\[\e[32m\]\w\[\e[0m\]'
 the_time='\[\e[33m\]\A\[\e[0m\]'
 export PS1="$user at $hostname in $working_dir\n╰ $the_time "
+
+
+# Local Variables:
+# major-mode: bash-ts-mode
+# End:
