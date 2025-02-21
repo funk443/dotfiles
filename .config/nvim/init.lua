@@ -72,26 +72,6 @@ local plugins = {
 			vim.cmd.colorscheme("modus")
 		end,
 	},
-	{
-		"stevearc/conform.nvim",
-		lazy = true,
-		event = { "BufWritePre" },
-		cmd = { "ConformInfo" },
-		opts = {
-			formatters_by_ft = {
-				python = { "black" },
-				lua = { "stylua" },
-				java = { "google-java-format" },
-				c = { "clang-format" },
-				go = { "gofmt" },
-				html = { "prettier" },
-				javascript = { "prettier" },
-				css = { "prettier" },
-				["_"] = { "trim_whitespace" },
-			},
-			format_on_save = {},
-		},
-	},
 	{ "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
 	{ "neovim/nvim-lspconfig" },
 }

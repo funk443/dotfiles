@@ -26,11 +26,6 @@
   :config
   (treesit-auto-add-to-auto-mode-alist))
 
-(use-package apheleia
-  :ensure t
-  :config
-  (apheleia-global-mode 1))
-
 (use-package markdown-mode
   :ensure t
   :hook
