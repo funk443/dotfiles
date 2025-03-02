@@ -60,6 +60,7 @@
  '(current-language-environment "UTF-8")
  '(custom-enabled-themes '(modus-vivendi))
  '(delete-selection-mode t)
+ '(dired-dwim-target 'dired-dwim-target-next)
  '(dired-listing-switches "-alh")
  '(frame-resize-pixelwise t)
  '(go-ts-mode-indent-offset tab-width)
