@@ -5,7 +5,7 @@
                     :family "Iosevka"
                     :inherit 'default)
 (set-face-attribute 'variable-pitch nil
-                    :family "Noto Sans"
+                    :family "Iosevka Slab"
                     :inherit 'default)
 
 (use-package package
