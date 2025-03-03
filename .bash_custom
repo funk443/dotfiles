@@ -3,7 +3,7 @@
 alias ls="ls -Alh --color=auto"
 alias grep="grep --color=auto"
 
-export VISUAL='emacsclient -a "" -c'
+export VISUAL='emacsclient -a "emacs" -c'
 
 user='\[\e[36m\]\u\[\e[0m\]'
 hostname='\[\e[34m\]\h\[\e[0m\]'

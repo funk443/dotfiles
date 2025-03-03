@@ -62,7 +62,7 @@ input "type:keyboard" {
 
 set $term alacritty
 set $menu wmenu-run -f "Iosevka 10"
-set $emacs emacsclient -a "" -c
+set $emacs emacsclient -a "emacs" -c
 
 bindsym $mod+Return exec $emacs
 bindsym $mod+t exec $term
