@@ -24,7 +24,7 @@ set $right l
 ### Output configuration
 
 # Wallpaper
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ./desktop.jpg fill
 
 # Example configuration:
 #
