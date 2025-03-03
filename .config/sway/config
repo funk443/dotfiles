@@ -163,6 +163,8 @@ bindsym $mod+Print exec grim -c
 bindsym Print exec grim -c - | wl-copy
 bindsym $mod+Shift+Print exec grim -g "$(slurp)" - | wl-copy
 
+bindsym $mod+Semicolon exec swaylock -f -c 000000
+
 bar {
     swaybar_command waybar
 }
