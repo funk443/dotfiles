@@ -30,21 +30,3 @@ e. g. `vterm` integration.
 ```console
 $ ln -s ~/dotfiles/.bash_custom ~/
 ```
-
-## Softwares I have config for
-
-- Terminals:
-  - Alacritty
-  - Kitty
-  - Foot
-
-- Editors:
-  - Emacs
-  - Lem
-  - Neovim
-
-- Others:
-  - Bash
-  - i3wm
-  - dunst
-  - git
