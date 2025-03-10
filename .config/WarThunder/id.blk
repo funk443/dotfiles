@@ -117,6 +117,7 @@ controls{
       keyboardKey:i=49
     }
 
+    ID_HIDE_HUD{}
     ID_LOCK_TARGET{
       mouseButton:i=2
     }
@@ -274,11 +275,20 @@ controls{
     }
 
     ID_TRACKER_RESET_POSITION{}
+    ID_WEAPON_LEAD_TANK{
+      keyboardKey:i=56
+      keyboardKey:i=44
+    }
+
     ID_WEAPON_LOCK{
       keyboardKey:i=44
     }
 
     ID_WEAPON_LOCK_HELICOPTER{
+      keyboardKey:i=44
+    }
+
+    ID_WEAPON_LOCK_TANK{
       keyboardKey:i=44
     }
 
