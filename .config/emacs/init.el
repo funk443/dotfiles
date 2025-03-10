@@ -74,6 +74,7 @@
  '(scroll-bar-mode nil)
  '(tab-width 4)
  '(tool-bar-mode nil)
+ '(which-key-mode t)
  '(x-select-enable-clipboard-manager nil))
 
 (custom-set-faces
