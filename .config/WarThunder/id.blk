@@ -377,6 +377,7 @@ controls{
     USEROPT_INVERTY_SPECTATOR:b=no
     USEROPT_INVERTY_SUBMARINE:b=no
     USEROPT_JOYFX:b=yes
+    USEROPT_MOUSE_SENSE:i=11
     USEROPT_MOUSE_USAGE_NO_AIM:i=1
     USEROPT_SHIP_COMBINE_PRI_SEC_TRIGGERS:b=yes
     USEROPT_SINGLE_SHOT_BY_TURRET:b=yes
@@ -396,7 +397,7 @@ settings{
   freeCameraInertia:r=1
   replayCameraWiggle:r=1
   zoomSens:r=0
-  mouseSens:r=0.5
+  mouseSens:r=0.22
   mouseAimSens:r=0.5
   gunnerViewSens:r=1
   gunnerViewZoomSens:r=1
@@ -439,7 +440,7 @@ settings{
   gamepadMinVibration:r=0.05
   cameraSmooth:r=0
   cameraSpeed:r=1.325
-  cameraMouseSpeed:r=3.95
+  cameraMouseSpeed:r=2.525
   cameraFpsPhysMult:r=0.5
   vrCameraFpsPhysMult:r=0
   invertY:b=no
