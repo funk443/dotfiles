@@ -40,7 +40,7 @@
 (defconst my-rubbish-dir (concat user-emacs-directory "rubbish"))
 (unless (file-directory-p my-rubbish-dir)
   (make-directory my-rubbish-dir))
-(setopt backup-directory-alist `((".*" . ,my-rubbish-dir)))
+(setopt backup-directory-alist `(("." . ,my-rubbish-dir)))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 
