@@ -65,7 +65,7 @@ controls{
     }
 
     ID_CONTROL_MODE_HELICOPTER{
-      keyboardKey:i=23
+      keyboardKey:i=19
     }
 
     ID_EXIT_SHOOTING_CYCLE_MODE{
