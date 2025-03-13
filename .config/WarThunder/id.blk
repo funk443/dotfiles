@@ -78,7 +78,7 @@ controls{
     }
 
     ID_FIRE_GM_SPECIAL_GUN{
-      keyboardKey:i=29
+      keyboardKey:i=58
     }
 
     ID_FIRE_SECONDARY_HELICOPTER{
@@ -197,7 +197,7 @@ controls{
     }
 
     ID_SENSOR_TARGET_LOCK_TANK{
-      keyboardKey:i=58
+      keyboardKey:i=29
     }
 
     ID_SQUAD_TARGET_DESIGNATION{
