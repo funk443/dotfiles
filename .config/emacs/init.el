@@ -74,6 +74,9 @@
  '(scroll-bar-mode nil)
  '(tab-width 4)
  '(tool-bar-mode nil)
+ '(tramp-remote-process-environment
+   '("ENV=''" "TMOUT=0" "CDPATH=" "HISTORY=" "MAIL=" "MAILCHECK="
+     "MAILPATH=" "PAGER=cat" "autocorrect=" "correct="))
  '(which-key-mode t)
  '(x-select-enable-clipboard-manager nil))
 
