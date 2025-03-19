@@ -5,6 +5,7 @@ base-devel
 bash-completion
 btrfs-progs
 cmake
+ed
 efibootmgr
 fcitx5-chewing
 fcitx5-configtool
