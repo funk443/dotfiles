@@ -7,6 +7,12 @@
 (set-face-attribute 'variable-pitch nil
                     :family "Iosevka Slab"
                     :inherit 'default)
+(set-fontset-font nil 'han
+                  (font-spec :family "Noto Sans CJK TC")
+                  nil 'prepend)
+(set-fontset-font nil 'kana
+                  (font-spec :family "Noto Sans CJK JP")
+                  nil 'prepend)
 
 (use-package package
   :custom
