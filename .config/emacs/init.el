@@ -78,6 +78,7 @@
  '(package-selected-packages '(magit markdown-mode treesit-auto vterm))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
+ '(sentence-end-double-space nil)
  '(shell-command-prompt-show-cwd t)
  '(tab-width 4)
  '(tool-bar-mode nil)
