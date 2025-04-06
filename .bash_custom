@@ -1,5 +1,7 @@
 # vim: filetype=bash
 
+complete -F _command doas
+
 alias ls="ls -Alh --color=auto"
 alias grep="grep --color=auto"
 
