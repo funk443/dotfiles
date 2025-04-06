@@ -159,8 +159,8 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ to
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
-bindsym $mod+Print exec grim -c -g "$(slurp)"
-bindsym Print exec grim -c
+bindsym Print exec ~/dotfiles/.config/sway/grim.sh
+bindsym $mod+Print exec ~/dotfiles/.config/sway/grim.sh --region
 
 bindsym $mod+Semicolon exec swaylock -f -c 000000
 
