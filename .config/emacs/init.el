@@ -10,6 +10,9 @@
 (set-fontset-font nil 'han
                   (font-spec :family "Noto Sans CJK TC")
                   nil 'prepend)
+(set-fontset-font nil 'bopomofo
+                  (font-spec :family "Noto Sans CJK TC")
+                  nil 'prepend)
 (set-fontset-font nil 'kana
                   (font-spec :family "Noto Sans CJK JP")
                   nil 'prepend)
