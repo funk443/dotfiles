@@ -37,6 +37,7 @@ libva-utils
 linux
 linux-firmware
 loupe
+lshw
 mako
 man-db
 mpv
