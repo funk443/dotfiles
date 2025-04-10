@@ -8,7 +8,8 @@ mkdir -p "$dir"
 output_file="${dir}/$(date +%Y%m%d-%H%M%S).png"
 
 if [ "$1" = "--region" ]; then
-    grim -g "$(slurp)" "$output_file"
+    region=$(slurp) || { notify-send -t 1000 "Canceled."; exit 1; }
+    grim -g "$region" "$output_file"
 else
     grim "$output_file"
 fi
