@@ -109,5 +109,6 @@ xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
 xorg-xwayland
+yt-dlp
 zip
 zram-generator
