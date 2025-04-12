@@ -72,7 +72,7 @@ openssh
 pacman
 patch
 pavucontrol
-pcmanfm
+pcmanfm-gtk3
 pipewire
 pipewire-alsa
 pipewire-jack
