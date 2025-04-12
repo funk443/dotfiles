@@ -16,6 +16,7 @@ fakeroot
 fastfetch
 fcitx5-chewing
 fcitx5-configtool
+ffmpegthumbnailer
 file
 findutils
 firefox
@@ -94,6 +95,7 @@ texinfo
 tk
 transmission-gtk
 tree
+tumbler
 ufw
 unzip
 vlc
