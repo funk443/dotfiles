@@ -4,6 +4,7 @@ include machines/amd-pc.conf
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec mako
 exec fcitx5 -dr
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 font pango:Iosevka 10
 

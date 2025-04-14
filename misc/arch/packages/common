@@ -20,6 +20,7 @@ ffmpegthumbnailer
 file
 findutils
 firefox
+firewalld
 flatpak
 flex
 fuse2
@@ -79,6 +80,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 pkgconf
+polkit-gnome
 pyright
 python-black
 python-pip
@@ -96,7 +98,6 @@ tk
 transmission-gtk
 tree
 tumbler
-ufw
 unzip
 vlc
 waybar
