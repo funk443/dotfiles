@@ -13,6 +13,7 @@ workspace_layout tabbed
 
 xwayland enable
 for_window [shell="xwayland"] title_format "[X11] %title"
+for_window [all] inhibit_idle fullscreen
 
 # Super key as mod.
 set $mod Mod4
