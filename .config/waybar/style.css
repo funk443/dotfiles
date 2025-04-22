@@ -12,6 +12,10 @@ window#waybar, tooltip, #tray menu {
     color: white;
 }
 
+#tray menuitem:hover {
+    background-color: #303030;
+}
+
 #workspaces button{
     padding: 0 5px;
 }
