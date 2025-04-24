@@ -24,6 +24,10 @@
      ("gnu"    . "https://elpa.gnu.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/"))))
 
+(use-package tramp
+  :config
+  (tramp-enable-method "run0"))
+
 (use-package eglot
   :custom
   (eglot-autoshutdown t))
