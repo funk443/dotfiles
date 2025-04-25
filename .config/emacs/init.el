@@ -1,11 +1,11 @@
 (set-face-attribute 'default nil
-                    :family "Iosevka"
+                    :family "DejaVu Sans Mono"
                     :height 200)
 (set-face-attribute 'fixed-pitch nil
-                    :family "Iosevka"
+                    :family "DejaVu Sans Mono"
                     :inherit 'default)
 (set-face-attribute 'variable-pitch nil
-                    :family "Iosevka Slab"
+                    :family "DejaVu Sans"
                     :inherit 'default)
 (set-fontset-font nil 'han
                   (font-spec :family "Noto Sans CJK TC")
