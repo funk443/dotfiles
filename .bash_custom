@@ -15,7 +15,7 @@ the_time='\[\e[33m\]\A\[\e[0m\]'
 if [ "$TERM" = "dumb" ]; then
     export PS1="\$ "
 else
-    export PS1="$user at $hostname in $working_dir\n╰ $the_time "
+    export PS1="$user at $hostname in $working_dir\n| $the_time "
 fi
 
 if [[ "$INSIDE_EMACS" = 'vterm' ]] \
