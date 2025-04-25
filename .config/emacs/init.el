@@ -1,11 +1,11 @@
 (set-face-attribute 'default nil
-                    :family "Noto Sans Mono"
+                    :family "Source Code Pro"
                     :height 200)
 (set-face-attribute 'fixed-pitch nil
-                    :family "Noto Sans Mono"
+                    :family "Source Code Pro"
                     :inherit 'default)
 (set-face-attribute 'variable-pitch nil
-                    :family "Noto Sans"
+                    :family "Source Sans 3"
                     :inherit 'default)
 (set-fontset-font nil 'han
                   (font-spec :family "Noto Sans CJK TC")
