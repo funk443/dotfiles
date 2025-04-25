@@ -1,11 +1,11 @@
 (set-face-attribute 'default nil
-                    :family "DejaVu Sans Mono"
+                    :family "Liberation Mono"
                     :height 200)
 (set-face-attribute 'fixed-pitch nil
-                    :family "DejaVu Sans Mono"
+                    :family "Liberation Mono"
                     :inherit 'default)
 (set-face-attribute 'variable-pitch nil
-                    :family "DejaVu Sans"
+                    :family "Liberation Sans"
                     :inherit 'default)
 (set-fontset-font nil 'han
                   (font-spec :family "Noto Sans CJK TC")

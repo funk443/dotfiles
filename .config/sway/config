@@ -6,7 +6,7 @@ exec mako
 exec fcitx5 -dr
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-font pango:DejaVu Sans 10
+font pango:Liberation Sans 10
 
 focus_follows_mouse no
 workspace_layout tabbed
@@ -63,7 +63,7 @@ input "type:keyboard" {
 ### Key bindings
 
 set $term alacritty
-set $menu wmenu-run -f "DejaVu Sans Mono 10"
+set $menu wmenu-run -f "Liberation Mono 10"
 set $emacs emacsclient -a "emacs" -c
 
 bindsym $mod+Return exec $emacs

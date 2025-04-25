@@ -2,7 +2,7 @@
     all: unset;
     border: none;
     border-radius: 0;
-    font-family: 'DejaVu Sans', 'Noto Sans CJK TC';
+    font-family: 'Liberation Sans', 'Noto Sans CJK TC';
     font-size: 10pt;
     min-height: 0;
 }
