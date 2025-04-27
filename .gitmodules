@@ -1,0 +1,4 @@
+[submodule ".local/share/themes/Skewaita"]
+	path = .local/share/themes/Skewaita
+	url = https://git.disroot.org/eudaimon/Skewaita.git
+    ignore = dirty
