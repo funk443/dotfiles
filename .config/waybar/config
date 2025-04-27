@@ -2,13 +2,16 @@
     "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
     "modules-center": [],
     "include": "~/.config/waybar/machines/amd-pc.jsonc",
+    "load": {
+        "interval": 5
+    },
     "pulseaudio": {
         "format-muted": "muted"
     },
     "clock": {
         "interval": 5,
         "format": "{:%Y-%m-%d %a %H:%M:%S}",
-        "tooltip-format": "time",
+        "tooltip-format": "time"
     },
     "tray": {
         "spacing": 10

@@ -28,6 +28,6 @@ window#waybar, tooltip, #tray menu {
     background-color: red;
 }
 
-#clock, #battery, #pulseaudio {
+#load, #clock, #battery, #pulseaudio {
     padding-left: 10px;
 }
