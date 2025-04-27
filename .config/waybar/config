@@ -3,11 +3,12 @@
     "modules-center": [],
     "include": "~/.config/waybar/machines/amd-pc.jsonc",
     "load": {
-        "interval": 5
+        "format": "{load1:0.2f}/{load5:0.2f}/{load15:0.2f}",
+        "tooltip": false
     },
     "memory": {
-        "format": "{used}/{swapUsed}",
-        "tooltip-format": "RAM/Swap"
+        "format": "{used:0.2f}/{swapUsed:0.2f}",
+        "tooltip-format": "{total:0.2f}/{swapTotal:0.2f}"
     },
     "pulseaudio": {
         "format-muted": "muted"
