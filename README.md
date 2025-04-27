@@ -16,12 +16,14 @@ and clean.
 
 ## Quick start
 
+### General software configs
+
 I usually clone this repositoy under my home directory.
 
 ```console
 # Replace emacs with other things.
 $ mkdir ~/.config/emacs
-$ ln -s -t ~/.config/emacs ~/dotfiles/.config/emacs/*
+$ ln -s ~/dotfiles/.config/emacs/* ~/.config/emacs
 ```
 
 There is also a `.bash_custom` file for my bash customisation, e. g.
@@ -29,4 +31,31 @@ There is also a `.bash_custom` file for my bash customisation, e. g.
 
 ```console
 $ ln -s ~/dotfiles/.bash_custom ~/
+```
+
+### GTK stuffs
+
+I'm currently using
+[Skewaita](https://git.disroot.org/eudaimon/Skewaita.git) GTK theme
+and [Oxylite](https://github.com/mx-2/oxylite-icon-theme) icon pack.
+
+I will make a script to automate the setup of the theme and icon, why
+can't GNOME just use something like a dotfile that can be loaded by
+`gsettings` or other shits?
+
+For now, run these commands:
+
+```console
+$ cd .local/share/themes/Skewaita/source/templates
+$ ./use_scheme.sh colorscheme-dark-adwaita.sh
+$ cd .local/share/themes/Skewaita/source
+$ ./compile.sh dark
+
+$ gsettings set org.gnome.desktop.interface gtk-theme Skewaita
+$ gsettings set org.gnome.desktop.interface icon-theme oxylite
+$ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
+$ gsettings set org.gnome.desktop.interface font-name "Source Sans 3 12"
+$ gsettings set org.gnome.desktop.interface monospace-font-name "Source Code Pro 12"
+$ gsettings set org.gnome.desktop.interface document-font-name "Source Seirf 4 12"
 ```
