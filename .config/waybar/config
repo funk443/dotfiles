@@ -6,12 +6,8 @@
         "interval": 5
     },
     "memory": {
-        "format": "{used}",
-        "tooltip-format": "RAM"
-    },
-    "memory#swap": {
-        "format": "{swapUsed}",
-        "tooltip-format": "Swap"
+        "format": "{used}/{swapUsed}",
+        "tooltip-format": "RAM/Swap"
     },
     "pulseaudio": {
         "format-muted": "muted"
