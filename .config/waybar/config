@@ -5,6 +5,14 @@
     "load": {
         "interval": 5
     },
+    "memory": {
+        "format": "{used}",
+        "tooltip-format": "RAM"
+    },
+    "memory#swap": {
+        "format": "{swapUsed}",
+        "tooltip-format": "Swap"
+    },
     "pulseaudio": {
         "format-muted": "muted"
     },
