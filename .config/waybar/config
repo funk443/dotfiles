@@ -19,7 +19,7 @@
     "clock": {
         "interval": 5,
         "format": "{:%Y-%m-%d %a %H:%M:%S}",
-        "tooltip-format": "time"
+        "tooltip": false
     },
     "tray": {
         "spacing": 10
