@@ -73,7 +73,6 @@ local plugins = {
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
-    { "neovim/nvim-lspconfig" },
 }
 
 -- }}}
@@ -116,26 +115,6 @@ local lazy_opts = {
 require("lazy").setup(plugins, lazy_opts)
 
 -- }}}
-
--- }}}
-
--- LSP configs {{{
-
-local lsp = require("lspconfig")
-lsp.pyright.setup({})
-lsp.jdtls.setup({})
-lsp.gopls.setup({})
-
-if vim.version().minor >= 11 then
-    vim.api.nvim_create_autocmd("LspAttach", {
-        callback = function(args)
-            local client = vim.lsp.get_client_by_id(args.data.client_id)
-            if client:supports_method("textDocument/completion") then
-                vim.lsp.completion.enable(true, client.id, args.buf, {})
-            end
-        end,
-    })
-end
 
 -- }}}
 

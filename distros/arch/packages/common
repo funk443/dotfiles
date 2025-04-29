@@ -34,7 +34,6 @@ gimp
 git
 git-lfs
 go
-gopls
 grep
 grim
 groff
@@ -83,8 +82,6 @@ pipewire-jack
 pipewire-pulse
 pkgconf
 polkit-gnome
-pyright
-python-black
 python-pip
 qt5-wayland
 sed
