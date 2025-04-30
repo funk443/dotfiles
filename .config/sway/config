@@ -62,8 +62,8 @@ input "type:keyboard" {
 
 ### Key bindings
 
-set $term alacritty
 set $menu wmenu-run -f "Source CodePro 10"
+set $term foot
 set $emacs emacsclient -a "emacs" -c
 
 bindsym $mod+Return exec $emacs
