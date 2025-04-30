@@ -1,21 +1,22 @@
-(set-face-attribute 'default nil
-                    :family "Source Code Pro"
-                    :height 200)
-(set-face-attribute 'fixed-pitch nil
-                    :family "Source Code Pro"
-                    :inherit 'default)
-(set-face-attribute 'variable-pitch nil
-                    :family "Source Sans 3"
-                    :inherit 'default)
-(set-fontset-font nil 'han
-                  (font-spec :family "Noto Sans CJK TC")
-                  nil 'prepend)
-(set-fontset-font nil 'bopomofo
-                  (font-spec :family "Noto Sans CJK TC")
-                  nil 'prepend)
-(set-fontset-font nil 'kana
-                  (font-spec :family "Noto Sans CJK JP")
-                  nil 'prepend)
+(when (display-graphic-p)
+  (set-face-attribute 'default nil
+                      :family "Source Code Pro"
+                      :height 200)
+  (set-face-attribute 'fixed-pitch nil
+                      :family "Source Code Pro"
+                      :inherit 'default)
+  (set-face-attribute 'variable-pitch nil
+                      :family "Source Sans 3"
+                      :inherit 'default)
+  (set-fontset-font nil 'han
+                    (font-spec :family "Noto Sans CJK TC")
+                    nil 'prepend)
+  (set-fontset-font nil 'bopomofo
+                    (font-spec :family "Noto Sans CJK TC")
+                    nil 'prepend)
+  (set-fontset-font nil 'kana
+                    (font-spec :family "Noto Sans CJK JP")
+                    nil 'prepend))
 
 (use-package package
   :custom
