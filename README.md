@@ -48,7 +48,7 @@ For now, run these commands:
 ```console
 $ cd .local/share/themes/Skewaita/source/templates
 $ ./use_scheme.sh colorscheme-dark-adwaita.sh
-$ cd .local/share/themes/Skewaita/source
+$ cd ..
 $ ./compile.sh dark
 
 $ gsettings set org.gnome.desktop.interface gtk-theme Skewaita
