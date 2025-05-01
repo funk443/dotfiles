@@ -39,11 +39,13 @@ I'm currently using
 [Skewaita](https://git.disroot.org/eudaimon/Skewaita.git) GTK theme
 and [Oxylite](https://github.com/mx-2/oxylite-icon-theme) icon pack.
 
-I will make a script to automate the setup of the theme and icon, why
-can't GNOME just use something like a dotfile that can be loaded by
-`gsettings` or other shits?
-
-For now, run these commands:
+The script [theme-setup.sh](./theme-setup.sh) should do all the works
+for you. simply run `./theme-setup.sh all` and things should be done.
+but I don't know if this script I wrote (I'm not a Bash master) is
+robust enough to run on every machine, something could go horribly
+wrong (no `rm` is used in the script, so the most severe case should
+be a few symlinks and files littered in your home directory,) so use
+at your own risk. To deploy the themes by yourself, run:
 
 ```console
 $ cd .local/share/themes/Skewaita/source/templates
