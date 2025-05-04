@@ -1,3 +1,4 @@
+# -*- mode: bash-ts; -*-
 # vim: filetype=bash
 
 alias ls="ls -Alh --color=auto"
