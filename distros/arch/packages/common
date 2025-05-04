@@ -25,7 +25,6 @@ firefox
 firewalld
 flatpak
 flex
-foot
 fuse2
 gawk
 gcc
@@ -48,6 +47,7 @@ kcmutils
 kdeclarative
 keepassxc
 kirigami
+kitty
 ksvg
 libgccjit
 libnotify
