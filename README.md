@@ -61,3 +61,9 @@ $ gsettings set org.gnome.desktop.interface font-name "Source Sans 3 12"
 $ gsettings set org.gnome.desktop.interface monospace-font-name "Source Code Pro 12"
 $ gsettings set org.gnome.desktop.interface document-font-name "Source Seirf 4 12"
 ```
+
+## Excluded directories
+
+- `~/.config/{notmuch,msmtp,offlineimap}`: These directories have
+  plain text passwords in them, system secret support is yet to be
+  implemented.

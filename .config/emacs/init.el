@@ -18,6 +18,7 @@
                     (font-spec :family "Noto Sans CJK JP")
                     nil 'prepend))
 
+(add-to-list 'load-path "/usr/share/emacs/site-lisp")
 (use-package package
   :custom
   (package-archives
@@ -42,6 +43,17 @@
 
 (use-package magit
   :ensure t)
+
+(use-package notmuch
+  :commands (notmuch)
+  :custom
+  (mail-specify-envelope-from t)
+  (mail-envelope-from 'header)
+  (message-signature "Best,\nID\n")
+  (notmuch-fcc-dirs nil)
+  (message-citation-line-function #'message-insert-formatted-citation-line)
+  (message-citation-line-format "\nOn %Y-%m-%d %R%z, %f wrote:\n")
+  (message-cite-reply-position 'below))
 
 (use-package treesit-auto
   :ensure t
@@ -99,6 +111,7 @@
    '(edit-indirect fish-mode magit markdown-mode treesit-auto vterm))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
+ '(send-mail-function 'sendmail-send-it)
  '(sentence-end-double-space nil)
  '(shell-command-prompt-show-cwd t)
  '(tool-bar-mode nil)

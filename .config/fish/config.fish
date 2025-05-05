@@ -45,7 +45,7 @@ else
         set_color red
         printf "%s" "$hostname"
         set_color normal
-        
+
         printf ". "
 
         set_color green
@@ -73,6 +73,7 @@ end
 
 # Environmental variables.
 set -gx VISUAL nvim
+set -gx XAPIAN_CJK_NGRAM 1
 
 # Emacs vterm configuration.
 # Placed in here because files from conf.d is read before this file,
