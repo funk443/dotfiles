@@ -60,7 +60,7 @@ function ls -w /usr/bin/ls -d "ls with some custom options."
 end
 
 function grep -w /usr/bin/grep -d "grep with color."
-    /usr/bin/grep --color=auto
+    /usr/bin/grep --color=auto $argv
 end
 
 function kssh -w /usr/bin/ssh -d "ssh over kitten."
