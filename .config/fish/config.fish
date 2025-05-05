@@ -16,7 +16,7 @@ else
     end
 
     function fish_greeting -d "ID's custom welcome message."
-        printf "urmom.\n"
+        printf "%s%s%s\n" (set_color brred) "urmom." (set_color normal)
     end
 end
 
