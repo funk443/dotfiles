@@ -58,6 +58,9 @@
 (use-package edit-indirect
   :ensure t)
 
+(use-package fish-mode
+  :ensure t)
+
 (defconst my-rubbish-dir (concat user-emacs-directory "rubbish"))
 (unless (file-directory-p my-rubbish-dir)
   (make-directory my-rubbish-dir))
@@ -92,7 +95,8 @@
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(package-selected-packages '(edit-indirect magit markdown-mode treesit-auto vterm))
+ '(package-selected-packages
+   '(edit-indirect fish-mode magit markdown-mode treesit-auto vterm))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
