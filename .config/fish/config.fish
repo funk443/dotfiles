@@ -8,23 +8,48 @@ if contains dumb "$TERM"
     end
 else
     function fish_prompt -d "ID's custom prompt."
-        printf '%s%s%s at %s%s%s in %s%s%s\n|-%s%s%s ' \
-            (set_color cyan)   "$USER"                        (set_color normal) \
-            (set_color green)  "$hostname"                    (set_color normal) \
-            (set_color blue)   "$(prompt_pwd --dir-length=5)" (set_color normal) \
-            (set_color yellow) "$(date +%H:%M)"               (set_color normal)
+        set_color cyan
+        printf "%s" "$USER"
+        set_color normal
+
+        printf " at "
+
+        set_color green
+        printf "%s" "$hostname"
+        set_color normal
+
+        printf " in "
+
+        set_color blue
+        printf "%s" "$(prompt_pwd --dir-length=5)"
+        set_color normal
+
+        printf "\n|-"
+
+        set_color yellow
+        printf "%s" "$(date +%H:%M)"
+        set_color normal
+
+        printf " "
     end
 
     function fish_greeting -d "ID's custom welcome message."
-        printf "%s%s%s%s%s" \
-            (set_color blue) ">" \
-            (set_color green) "<>" \
-            (set_color normal)
-        printf " %s%s%s " (set_color red) "urmom" (set_color normal)
-        printf "%s%s%s%s%s" \
-            (set_color green) "<>" \
-            (set_color blue) "<" \
-            (set_color normal)
+        set_color blue
+        printf ">"
+        set_color green
+        printf "<>"
+        set_color normal
+
+        set_color red
+        printf " urmom "
+        set_color normal
+
+        set_color green
+        printf "<>"
+        set_color blue
+        printf "<"
+        set_color normal
+
         printf "\n"
     end
 end
