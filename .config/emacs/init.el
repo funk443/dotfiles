@@ -26,6 +26,10 @@
      ("nongnu" . "https://elpa.nongnu.org/nongnu/"))))
 
 (use-package tramp
+  :custom
+  (tramp-remote-process-environment
+   '("ENV=''" "TMOUT=0" "CDPATH=" "HISTORY=" "MAIL=" "MAILCHECK="
+     "MAILPATH=" "PAGER=cat" "autocorrect=" "correct="))
   :config
   (tramp-enable-method "run0"))
 
@@ -63,8 +67,11 @@
 
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
+(keymap-global-set   "C-c C-u C-c" #'compile)
 
-(keymap-global-set "C-c C-u C-c" #'compile)
+;; Set indent offset of major modes here.
+(setopt tab-width                4
+        go-ts-mode-indent-offset tab-width)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -81,7 +88,6 @@
  '(dired-dwim-target 'dired-dwim-target-next)
  '(dired-listing-switches "-alh")
  '(frame-resize-pixelwise t)
- '(go-ts-mode-indent-offset tab-width)
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
@@ -91,11 +97,7 @@
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(shell-command-prompt-show-cwd t)
- '(tab-width 4)
  '(tool-bar-mode nil)
- '(tramp-remote-process-environment
-   '("ENV=''" "TMOUT=0" "CDPATH=" "HISTORY=" "MAIL=" "MAILCHECK="
-     "MAILPATH=" "PAGER=cat" "autocorrect=" "correct="))
  '(which-key-mode t)
  '(x-select-enable-clipboard-manager nil))
 
