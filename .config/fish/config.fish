@@ -39,6 +39,7 @@ set -gx VISUAL nvim
 # Emacs vterm configuration.
 # Placed in here because files from conf.d is read before this file,
 # and the prompt defined in there will be overwritten.
-if test "$INSIDE_EMACS" = "vterm"
-    . "$(status dirname)"/emacs-vterm.fish
+set -l vterm_fish_location "$(status dirname)/emacs-vterm.fish"
+if test "$INSIDE_EMACS" = "vterm"; and test -f "$vterm_fish_location"
+    . "$vterm_fish_location"
 end
