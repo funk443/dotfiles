@@ -40,8 +40,10 @@ else
         printf "<>"
         set_color normal
 
+        printf " You're now at machine "
+
         set_color red
-        printf " urmom "
+        printf "%s " "$hostname"
         set_color normal
 
         set_color green
