@@ -16,7 +16,12 @@ else
     end
 
     function fish_greeting -d "ID's custom welcome message."
-        printf "%s%s%s\n" (set_color brred) "urmom." (set_color normal)
+        printf "%s%s%s%s%s" (set_color blue) ">" (set_color green) "<>" \
+            (set_color normal)
+        printf " %s%s%s " (set_color red) "urmom" (set_color normal)
+        printf "%s%s%s%s%s" (set_color green) "<>" (set_color blue) "<" \
+            (set_color normal)
+        printf "\n"
     end
 end
 
