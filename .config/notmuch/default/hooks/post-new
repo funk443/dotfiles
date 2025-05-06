@@ -1,0 +1,3 @@
+#!/usr/bin/fish
+
+notmuch tag +emacs-devel -- from:emacs-devel@gnu.org to:emacs-devel@gnu.org
