@@ -1,7 +1,7 @@
 # Prompt and welcome message customization.
 if test "$TERM" = "dumb" 
-    exec /usr/bin/bash
-    exit 0
+    exec sh
+    exit
 else
     function fish_prompt -d "ID's custom prompt."
         set_color cyan
