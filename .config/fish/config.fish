@@ -1,11 +1,7 @@
 # Prompt and welcome message customization.
-if contains dumb "$TERM"
-    function fish_prompt -d "Simpler prompt for dumb terminals."
-        printf '$ '
-    end
-
-    function fish_greeting -d "Disable welcome message for dumb terminals."
-    end
+if test "$TERM" = "dumb" 
+    exec /usr/bin/bash
+    exit 0
 else
     function fish_prompt -d "ID's custom prompt."
         set_color cyan
