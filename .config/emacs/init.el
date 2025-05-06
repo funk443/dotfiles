@@ -56,7 +56,13 @@
   (message-cite-reply-position 'below)
   (send-mail-function 'sendmail-send-it)
   (notmuch-saved-searches
-   '((:name "inbox"
+   '((:name "emacs-devel"
+            :query "tag:emacs-devel"
+            :sort-order newest-first)
+     (:name "lkml"
+            :query "tag:lkml"
+            :sort-order newest-first)
+     (:name "inbox"
             :query "tag:inbox"
             :key "i"
             :sort-order newest-first)
