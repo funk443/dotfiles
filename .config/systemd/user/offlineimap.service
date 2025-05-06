@@ -5,7 +5,7 @@ Description = fetch email with offlineimap
 [Service]
 
 Type = oneshot
-ExecStart = /home/id/.config/systemd/user/offlineimap.fish
+ExecStart = notmuch new
 
 [Install]
 
