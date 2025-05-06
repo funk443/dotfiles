@@ -1,7 +1,7 @@
 {
     "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
     "modules-center": [],
-    "include": "~/.config/waybar/machines/amd-pc.jsonc",
+    "include": "~/.config/waybar/machines/thinkpad.jsonc",
     "load": {
         "format": "{load1:0.2f}/{load5:0.2f}/{load15:0.2f}",
         "tooltip": false
