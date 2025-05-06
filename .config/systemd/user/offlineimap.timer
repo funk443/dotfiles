@@ -1,0 +1,12 @@
+[Unit]
+
+Description = fetch email with offlineimap
+
+[Timer]
+
+OnCalendar = *:0/5
+Unit = offlineimap.service
+
+[Install]
+
+WantedBy = timers.target

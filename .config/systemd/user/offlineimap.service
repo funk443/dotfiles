@@ -1,0 +1,12 @@
+[Unit]
+
+Description = fetch email with offlineimap
+
+[Service]
+
+Type = oneshot
+ExecStart = /home/id/.config/systemd/user/offlineimap.fish
+
+[Install]
+
+WantedBy = default.target
