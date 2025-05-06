@@ -53,7 +53,32 @@
   (notmuch-fcc-dirs nil)
   (message-citation-line-function #'message-insert-formatted-citation-line)
   (message-citation-line-format "\nOn %Y-%m-%d %R%z, %f wrote:\n")
-  (message-cite-reply-position 'below))
+  (message-cite-reply-position 'below)
+  (notmuch-saved-searches
+   '((:name "inbox"
+            :query "tag:inbox"
+            :key "i"
+            :sort-order newest-first)
+     (:name "unread"
+            :query "tag:unread"
+            :key "u"
+            :sort-order newest-first)
+     (:name "flagged"
+            :query "tag:flagged"
+            :key "f"
+            :sort-order newest-first)
+     (:name "sent"
+            :query "tag:sent"
+            :key "t"
+            :sort-order newest-first)
+     (:name "drafts"
+            :query "tag:draft"
+            :key "d"
+            :sort-order newest-first)
+     (:name "all mail"
+            :query "*"
+            :key "a"
+            :sort-order newest-first))))
 
 (use-package treesit-auto
   :ensure t
