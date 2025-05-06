@@ -54,6 +54,7 @@
   (message-citation-line-function #'message-insert-formatted-citation-line)
   (message-citation-line-format "\nOn %Y-%m-%d %R%z, %f wrote:\n")
   (message-cite-reply-position 'below)
+  (send-mail-function 'sendmail-send-it)
   (notmuch-saved-searches
    '((:name "inbox"
             :query "tag:inbox"
@@ -136,7 +137,6 @@
    '(edit-indirect fish-mode magit markdown-mode treesit-auto vterm))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
- '(send-mail-function 'sendmail-send-it)
  '(sentence-end-double-space nil)
  '(shell-command-prompt-show-cwd t)
  '(tool-bar-mode nil)
