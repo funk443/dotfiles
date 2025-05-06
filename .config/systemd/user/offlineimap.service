@@ -6,6 +6,7 @@ Description = fetch email with offlineimap
 
 Type = oneshot
 ExecStart = notmuch new
+StandardOutput = null
 
 [Install]
 
