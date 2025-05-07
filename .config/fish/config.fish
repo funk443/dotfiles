@@ -1,7 +1,10 @@
 # Prompt and welcome message customization.
 if test "$TERM" = "dumb" 
-    exec sh
-    exit
+    function fish_prompt
+        printf '$ '
+    end
+
+    function fish_greeting; end
 else
     function fish_prompt
         set_color cyan
