@@ -3,7 +3,7 @@ if test "$TERM" = "dumb"
     exec sh
     exit
 else
-    function fish_prompt -d "ID's custom prompt."
+    function fish_prompt
         set_color cyan
         printf "%s" "$USER"
         set_color normal
@@ -29,7 +29,7 @@ else
         printf " "
     end
 
-    function fish_greeting -d "ID's custom welcome message."
+    function fish_greeting
         set_color blue
         printf ">"
         set_color green
