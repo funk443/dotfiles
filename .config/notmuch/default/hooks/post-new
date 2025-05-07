@@ -1,4 +1,4 @@
-#!/usr/bin/fish
+#!/bin/dash
 
 notmuch tag +emacs-devel -inbox -- from:emacs-devel@gnu.org OR to:emacs-devel@gnu.org
 notmuch tag +lkml -inbox -- from:linux-kernel@vger.kernel.org OR to:linux-kernel@vger.kernel.org
