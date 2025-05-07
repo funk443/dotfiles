@@ -1,6 +1,5 @@
 alias ls="/usr/bin/ls -alh --color=auto"
 alias grep="/usr/bin/grep --color=auto"
-alias kssh="kitten ssh"
 
 export PS1="$(whoami) at $(hostname) \$ "
 export VISUAL=nvim

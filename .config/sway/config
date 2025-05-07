@@ -62,7 +62,7 @@ input "type:keyboard" {
 
 ### Key bindings
 
-set $term kitty
+set $term alacritty
 set $menu wmenu-run -f "Source Code Pro 10"
 set $emacs emacsclient -a "emacs" -c
 
