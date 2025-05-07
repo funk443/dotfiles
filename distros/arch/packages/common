@@ -11,6 +11,7 @@ binutils
 bison
 btrfs-progs
 cmake
+dash
 debugedit
 ed
 efibootmgr
@@ -23,7 +24,6 @@ file
 findutils
 firefox
 firewalld
-fish
 flatpak
 flex
 fuse2
