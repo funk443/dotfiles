@@ -102,9 +102,6 @@
 (use-package edit-indirect
   :ensure t)
 
-(use-package fish-mode
-  :ensure t)
-
 (use-package text-mode
   :hook
   (text-mode . auto-fill-mode))
@@ -145,8 +142,7 @@
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
  '(modus-themes-variable-pitch-ui t)
- '(package-selected-packages
-   '(edit-indirect fish-mode magit markdown-mode treesit-auto vterm))
+ '(package-selected-packages '(edit-indirect magit markdown-mode treesit-auto vterm))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
