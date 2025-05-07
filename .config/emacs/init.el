@@ -144,6 +144,7 @@
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
+ '(modus-themes-variable-pitch-ui t)
  '(package-selected-packages
    '(edit-indirect fish-mode magit markdown-mode treesit-auto vterm))
  '(save-interprogram-paste-before-kill t)
