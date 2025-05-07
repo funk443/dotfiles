@@ -105,10 +105,6 @@
 (use-package fish-mode
   :ensure t)
 
-(use-package text-mode
-  :hook
-  (text-mode . auto-fill-mode))
-
 (defconst my-rubbish-dir (concat user-emacs-directory "rubbish"))
 (unless (file-directory-p my-rubbish-dir)
   (make-directory my-rubbish-dir))
@@ -138,7 +134,6 @@
  '(delete-selection-mode t)
  '(dired-dwim-target 'dired-dwim-target-next)
  '(dired-listing-switches "-alh")
- '(fill-column 80)
  '(frame-resize-pixelwise t)
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
