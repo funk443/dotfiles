@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 set -xe
 
@@ -9,15 +9,15 @@ icon_ver="v1.1.5"
 icon_file="oxylite-icon-theme-${icon_ver}.tar.gz"
 icon_url="https://github.com/mx-2/oxylite-icon-theme/releases/download/${icon_ver}/${icon_file}"
 icons_dir="${HOME}/.local/share/icons"
-function setup_icon {
+setup_icon() {
     mkdir -p "${icons_dir}"
     cd "${icons_dir}"
 
-    if ! test -f "${icon_file}"; then
+    if test ! -f "${icon_file}"; then
         curl -LO "${icon_url}"
     fi
 
-    if ! test -d "oxylite"; then
+    if test ! -d "oxylite"; then
         tar -xa -f "${icon_file}"
     fi
 
@@ -26,7 +26,7 @@ function setup_icon {
 
 theme_rel_location=".local/share/themes/Skewaita"
 themes_dir="${HOME}/.local/share/themes"
-function setup_gtk_theme {
+setup_gtk_theme() {
     cd "${basedir}"
 
     git submodule init
@@ -38,7 +38,7 @@ function setup_gtk_theme {
     ./compile.sh dark
 
     mkdir -p "${themes_dir}"
-    if ! test -h "${themes_dir}/Skewaita"; then
+    if test ! -h "${themes_dir}/Skewaita"; then
         ln -s "${basedir}/${theme_rel_location}" "${themes_dir}/"
     fi
 
@@ -46,7 +46,7 @@ function setup_gtk_theme {
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 }
 
-function setup_fonts {
+setup_fonts() {
     gsettings set org.gnome.desktop.interface font-name "Source Sans 3 12"
     gsettings set org.gnome.desktop.interface monospace-font-name "Source Code Pro 12"
     gsettings set org.gnome.desktop.interface document-font-name "Source Seirf 4 12"
