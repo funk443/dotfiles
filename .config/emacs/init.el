@@ -59,9 +59,6 @@
    '((:name "emacs-devel"
             :query "tag:emacs-devel"
             :sort-order newest-first)
-     (:name "lkml"
-            :query "tag:lkml"
-            :sort-order newest-first)
      (:name "inbox"
             :query "tag:inbox"
             :key "i"
