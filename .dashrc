@@ -1,6 +1,6 @@
 alias ls="/usr/bin/ls -alh --color=auto"
 alias grep="/usr/bin/grep --color=auto"
 
-export PS1="$(whoami) at $(hostname) \$ "
+export PS1="$(whoami) at $(hostname)\$ "
 export VISUAL=nvim
 export XAPIAN_CJK_NGRAM=1
