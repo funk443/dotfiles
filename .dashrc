@@ -1,3 +1,5 @@
+set -o emacs
+
 alias ls="/usr/bin/ls -alh --color=auto"
 alias grep="/usr/bin/grep --color=auto"
 
