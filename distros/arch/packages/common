@@ -20,6 +20,7 @@ fakeroot
 fastfetch
 fcitx5-chewing
 fcitx5-configtool
+fd
 ffmpegthumbnailer
 file
 findutils
@@ -85,6 +86,7 @@ pkgconf
 polkit-gnome
 python-pip
 qt5-wayland
+ripgrep
 sed
 slurp
 sof-firmware
