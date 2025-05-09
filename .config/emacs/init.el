@@ -18,7 +18,6 @@
                     (font-spec :family "Noto Sans CJK JP")
                     nil 'prepend))
 
-(add-to-list 'load-path "/usr/share/emacs/site-lisp")
 (use-package package
   :custom
   (package-archives
@@ -46,6 +45,8 @@
 
 (use-package notmuch
   :commands (notmuch)
+  :init
+  (add-to-list 'load-path "/usr/share/emacs/site-lisp")
   :custom
   (mail-specify-envelope-from t)
   (mail-envelope-from 'header)
@@ -99,16 +100,13 @@
 (use-package edit-indirect
   :ensure t)
 
-(use-package text-mode
-  :hook
-  (text-mode . auto-fill-mode))
-
 (defconst my-rubbish-dir (concat user-emacs-directory "rubbish"))
 (unless (file-directory-p my-rubbish-dir)
   (make-directory my-rubbish-dir))
 (setopt backup-directory-alist `(("." . ,my-rubbish-dir)))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
+(add-hook 'text-mode-hook (lambda () (auto-fill-mode 1)))
 (add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
 
 (keymap-global-unset "C-z")
