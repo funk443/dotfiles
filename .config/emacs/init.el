@@ -109,6 +109,7 @@
 (setopt backup-directory-alist `(("." . ,my-rubbish-dir)))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
+(add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
 
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
