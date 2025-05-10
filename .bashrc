@@ -10,7 +10,7 @@ export HISTFILE=
 alias ls="/usr/bin/ls -alh --color=auto"
 alias grep="/usr/bin/grep --color=auto"
 
-export PS1='[\u@\h \W]\$ '
+export PS1='\h:\W> '
 export VISUAL=nvim
 export XAPIAN_CJK_NGRAM=1
 
