@@ -5,6 +5,12 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+if [[ "$TERM" = "dumb" ]]; then
+    set +o emacs vi
+    export PS1='$ '
+    return
+fi
+
 unset HISTFILE
 
 alias ls="/usr/bin/ls -alh --color=auto"
