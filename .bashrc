@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export HISTFILE=
+unset HISTFILE
 
 alias ls="/usr/bin/ls -alh --color=auto"
 alias grep="/usr/bin/grep --color=auto"
