@@ -1,3 +1,9 @@
+if [[ "$TERM" == "dumb" ]]; then
+    unsetopt zle
+    PS1="$ "
+    return
+fi
+
 HISTFILE=
 SAVEHIST=
 HISTSIZE=1000
