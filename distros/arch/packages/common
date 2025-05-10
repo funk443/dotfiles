@@ -7,7 +7,6 @@ archlinux-keyring
 autoconf
 automake
 base
-bash-completion
 binutils
 bison
 btrfs-progs
@@ -116,4 +115,3 @@ xorg-xwayland
 yt-dlp
 zip
 zram-generator
-zsh
