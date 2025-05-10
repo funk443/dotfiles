@@ -12,7 +12,6 @@ binutils
 bison
 btrfs-progs
 cmake
-dash
 debugedit
 ed
 efibootmgr
@@ -117,3 +116,4 @@ xorg-xwayland
 yt-dlp
 zip
 zram-generator
+zsh
