@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (when (display-graphic-p)
   (set-face-attribute 'default nil
                       :family "Source Code Pro"
