@@ -1,5 +1,8 @@
 ;; -*- lexical-binding: t; -*-
 
+(setopt modus-themes-variable-pitch-ui t)
+(load-theme 'modus-vivendi t)
+
 (when (display-graphic-p)
   (set-face-attribute 'default nil
                       :family "Source Code Pro"
@@ -129,7 +132,6 @@
  '(case-replace nil)
  '(column-number-mode t)
  '(current-language-environment "UTF-8")
- '(custom-enabled-themes '(modus-vivendi))
  '(delete-selection-mode t)
  '(dired-dwim-target 'dired-dwim-target-next)
  '(dired-listing-switches "-alh")
@@ -139,7 +141,6 @@
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(modus-themes-variable-pitch-ui t)
  '(package-selected-packages '(edit-indirect magit markdown-mode treesit-auto vterm))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
