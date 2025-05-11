@@ -5,13 +5,13 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+unset HISTFILE
+
 if [[ "$TERM" = "dumb" ]]; then
     set +o emacs vi
     export PS1='$ '
     return
 fi
-
-unset HISTFILE
 
 alias ls="/usr/bin/ls -alh --color=auto"
 alias grep="/usr/bin/grep --color=auto"
