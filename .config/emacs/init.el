@@ -149,7 +149,6 @@
  '(sentence-end-double-space nil)
  '(shell-command-prompt-show-cwd t)
  '(tool-bar-mode nil)
- '(transient-mark-mode nil)
  '(which-key-mode t)
  '(x-select-enable-clipboard-manager nil))
 
