@@ -18,10 +18,12 @@
                     nil 'prepend)
   (set-fontset-font nil 'kana
                     (font-spec :family "Noto Sans CJK JP")
-                    nil 'prepend)
-  (setopt modus-themes-variable-pitch-ui t))
-
+                    nil 'prepend))
 (load-theme 'modus-vivendi t)
+(when (display-graphic-p)
+  (setopt modus-themes-variable-pitch-ui t)
+  (set-face-attribute 'modus-themes-ui-variable-pitch nil
+                      :inherit 'variable-pitch))
 
 (use-package package
   :custom
