@@ -36,7 +36,10 @@ git-lfs
 grep
 grim
 groff
+gst-libav
 gst-plugin-pipewire
+gst-plugins-base
+gst-plugins-good
 gvfs
 gzip
 htop
