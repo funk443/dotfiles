@@ -21,9 +21,8 @@
                     nil 'prepend))
 
 (when (display-graphic-p)
-  (setopt modus-themes-variable-pitch-ui t)
-  (rectangle-mark-mode 1)
-  (rectangle-mark-mode -1))
+  (require 'rect)
+  (setopt modus-themes-variable-pitch-ui t))
 (load-theme 'modus-vivendi t)
 
 (use-package package
