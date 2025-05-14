@@ -1,5 +1,6 @@
 ;; -*- lexical-binding: t; -*-
 
+(load-theme 'modus-vivendi t)
 (when (display-graphic-p)
   (set-face-attribute 'default nil
                       :family "Source Code Pro"
@@ -19,11 +20,6 @@
   (set-fontset-font nil 'kana
                     (font-spec :family "Noto Sans CJK JP")
                     nil 'prepend))
-(load-theme 'modus-vivendi t)
-(when (display-graphic-p)
-  (setopt modus-themes-variable-pitch-ui t)
-  (set-face-attribute 'modus-themes-ui-variable-pitch nil
-                      :inherit 'variable-pitch))
 
 (use-package package
   :custom
