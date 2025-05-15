@@ -20,9 +20,7 @@
                     (font-spec :family "Noto Sans CJK JP")
                     nil 'prepend))
 
-(when (display-graphic-p)
-  (require 'rect)
-  (setopt modus-themes-variable-pitch-ui t))
+(setopt modus-themes-variable-pitch-ui t)
 (load-theme 'modus-vivendi t)
 
 (use-package package
@@ -153,7 +151,6 @@
  '(sentence-end-double-space nil)
  '(shell-command-prompt-show-cwd t)
  '(tool-bar-mode nil)
- '(transient-mark-mode nil)
  '(which-key-mode t)
  '(x-select-enable-clipboard-manager nil))
 
