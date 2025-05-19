@@ -47,17 +47,11 @@ vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
 
 local plugins = {
     {
-        "catppuccin/nvim",
+        "EdenEast/nightfox.nvim",
         priority = 1000,
-        opts = {
-            background = {
-                dark = "mocha",
-                light = "latte",
-            },
-        },
         config = function(_, opts)
-            require("catppuccin").setup(opts)
-            vim.cmd.colorscheme("catppuccin")
+            require("nightfox").setup(opts)
+            vim.cmd.colorscheme("carbonfox")
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
