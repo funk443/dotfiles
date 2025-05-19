@@ -3,6 +3,10 @@
 normal = {family = "Source Code Pro"}
 size = 20
 
+[window]
+
+dynamic_padding = true
+
 [keyboard]
 
 bindings = [
