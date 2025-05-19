@@ -28,11 +28,6 @@ vim.keymap.set("n", "<leader>fh", function()
 end, { noremap = true })
 vim.keymap.set("n", "<leader>ff", ":e ", { noremap = true })
 
-vim.keymap.set("n", "<leader>bb", ":b ", { noremap = true })
-vim.keymap.set("n", "<leader>bd", ":bd<return>", { noremap = true })
-vim.keymap.set("n", "<leader>bn", ":bn<return>", { noremap = true })
-vim.keymap.set("n", "<leader>bp", ":bp<return>", { noremap = true })
-
 vim.keymap.set("n", "<c-h>", vim.lsp.buf.hover, { noremap = true })
 vim.keymap.set("i", "<c-h>", "<c-x><c-o>", { noremap = true })
 
