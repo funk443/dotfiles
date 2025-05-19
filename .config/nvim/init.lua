@@ -47,11 +47,17 @@ vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
 
 local plugins = {
     {
-        "miikanissi/modus-themes.nvim",
+        "catppuccin/nvim",
         priority = 1000,
+        opts = {
+            background = {
+                dark = "mocha",
+                light = "latte",
+            },
+        },
         config = function(_, opts)
-            require("modus-themes").setup(opts)
-            vim.cmd.colorscheme("modus")
+            require("catppuccin").setup(opts)
+            vim.cmd.colorscheme("catppuccin")
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },

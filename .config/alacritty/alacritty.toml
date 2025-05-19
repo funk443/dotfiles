@@ -16,7 +16,7 @@ bindings = [
 [general]
 
 import = [
-    "~/dotfiles/.config/alacritty/modus-vivendi.toml"
+    "~/dotfiles/.config/alacritty/catppuccin-mocha.toml"
 ]
 
 [mouse]
