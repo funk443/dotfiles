@@ -108,6 +108,7 @@ wireplumber
 wl-clipboard
 wl-mirror
 wmenu
+x11-ssh-askpass
 xarchiver
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
