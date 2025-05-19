@@ -50,11 +50,14 @@ vim.keymap.set("n", "<F5>", ":term ", { noremap = true })
 
 local plugins = {
     {
-        "EdenEast/nightfox.nvim",
+        "miikanissi/modus-themes.nvim",
         priority = 1000,
+        opts = {
+            variants = "default",
+        },
         config = function(_, opts)
-            require("nightfox").setup(opts)
-            vim.cmd.colorscheme("carbonfox")
+            require("modus-themes").setup(opts)
+            vim.cmd.colorscheme("modus")
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },

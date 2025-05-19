@@ -16,7 +16,7 @@ bindings = [
 [general]
 
 import = [
-    "~/dotfiles/.config/alacritty/carbonfox.toml"
+    "~/dotfiles/.config/alacritty/modus-vivendi.toml"
 ]
 
 [mouse]
