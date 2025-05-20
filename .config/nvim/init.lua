@@ -9,6 +9,7 @@ vim.opt.expandtab = true
 vim.opt.undofile = true
 vim.opt.relativenumber = true
 vim.opt.formatoptions:append("mM")
+vim.opt.formatoptions:remove("t")
 
 vim.g.netrw_browsex_viewer = "xdg-open"
 vim.cmd.filetype("indent off")
