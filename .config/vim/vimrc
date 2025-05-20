@@ -1,4 +1,5 @@
 vim9script
+set nocompatible
 
 set textwidth=80
 set formatoptions+=mM
@@ -16,7 +17,7 @@ set encoding=utf-8
 set incsearch
 set hlsearch
 set hidden
-set nocompatible
+set nostartofline
 
 set grepprg=rg\ --vimgrep\ -uu
 
