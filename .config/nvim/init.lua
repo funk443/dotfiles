@@ -97,10 +97,12 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     callback = function(ev)
         vim.opt_local.expandtab = false
     end,
+    desc = "Use tabs for indentation in Go files.",
 })
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     command = "%s/\\s\\+$//e",
+    desc = "Remove trailing whitespaces before saving.",
 })
 
 -- }}}
