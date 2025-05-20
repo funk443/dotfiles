@@ -42,6 +42,7 @@ gst-plugin-pipewire
 gst-plugins-base
 gst-plugins-good
 gvfs
+gvim
 gzip
 htop
 imagemagick
@@ -100,7 +101,6 @@ transmission-gtk
 tree
 tumbler
 unzip
-vim
 vlc
 waybar
 which
