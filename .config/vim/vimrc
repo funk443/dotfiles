@@ -19,6 +19,7 @@ set hlsearch
 set hidden
 set nostartofline
 set belloff=all
+set viminfo=
 
 set grepprg=rg\ --vimgrep\ -uu
 
