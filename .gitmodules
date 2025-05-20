@@ -2,3 +2,6 @@
 	path = .local/share/themes/Skewaita
 	url = https://git.disroot.org/eudaimon/Skewaita.git
     ignore = dirty
+[submodule ".config/vim/pack/vim-wayland-clipboard/start/vim-wayland-clipboard"]
+	path = .config/vim/pack/vim-wayland-clipboard/start/vim-wayland-clipboard
+	url = https://github.com/jasonccox/vim-wayland-clipboard.git
