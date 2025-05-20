@@ -39,14 +39,6 @@ local plugins = {
 
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>ff", function()
-    local cwd = vim.fn.expand("%:h")
-    if 0 == #cwd then
-        cwd = "."
-    end
-    vim.api.nvim_input(string.format(":e %s/", cwd))
-end, { noremap = true })
-
 vim.keymap.set("n", "<c-h>", vim.lsp.buf.hover, { noremap = true })
 vim.keymap.set("i", "<c-h>", "<c-x><c-o>", { noremap = true })
 
