@@ -15,6 +15,8 @@ set undofile
 set encoding=utf-8
 set incsearch
 set hlsearch
+set hidden
+set nocompatible
 
 set grepprg=rg\ --vimgrep\ -uu
 
