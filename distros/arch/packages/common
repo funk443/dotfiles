@@ -42,7 +42,7 @@ gst-plugin-pipewire
 gst-plugins-base
 gst-plugins-good
 gvfs
-gvim
+neovim
 gzip
 htop
 imagemagick
