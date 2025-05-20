@@ -24,3 +24,4 @@ set viminfo=
 set grepprg=rg\ --vimgrep\ -uu
 
 autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufEnter *.go :setl noexpandtab
