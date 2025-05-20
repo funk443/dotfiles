@@ -15,6 +15,25 @@ vim.cmd.filetype("indent off")
 
 -- }}}
 
+-- Plugin list {{{
+
+local plugins = {
+    {
+        "miikanissi/modus-themes.nvim",
+        priority = 1000,
+        opts = {
+            variants = "default",
+        },
+        config = function(_, opts)
+            require("modus-themes").setup(opts)
+            vim.cmd.colorscheme("modus")
+        end,
+    },
+    { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
+}
+
+-- }}}
+
 -- Keybindings {{{
 
 vim.g.mapleader = " "
@@ -39,27 +58,6 @@ vim.keymap.set("n", "<F5>", ":term ", { noremap = true })
 -- }}}
 
 -- Lazy.nvim {{{
-
--- Plugin list {{{
-
-local plugins = {
-    {
-        "miikanissi/modus-themes.nvim",
-        priority = 1000,
-        opts = {
-            variants = "default",
-        },
-        config = function(_, opts)
-            require("modus-themes").setup(opts)
-            vim.cmd.colorscheme("modus")
-        end,
-    },
-    { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
-}
-
--- }}}
-
--- Other Lazy.nvim stuffs {{{
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -95,8 +93,6 @@ local lazy_opts = {
 }
 
 require("lazy").setup(plugins, lazy_opts)
-
--- }}}
 
 -- }}}
 
