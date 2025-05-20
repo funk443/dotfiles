@@ -18,6 +18,7 @@ set incsearch
 set hlsearch
 set hidden
 set nostartofline
+set belloff=all
 
 set grepprg=rg\ --vimgrep\ -uu
 
