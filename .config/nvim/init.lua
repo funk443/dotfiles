@@ -46,8 +46,8 @@ vim.keymap.set("n", "<leader>ff", function()
     vim.api.nvim_input(string.format(":e %s/", cwd))
 end, { noremap = true })
 
-vim.keymap.set("n", "<c-tab>", vim.lsp.buf.hover, { noremap = true })
-vim.keymap.set("i", "<c-tab>", "<c-x><c-o>", { noremap = true })
+vim.keymap.set("n", "<c-h>", vim.lsp.buf.hover, { noremap = true })
+vim.keymap.set("i", "<c-h>", "<c-x><c-o>", { noremap = true })
 
 vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { noremap = true })
 vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { noremap = true })
