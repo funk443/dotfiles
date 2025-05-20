@@ -13,6 +13,8 @@ if [[ "$TERM" = "dumb" ]]; then
     return
 fi
 
+set -o vi
+
 alias ls="/usr/bin/ls -alh --color=auto"
 alias grep="/usr/bin/grep --color=auto"
 
