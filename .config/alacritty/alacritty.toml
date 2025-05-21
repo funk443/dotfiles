@@ -16,7 +16,7 @@ bindings = [
 [general]
 
 import = [
-    "~/dotfiles/.config/alacritty/solarized-light.toml"
+    "~/dotfiles/.config/alacritty/papertheme.toml"
 ]
 
 [mouse]

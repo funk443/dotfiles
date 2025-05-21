@@ -21,12 +21,12 @@ vim.cmd.filetype("indent off")
 
 local plugins = {
     {
-        "maxmx03/solarized.nvim",
+        "yorickpeterse/vim-paper",
+        lazy = false,
         priority = 1000,
         opts = {},
         config = function(_, opts)
-            require("solarized").setup(opts)
-            vim.cmd.colorscheme("solarized")
+            vim.cmd.colorscheme("paper")
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
