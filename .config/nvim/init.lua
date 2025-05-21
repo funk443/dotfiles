@@ -21,12 +21,15 @@ vim.cmd.filetype("indent off")
 
 local plugins = {
     {
-        "https://git.sr.ht/~p00f/alabaster.nvim",
+        "navarasu/onedark.nvim",
         lazy = false,
         priority = 1000,
-        opts = {},
+        opts = {
+            style = "light",
+        },
         config = function(_, opts)
-            vim.cmd.colorscheme("alabaster")
+            require("onedark").setup(opts)
+            require("onedark").load()
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
