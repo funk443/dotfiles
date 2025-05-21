@@ -21,12 +21,13 @@ vim.cmd.filetype("indent off")
 
 local plugins = {
     {
-        "yorickpeterse/vim-paper",
+        "morhetz/gruvbox",
         lazy = false,
         priority = 1000,
         opts = {},
         config = function(_, opts)
-            vim.cmd.colorscheme("paper")
+            vim.opt.background = "light"
+            vim.cmd.colorscheme("gruvbox")
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },

@@ -16,7 +16,7 @@ bindings = [
 [general]
 
 import = [
-    "~/dotfiles/.config/alacritty/papertheme.toml"
+    "~/dotfiles/.config/alacritty/gruvbox-light.toml"
 ]
 
 [mouse]
