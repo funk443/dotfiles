@@ -16,7 +16,7 @@ bindings = [
 [general]
 
 import = [
-    "~/dotfiles/.config/alacritty/gruvbox-light.toml"
+    "~/dotfiles/.config/alacritty/alabaster.toml"
 ]
 
 [mouse]

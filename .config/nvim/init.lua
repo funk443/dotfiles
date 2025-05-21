@@ -21,15 +21,12 @@ vim.cmd.filetype("indent off")
 
 local plugins = {
     {
-        "ellisonleao/gruvbox.nvim",
+        "https://git.sr.ht/~p00f/alabaster.nvim",
         lazy = false,
         priority = 1000,
-        opts = {
-            terminal_colors = true,
-        },
+        opts = {},
         config = function(_, opts)
-            require("gruvbox").setup(opts)
-            vim.cmd.colorscheme("gruvbox")
+            vim.cmd.colorscheme("alabaster")
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
