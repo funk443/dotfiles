@@ -21,13 +21,13 @@ vim.cmd.filetype("indent off")
 
 local plugins = {
     {
-        "EdenEast/nightfox.nvim",
+        "miikanissi/modus-themes.nvim",
         lazy = false,
         priority = 1000,
         opts = {},
         config = function(_, opts)
-            require("nightfox").setup(opts)
-            vim.cmd.colorscheme("carbonfox")
+            require("modus-themes").setup(opts)
+            vim.cmd.colorscheme("modus")
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
