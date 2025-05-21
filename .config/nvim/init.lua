@@ -21,14 +21,12 @@ vim.cmd.filetype("indent off")
 
 local plugins = {
     {
-        "miikanissi/modus-themes.nvim",
+        "maxmx03/solarized.nvim",
         priority = 1000,
-        opts = {
-            variants = "default",
-        },
+        opts = {},
         config = function(_, opts)
-            require("modus-themes").setup(opts)
-            vim.cmd.colorscheme("modus")
+            require("solarized").setup(opts)
+            vim.cmd.colorscheme("solarized")
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
