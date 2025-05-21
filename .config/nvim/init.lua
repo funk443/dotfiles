@@ -21,15 +21,13 @@ vim.cmd.filetype("indent off")
 
 local plugins = {
     {
-        "navarasu/onedark.nvim",
+        "EdenEast/nightfox.nvim",
         lazy = false,
         priority = 1000,
-        opts = {
-            style = "light",
-        },
+        opts = {},
         config = function(_, opts)
-            require("onedark").setup(opts)
-            require("onedark").load()
+            require("nightfox").setup(opts)
+            vim.cmd.colorscheme("carbonfox")
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },

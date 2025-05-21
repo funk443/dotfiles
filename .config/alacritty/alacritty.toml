@@ -16,7 +16,7 @@ bindings = [
 [general]
 
 import = [
-    "~/dotfiles/.config/alacritty/one-light.toml"
+    "~/dotfiles/.config/alacritty/carbonfox.toml"
 ]
 
 [mouse]

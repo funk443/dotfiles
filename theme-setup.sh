@@ -33,7 +33,7 @@ setup_gtk_theme() {
     git submodule update
 
     cd "${theme_rel_location}/source/templates"
-    ./use_scheme.sh colorscheme-light-blue.sh
+    ./use_scheme.sh colorscheme-dark-adwaita.sh
     cd ..
     ./compile.sh dark
 
@@ -43,7 +43,7 @@ setup_gtk_theme() {
     fi
 
     gsettings set org.gnome.desktop.interface gtk-theme Skewaita
-    # gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 }
 
 setup_fonts() {
