@@ -21,12 +21,14 @@ vim.cmd.filetype("indent off")
 
 local plugins = {
     {
-        "morhetz/gruvbox",
+        "ellisonleao/gruvbox.nvim",
         lazy = false,
         priority = 1000,
-        opts = {},
+        opts = {
+            terminal_colors = true,
+        },
         config = function(_, opts)
-            vim.opt.background = "light"
+            require("gruvbox").setup(opts)
             vim.cmd.colorscheme("gruvbox")
         end,
     },
