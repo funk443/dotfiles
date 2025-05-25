@@ -67,6 +67,10 @@
     <keybind key="W-Print">
         <action name="Execute" command="~/dotfiles/.config/sway/grim.sh --region" />
     </keybind>
+
+    <keybind key="W-l">
+        <action name="Execute" command="pkill -SIGUSR1 swayidle" />
+    </keybind>
 </keyboard>
 
 <mouse>
