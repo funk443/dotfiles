@@ -1,4 +1,5 @@
 {
+    "exclusive": false,
     "modules-left": ["tray"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "load", "memory"],

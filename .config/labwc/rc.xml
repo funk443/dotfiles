@@ -6,11 +6,6 @@
     <allowTearing>fullscreen</allowTearing>
 </core>
 
-<resistance>
-    <windowEdgeStrength>0</windowEdgeStrength>
-    <screenEdgeStrength>0</screenEdgeStrength>
-</resistance>
-
 <placement>
     <policy>center</policy>
 </placement>
