@@ -28,7 +28,7 @@ window#waybar, tooltip, #tray menu {
     background-color: red;
 }
 
-#memory, #load, #clock, #battery, #pulseaudio {
+#memory, #load, #clock, #battery, #pulseaudio, #idle_inhibitor {
     padding-left: 5px;
     margin-left: 5px;
 }
