@@ -10,6 +10,15 @@
     <policy>center</policy>
 </placement>
 
+<windowSwitcher show="yes" preview="yes" outlines="yes">
+<fields>
+    <field content="type_short" width="5%"/>
+    <field content="icon" width="5%"/>
+    <field content="desktop_entry_name" width="40%"/>
+    <field content="title" width="50%"/>
+</fields>
+</windowSwitcher>
+
 <theme>
     <name>Raven-Cyan</name>
     <cornerRadius>0</cornerRadius>
