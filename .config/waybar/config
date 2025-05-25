@@ -1,7 +1,7 @@
 {
     "modules-left": ["tray"],
     "modules-center": ["clock"],
-    "modules-right": ["load", "memory"],
+    "modules-right": ["pulseaudio", "load", "memory"],
     "load": {
         "format": "{load1:0.2f}/{load5:0.2f}/{load15:0.2f}",
         "tooltip": false
