@@ -85,6 +85,10 @@
     </context>
 
     <context name="Frame">
+        <mousebind button="W-Left" action="Click">
+            <action name="Focus" />
+            <action name="Raise" />
+        </mousebind>
         <mousebind button="W-Left" action="Drag">
             <action name="Move" />
         </mousebind>
