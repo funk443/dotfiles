@@ -1,2 +1,5 @@
 font=Source Sans 3 10
+background-color=#2f343f
+border-color=#ffffff
+text-color=#ffffff
 default-timeout=3000

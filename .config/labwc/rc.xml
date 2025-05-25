@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+
+<labwc_config>
+
+<core>
+    <allowTearing>fullscreen</allowTearing>
+</core>
+
+<resistance>
+    <windowEdgeStrength>0</windowEdgeStrength>
+    <screenEdgeStrength>0</screenEdgeStrength>
+</resistance>
+
+<placement>
+    <policy>center</policy>
+</placement>
+
+<theme>
+    <name>Raven-Cyan</name>
+    <cornerRadius>0</cornerRadius>
+    <font place="">
+        <name>Source Sans 3</name>
+        <size>10</size>
+    </font>
+</theme>
+
+<keyboard>
+    <numlock>on</numlock>
+    <repeatRate>75</repeatRate>
+    <repeatDelay>250</repeatDelay>
+
+    <keybind key="W-S-e">
+        <action name="Exit" />
+    </keybind>
+    <keybind key="W-S-c">
+        <action name="Reconfigure" />
+    </keybind>
+
+    <keybind key="W-Tab">
+        <action name="NextWindow" />
+    </keybind>
+    <keybind key="W-S-Tab">
+        <action name="PreviousWindow" />
+    </keybind>
+
+    <keybind key="W-q">
+        <action name="Close" />
+    </keybind>
+    <keybind key="W-Up">
+        <action name="Maximize" direction="both" />
+    </keybind>
+    <keybind key="W-Down">
+        <action name="UnMaximize" direction="both" />
+    </keybind>
+    <keybind key="W-f">
+        <action name="ToggleFullscreen" />
+    </keybind>
+    <keybind key="W-m">
+        <action name="ShowMenu" menu="client-menu" />
+    </keybind>
+
+    <keybind key="W-t">
+        <action name="Execute" command="alacritty" />
+    </keybind>
+    <keybind key="W-d">
+        <action name="Execute" command="wmenu-run -f 'Source Code Pro 10'" />
+    </keybind>
+
+    <keybind key="Print">
+        <action name="Execute" command="~/dotfiles/.config/sway/grim.sh" />
+    </keybind>
+    <keybind key="W-Print">
+        <action name="Execute" command="~/dotfiles/.config/sway/grim.sh --region" />
+    </keybind>
+</keyboard>
+
+<mouse>
+    <context name="All">
+        <mousebind direction="W-Up" action="Scroll">
+            <action name="ZoomIn" />
+        </mousebind>
+        <mousebind direction="W-Down" action="Scroll">
+            <action name="ZoomOut" />
+        </mousebind>
+    </context>
+
+    <context name="Frame">
+        <mousebind button="W-Left" action="Drag">
+            <action name="Move" />
+        </mousebind>
+        <mousebind button="W-Right" action="Drag">
+            <action name="Resize" />
+        </mousebind>
+    </context>
+
+    <context name="Title">
+        <mousebind button="Left" action="DoubleClick">
+            <action name="ToggleMaximize" direction="both" />
+        </mousebind>
+        <mousebind button="Left" action="Drag">
+            <action name="Move" />
+        </mousebind>
+        <mousebind button="Right" action="Click">
+            <action name="ShowMenu" menu="client-menu" />
+        </mousebind>
+        <mousebind button="Left" action="Click">
+            <action name="Focus" />
+            <action name="Raise" />
+        </mousebind>
+    </context>
+
+    <context name="Iconify">
+        <mousebind button="Left" action="Click">
+            <action name="Iconify" />
+        </mousebind>
+    </context>
+    <context name="Maximize">
+        <mousebind button="Left" action="Click">
+            <action name="ToggleMaximize" direction="both" />
+        </mousebind>
+    </context>
+
+    <context name="Desktop">
+        <mousebind button="Right" action="Click">
+            <action name="ShowMenu" menu="id-desktop-menu" />
+        </mousebind>
+    </context>
+</mouse>
+
+<libinput><device category="default">
+    <pointerSpeed>-0.2</pointerSpeed>
+    <accelProfile>flat</accelProfile>
+</device></libinput>
+
+</labwc_config>
