@@ -19,6 +19,7 @@ alias grep="/usr/bin/grep --color=auto"
 export PS1='\h:\W> '
 export VISUAL=nvim
 export XAPIAN_CJK_NGRAM=1
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
 if [[ "$INSIDE_EMACS" = 'vterm' ]] \
     && [[ -n ${EMACS_VTERM_PATH} ]] \
