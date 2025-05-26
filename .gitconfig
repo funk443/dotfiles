@@ -1,18 +1,22 @@
 [user]
+
 	email = funk443@yahoo.com.tw
 	name = CToID
 
 [init]
-  defaultBranch = main
+
+    defaultBranch = main
 
 [alias]
-  get-wtfpl-text = !curl -sL https://funk443.github.io/licenses/wtfpl/license.txt
-  get-wtfpl-notice = !curl -sL https://funk443.github.io/licenses/wtfpl/notice.txt
-  get-wtfpl-prog-notice = !curl -sL https://funk443.github.io/licenses/wtfpl/notice.prog.txt
 
-  tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    get-wtfpl-text = !curl -sL https://funk443.github.io/licenses/wtfpl/license.txt
+    get-wtfpl-notice = !curl -sL https://funk443.github.io/licenses/wtfpl/notice.txt
+    get-wtfpl-prog-notice = !curl -sL https://funk443.github.io/licenses/wtfpl/notice.prog.txt
+
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
 [filter "lfs"]
+
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
