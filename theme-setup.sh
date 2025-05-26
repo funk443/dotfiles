@@ -47,9 +47,9 @@ setup_gtk_theme() {
 }
 
 setup_fonts() {
-    gsettings set org.gnome.desktop.interface font-name "Source Sans 3 12"
-    gsettings set org.gnome.desktop.interface monospace-font-name "Source Code Pro 12"
-    gsettings set org.gnome.desktop.interface document-font-name "Source Seirf 4 12"
+    gsettings set org.gnome.desktop.interface font-name "Roboto 10"
+    gsettings set org.gnome.desktop.interface monospace-font-name "Roboto Mono 10"
+    gsettings set org.gnome.desktop.interface document-font-name "Roboto Serif 10"
 }
 
 case "$1" in
