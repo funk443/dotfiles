@@ -46,8 +46,6 @@ vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { noremap = true })
 vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { noremap = true })
 vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
 
-vim.keymap.set("n", "<F5>", ":term ", { noremap = true })
-
 -- }}}
 
 -- Lazy.nvim {{{
