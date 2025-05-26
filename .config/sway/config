@@ -164,7 +164,7 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym Print exec ~/dotfiles/.config/sway/grim.sh
 bindsym $mod+Print exec ~/dotfiles/.config/sway/grim.sh --region
 
-bindsym $mod+Semicolon exec swaylock -f -c 000000
+bindsym $mod+Semicolon exec pkill -SIGUSR1 swayidle
 
 bar {
     swaybar_command waybar
