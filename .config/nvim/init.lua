@@ -17,6 +17,56 @@ vim.cmd.filetype("indent off")
 
 -- }}}
 
+-- Custom commands {{{
+
+vim.api.nvim_create_user_command("Compile", function(opts)
+    local arg_count = #opts.fargs
+    if arg_count <= 0 and vim.b.compile_last_command == nil then
+        print("Please provide some shell commands.")
+        return
+    end
+
+    local commands
+    if arg_count > 0 then
+        commands = opts.fargs
+        vim.b.compile_last_command = opts.fargs
+    else
+        commands = vim.b.compile_last_command
+    end
+
+    local buf = vim.api.nvim_create_buf(false, true)
+    if buf == 0 then
+        print("Shits happened while creating command output buffer.")
+        return
+    end
+
+    vim.api.nvim_set_option_value(
+        "errorformat",
+        vim.api.nvim_get_option_value("errorformat", { buf = 0 }),
+        { scope = "local", buf = buf }
+    )
+
+    local function callback(obj)
+        local raw_output = obj.stdout .. "\n" .. obj.stderr
+        local output = {}
+        for s in raw_output:gmatch("[^\r\n]+") do
+            table.insert(output, s)
+        end
+
+        vim.api.nvim_buf_set_lines(buf, 0, -1, false, output)
+        vim.cmd.cbuffer(buf)
+        vim.api.nvim_buf_delete(buf, {})
+    end
+
+    vim.system(
+        commands,
+        { text = true },
+        vim.schedule_wrap(callback)
+    )
+end, { nargs = "*", complete = "shellcmdline"})
+
+-- }}}
+
 -- Plugin list {{{
 
 local plugins = {
