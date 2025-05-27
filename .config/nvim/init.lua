@@ -26,13 +26,14 @@ vim.api.nvim_create_user_command("Compile", function(opts)
         return
     end
 
-    local commands
+    local commands = nil
     if arg_count > 0 then
         commands = opts.fargs
         vim.b.compile_last_command = opts.fargs
     else
         commands = vim.b.compile_last_command
     end
+    assert(commands, "Shit went wrong while setting the commands.")
 
     local buf = vim.api.nvim_create_buf(false, true)
     if buf == 0 then
@@ -47,12 +48,11 @@ vim.api.nvim_create_user_command("Compile", function(opts)
     )
 
     local function callback(obj)
-        local raw_output = obj.stdout .. "\n" .. obj.stderr
-        local output = {}
-        for s in raw_output:gmatch("[^\r\n]+") do
-            table.insert(output, s)
-        end
-
+        local output = vim.split(
+            obj.stdout .. "\n" .. obj.stderr,
+            "[\n\r]+",
+            { plain = false, trimempty = true }
+        )
         vim.api.nvim_buf_set_lines(buf, 0, -1, false, output)
         vim.cmd.cbuffer(buf)
         vim.api.nvim_buf_delete(buf, {})
