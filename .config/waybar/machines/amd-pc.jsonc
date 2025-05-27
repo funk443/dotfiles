@@ -1,3 +1,0 @@
-{
-    "modules-right": ["tray", "load", "memory", "pulseaudio", "clock"]
-}
