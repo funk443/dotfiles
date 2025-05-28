@@ -33,7 +33,7 @@ vim.api.nvim_create_user_command("Compile", function(opts)
     else
         commands = vim.b.compile_last_command
     end
-    assert(commands, "Shit went wrong while setting the commands.")
+    assert(commands, "Shits went wrong while setting the commands.")
 
     local buf = vim.api.nvim_create_buf(false, true)
     assert(buf ~= 0, "Shits happened while creating command output buffer.")
@@ -53,8 +53,10 @@ vim.api.nvim_create_user_command("Compile", function(opts)
         vim.api.nvim_buf_set_lines(buf, 0, -1, false, output)
         vim.cmd.cgetbuffer(buf)
         vim.api.nvim_buf_delete(buf, {})
+        print("Compilation finished.")
     end
 
+    print("Begin compilation.")
     vim.system(
         commands,
         { text = true },
