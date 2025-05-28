@@ -34,5 +34,7 @@ if [[ "$INSIDE_EMACS" = 'vterm' ]] \
     source ${EMACS_VTERM_PATH}/etc/emacs-vterm-bash.sh
 fi
 
-. "${HOME}/.deno/env"
-. "${HOME}/.local/share/bash-completion/completions/deno.bash"
+if [[ -d "${HOME}/.deno" ]]; then
+    . "${HOME}/.deno/env"
+    . "${HOME}/.local/share/bash-completion/completions/deno.bash"
+fi
