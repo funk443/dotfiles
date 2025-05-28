@@ -2,13 +2,13 @@
 
 (when (display-graphic-p)
   (set-face-attribute 'default nil
-                      :family "IBM Plex Mono"
+                      :family "Roboto Mono"
                       :height 200)
   (set-face-attribute 'fixed-pitch nil
-                      :family "IBM Plex Mono"
+                      :family "Roboto Mono"
                       :inherit 'default)
   (set-face-attribute 'variable-pitch nil
-                      :family "IBM Plex Sans"
+                      :family "Roboto"
                       :inherit 'default)
   (set-fontset-font nil 'han
                     (font-spec :family "Noto Sans CJK TC")
