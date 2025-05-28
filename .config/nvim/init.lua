@@ -40,6 +40,10 @@ vim.api.nvim_create_user_command("Compile", function(opts)
         assert(buf ~= 0, "Shits happened while creating command output buffer.")
         vim.g.compile_buffer_id = buf
         vim.api.nvim_buf_set_name(buf, "*Compilation*")
+        vim.api.nvim_set_option_value("buftype", "nofile", {
+            scope = "local",
+            buf = buf
+        })
     end
 
     vim.api.nvim_set_option_value(
@@ -54,7 +58,8 @@ vim.api.nvim_create_user_command("Compile", function(opts)
             "[\n\r]+",
             { plain = false, trimempty = true }
         )
-        vim.api.nvim_buf_set_lines(buf, 0, -1, false, output)
+        local baleia = require("baleia").setup({})
+        baleia.buf_set_lines(buf, 0, -1, false, output)
         vim.cmd.cgetbuffer(buf)
         print("Compilation finished.")
     end
@@ -83,6 +88,7 @@ local plugins = {
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
+    { "m00qek/baleia.nvim", lazy = true },
 }
 
 -- }}}
