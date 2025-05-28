@@ -19,7 +19,7 @@ alias grep="/usr/bin/grep --color=auto"
 export PS1='\h:\W> '
 
 export XAPIAN_CJK_NGRAM=1
-if test -z "$SSH_AUTH_SOCK"; then
+if [[ -z "$SSH_AUTH_SOCK" ]]; then
     export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 fi
 
