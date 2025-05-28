@@ -36,10 +36,7 @@ vim.api.nvim_create_user_command("Compile", function(opts)
     assert(commands, "Shit went wrong while setting the commands.")
 
     local buf = vim.api.nvim_create_buf(false, true)
-    if buf == 0 then
-        print("Shits happened while creating command output buffer.")
-        return
-    end
+    assert(buf ~= 0, "Shits happened while creating command output buffer.")
 
     vim.api.nvim_set_option_value(
         "errorformat",
