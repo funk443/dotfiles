@@ -17,6 +17,7 @@ alias ls="/usr/bin/ls -alh --color=auto"
 alias grep="/usr/bin/grep --color=auto"
 
 export PS1='\h:\W> '
+export PROMPT_COMMAND='printf "\e]133;A\007"'
 
 export XAPIAN_CJK_NGRAM=1
 if [[ -z "$SSH_AUTH_SOCK" ]]; then
