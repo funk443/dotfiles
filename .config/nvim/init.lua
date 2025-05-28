@@ -20,16 +20,15 @@ vim.cmd.filetype("indent off")
 -- Custom commands {{{
 
 vim.api.nvim_create_user_command("Compile", function(opts)
-    local arg_count = #opts.fargs
-    if arg_count <= 0 and vim.b.compile_last_command == nil then
+    if opts.args == "" and vim.b.compile_last_command == nil then
         print("Please provide some shell commands.")
         return
     end
 
     local commands = nil
-    if arg_count > 0 then
-        commands = opts.fargs
-        vim.b.compile_last_command = opts.fargs
+    if opts.args ~= "" then
+        commands = opts.args
+        vim.b.compile_last_command = opts.args
     else
         commands = vim.b.compile_last_command
     end
@@ -58,11 +57,11 @@ vim.api.nvim_create_user_command("Compile", function(opts)
 
     print("Begin compilation.")
     vim.system(
-        commands,
+        {"sh", "-c", opts.args},
         { text = true },
         vim.schedule_wrap(callback)
     )
-end, { nargs = "*", complete = "shellcmdline"})
+end, { nargs = "?", complete = "shellcmdline"})
 
 -- }}}
 
