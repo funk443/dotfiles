@@ -17,63 +17,6 @@ vim.cmd.filetype("indent off")
 
 -- }}}
 
--- Custom commands {{{
-
-vim.api.nvim_create_user_command("Compile", function(opts)
-    if opts.args == "" and vim.b.compile_last_command == nil then
-        print("Please provide some shell commands.")
-        return
-    end
-
-    local commands = nil
-    if opts.args ~= "" then
-        commands = opts.args
-        vim.b.compile_last_command = opts.args
-    else
-        commands = vim.b.compile_last_command
-    end
-    assert(commands, "Shits went wrong while setting the commands.")
-
-    local buf = vim.g.compile_buffer_id
-    if buf == nil then
-        buf = vim.api.nvim_create_buf(true, true)
-        assert(buf ~= 0, "Shits happened while creating command output buffer.")
-        vim.g.compile_buffer_id = buf
-        vim.api.nvim_buf_set_name(buf, "*Compilation*")
-        vim.api.nvim_set_option_value("buftype", "nofile", {
-            scope = "local",
-            buf = buf
-        })
-    end
-
-    vim.api.nvim_set_option_value(
-        "errorformat",
-        vim.api.nvim_get_option_value("errorformat", { buf = 0 }),
-        { scope = "local", buf = buf }
-    )
-
-    local function callback(obj)
-        local output = vim.split(
-            obj.stdout .. "\n" .. obj.stderr,
-            "[\n\r]+",
-            { plain = false, trimempty = true }
-        )
-        local baleia = require("baleia").setup({})
-        baleia.buf_set_lines(buf, 0, -1, false, output)
-        vim.cmd.cgetbuffer(buf)
-        print("Compilation finished.")
-    end
-
-    print("Begin compilation.")
-    vim.system(
-        {"sh", "-c", opts.args},
-        { text = true },
-        vim.schedule_wrap(callback)
-    )
-end, { nargs = "?", complete = "shellcmdline"})
-
--- }}}
-
 -- Plugin list {{{
 
 local plugins = {
@@ -88,7 +31,6 @@ local plugins = {
         end,
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
-    { "m00qek/baleia.nvim", lazy = true },
 }
 
 -- }}}

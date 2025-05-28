@@ -1,5 +1,4 @@
 {
-  "baleia.nvim": { "branch": "main", "commit": "1b25eac3ac03659c3d3af75c7455e179e5f197f7" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "modus-themes.nvim": { "branch": "master", "commit": "b6c46f8066b2d96cb75d5bc7202a9a4c097b5e9f" },
   "vim-easy-align": { "branch": "master", "commit": "9815a55dbcd817784458df7a18acacc6f82b1241" }
