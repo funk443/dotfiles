@@ -54,7 +54,7 @@ vim.api.nvim_create_user_command("Compile", function(opts)
             { plain = false, trimempty = true }
         )
         vim.api.nvim_buf_set_lines(buf, 0, -1, false, output)
-        vim.cmd.cbuffer(buf)
+        vim.cmd.cgetbuffer(buf)
         vim.api.nvim_buf_delete(buf, {})
     end
 
