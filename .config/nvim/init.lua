@@ -34,8 +34,13 @@ vim.api.nvim_create_user_command("Compile", function(opts)
     end
     assert(commands, "Shits went wrong while setting the commands.")
 
-    local buf = vim.api.nvim_create_buf(false, true)
-    assert(buf ~= 0, "Shits happened while creating command output buffer.")
+    local buf = vim.g.compile_buffer_id
+    if buf == nil then
+        buf = vim.api.nvim_create_buf(true, true)
+        assert(buf ~= 0, "Shits happened while creating command output buffer.")
+        vim.g.compile_buffer_id = buf
+        vim.api.nvim_buf_set_name(buf, "*Compilation*")
+    end
 
     vim.api.nvim_set_option_value(
         "errorformat",
@@ -51,7 +56,6 @@ vim.api.nvim_create_user_command("Compile", function(opts)
         )
         vim.api.nvim_buf_set_lines(buf, 0, -1, false, output)
         vim.cmd.cgetbuffer(buf)
-        vim.api.nvim_buf_delete(buf, {})
         print("Compilation finished.")
     end
 
