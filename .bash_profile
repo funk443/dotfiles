@@ -1,3 +1,5 @@
+export PATH="${HOME}/.local/bin:${PATH}"
+
 if [[ -d "${HOME}/.deno" ]]; then
     . "${HOME}/.deno/env"
     . "${HOME}/dotfiles/.local/share/bash-completion/completions/deno.bash"
