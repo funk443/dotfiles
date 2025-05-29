@@ -19,23 +19,8 @@ alias grep="/usr/bin/grep --color=auto"
 export PS1='\u@\h:\W> '
 export PROMPT_COMMAND='printf "\e]133;A\007"'
 
-export XAPIAN_CJK_NGRAM=1
-if [[ -z "$SSH_AUTH_SOCK" ]]; then
-    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
-fi
-
-export XMODIFIERS=@im=fcitx
-export QT_IM_MODULE=fcitx
-
-export VISUAL=nvim
-
 if [[ "$INSIDE_EMACS" = 'vterm' ]] \
     && [[ -n ${EMACS_VTERM_PATH} ]] \
     && [[ -f ${EMACS_VTERM_PATH}/etc/emacs-vterm-bash.sh ]]; then
-    source ${EMACS_VTERM_PATH}/etc/emacs-vterm-bash.sh
-fi
-
-if [[ -d "${HOME}/.deno" ]]; then
-    . "${HOME}/.deno/env"
-    . "${HOME}/.local/share/bash-completion/completions/deno.bash"
+    . ${EMACS_VTERM_PATH}/etc/emacs-vterm-bash.sh
 fi
