@@ -1,0 +1,9 @@
+#!/bin/bash
+
+usage="Usage: $0 <stream-url>"
+if [[ "$#" = "0" ]]; then
+    echo $usage
+    exit 1
+fi
+
+wl-screenrec --audio --low-power off --ffmpeg-muxer flv --bitrate "1 MB" --codec av1 --filename "$1"
