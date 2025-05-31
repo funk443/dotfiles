@@ -6,4 +6,8 @@ if [[ "$#" = "0" ]]; then
     exit 1
 fi
 
+<<<<<<< HEAD
 wl-screenrec --audio --low-power off --ffmpeg-muxer flv --bitrate "1 MB" --codec av1 --filename "$1"
+=======
+wl-screenrec --audio --low-power off --ffmpeg-muxer flv --bitrate "1 MB" --codec av1 --filename "$@"
+>>>>>>> fc8553c (Add some wrapper scripts for wl-screenrec.)
