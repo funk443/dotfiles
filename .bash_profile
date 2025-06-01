@@ -15,3 +15,7 @@ export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
 
 export XAPIAN_CJK_NGRAM=1
+
+if [[ -f "${HOME}/.bashrc" ]]; then
+    . "${HOME}/.bashrc"
+fi
