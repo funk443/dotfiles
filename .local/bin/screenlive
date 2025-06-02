@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 usage="Usage: $0 <stream-url>"
 if [[ "$#" = "0" ]]; then
     echo $usage

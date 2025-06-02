@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 recording_path="${HOME}/Videos/recordings"
 mkdir -p "${recording_path}"
 
