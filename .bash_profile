@@ -10,6 +10,7 @@ if [[ -z "$SSH_AUTH_SOCK" ]]; then
 fi
 
 export VISUAL=nvim
+export TERMINAL=alacritty
 
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
