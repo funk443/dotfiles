@@ -63,7 +63,7 @@ input "type:keyboard" {
 ### Key bindings
 
 set $term alacritty
-set $menu wmenu-run -f "Roboto Mono 10"
+set $menu wmenu-run -f "Roboto Mono 10" -N 000000 -n ffffff -S ffffff -s 000000
 set $emacs emacsclient -a "emacs" -c
 
 bindsym $mod+Return exec $emacs
