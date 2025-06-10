@@ -169,7 +169,3 @@ bindsym $mod+Semicolon exec pkill -SIGUSR1 swayidle
 bar {
     swaybar_command waybar
 }
-
-client.focused #ffffff #ffffff #000000 #ff0000 #ffffff
-client.focused_inactive #aaaaaa #aaaaaa #000000 #aa0000 #aaaaaa
-client.unfocused #000000 #000000 #ffffff #ff0000 #000000
