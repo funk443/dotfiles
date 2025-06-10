@@ -39,7 +39,6 @@ gst-plugin-pipewire
 gst-plugins-base
 gst-plugins-good
 gvfs
-neovim
 gzip
 htop
 imagemagick
@@ -65,6 +64,7 @@ mako
 man-db
 mpv
 nano
+neovim
 networkmanager
 noto-fonts
 noto-fonts-cjk
@@ -74,6 +74,7 @@ pacman
 patch
 pavucontrol
 pcmanfm-gtk3
+pipectl
 pipewire
 pipewire-alsa
 pipewire-jack
