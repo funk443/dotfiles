@@ -1,5 +1,4 @@
 include /etc/sway/config.d/*
-include machines/amd-pc.conf
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec mako
@@ -55,6 +54,7 @@ input "type:pointer" {
 input "type:keyboard" {
       repeat_delay 250
       repeat_rate 50
+      xkb_numlock enabled
 }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
