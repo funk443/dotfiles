@@ -21,7 +21,8 @@ window#waybar, tooltip, #tray menu {
 }
 
 #workspaces button.focused {
-    background-color: #285577;
+    background-color: white;
+    color: black;
 }
 
 #mode {
