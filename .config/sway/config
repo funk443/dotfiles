@@ -53,7 +53,7 @@ input "type:pointer" {
 
 input "type:keyboard" {
       repeat_delay 250
-      repeat_rate 50
+      repeat_rate 75
       xkb_numlock enabled
 }
 
