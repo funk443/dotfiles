@@ -164,7 +164,7 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym Print exec screenshot
 bindsym $mod+Print exec screenshot --region
 
-bindsym $mod+Semicolon exec pkill -SIGUSR1 swayidle
+bindsym $mod+Backslash exec pkill -SIGUSR1 swayidle
 
 bar {
     swaybar_command waybar
