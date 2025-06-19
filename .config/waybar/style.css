@@ -20,12 +20,16 @@ window#waybar, tooltip, #tray menu {
     padding: 0 5px;
 }
 
-#workspaces button.urgent {
-    background-color: #900000;
+#workspaces button.visible {
+    background-color: #5f676a;
 }
 
 #workspaces button.focused {
     background-color: #285577;
+}
+
+#workspaces button.urgent {
+    background-color: #900000;
 }
 
 #mode {
