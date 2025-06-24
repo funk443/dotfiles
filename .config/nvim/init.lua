@@ -2,6 +2,7 @@
 
 -- General configs {{{
 
+vim.opt.title = true
 vim.opt.textwidth = 80
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
