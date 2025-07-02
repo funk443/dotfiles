@@ -13,6 +13,7 @@ vim.opt.relativenumber = true
 vim.opt.formatoptions:append("mM")
 vim.opt.formatoptions:remove("t")
 vim.opt.shell = "pwsh.exe"
+vim.cmd.colorscheme("industry")
 
 vim.g.netrw_browsex_viewer = "xdg-open"
 vim.cmd.filetype("indent off")
@@ -22,16 +23,6 @@ vim.cmd.filetype("indent off")
 -- Plugin list {{{
 
 local plugins = {
-    {
-        "miikanissi/modus-themes.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-        config = function(_, opts)
-            require("modus-themes").setup(opts)
-            vim.cmd.colorscheme("modus")
-        end,
-    },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
 }
 
