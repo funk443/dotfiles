@@ -31,13 +31,21 @@ vim.opt.shellxquote = ""
 
 vim.g.netrw_browsex_viewer = "xdg-open"
 vim.cmd.filetype("indent off")
-vim.cmd.colorscheme("industry")
 
 -- }}}
 
 -- Plugin list {{{
 
 local plugins = {
+    {
+        "miikanissi/modus-themes.nvim",
+        priority = 1000, lazy = false,
+        opts = {},
+        config = function(_, opts)
+            require("modus-themes").setup(opts)
+            vim.cmd.colorscheme("modus")
+        end
+    },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
 }
 
