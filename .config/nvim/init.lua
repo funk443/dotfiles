@@ -38,12 +38,14 @@ vim.cmd.filetype("indent off")
 
 local plugins = {
     {
-        "miikanissi/modus-themes.nvim",
-        priority = 1000, lazy = false,
-        opts = {},
+        "catppuccin/nvim", name = "catppuccin",
+        lazy = false, priority = 1000,
+        opts = {
+            flavour = "mocha",
+        },
         config = function(_, opts)
-            require("modus-themes").setup(opts)
-            vim.cmd.colorscheme("modus")
+            require("catppuccin").setup(opts)
+            vim.cmd.colorscheme("catppuccin")
         end
     },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
