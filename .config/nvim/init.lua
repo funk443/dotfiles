@@ -12,11 +12,26 @@ vim.opt.undofile = true
 vim.opt.relativenumber = true
 vim.opt.formatoptions:append("mM")
 vim.opt.formatoptions:remove("t")
+
 vim.opt.shell = "pwsh.exe"
-vim.cmd.colorscheme("quiet")
+vim.opt.shellcmdflag = table.concat({
+    "-NoLogo", "-NonInteractive",
+    "-ExecutionPolicy RemoteSigned",
+    "-Command",
+    "[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();",
+    "[Console]::InputEncoding=[Console]::OutputEncoding;",
+    "$PSDefaultParameterValues['Out-File:Encoding']='utf8';",
+    "$PSStyle.OutputRendering='plaintext';",
+    "Remove-Alias -Force -ErrorAction SilentlyContinue tee;",
+}, " ")
+vim.opt.shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode'
+vim.opt.shellpipe = '2>&1 | %%{ "$_" } | tee %s; exit $LastExitCode'
+vim.opt.shellquote = ""
+vim.opt.shellxquote = ""
 
 vim.g.netrw_browsex_viewer = "xdg-open"
 vim.cmd.filetype("indent off")
+vim.cmd.colorscheme("quiet")
 
 -- }}}
 
