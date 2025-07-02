@@ -1,7 +1,7 @@
 [user]
 
-	email = funk443@yahoo.com.tw
-	name = CToID
+    email = funk443@yahoo.com.tw
+    name = CToID
 
 [init]
 
@@ -17,11 +17,11 @@
 
 [filter "lfs"]
 
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 
 [core]
 
-	sshCommand = 'C:/Windows/System32/OpenSSH/ssh.exe'
+    sshCommand = 'C:/Windows/System32/OpenSSH/ssh.exe'
