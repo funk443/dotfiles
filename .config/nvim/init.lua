@@ -31,7 +31,7 @@ vim.opt.shellxquote = ""
 
 vim.g.netrw_browsex_viewer = "xdg-open"
 vim.cmd.filetype("indent off")
-vim.cmd.colorscheme("quiet")
+vim.cmd.colorscheme("industry")
 
 -- }}}
 
