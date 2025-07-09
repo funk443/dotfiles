@@ -15,17 +15,17 @@ vim.opt.formatoptions:remove("t")
 
 vim.opt.shell = "pwsh.exe"
 vim.opt.shellcmdflag = table.concat({
-    "-NoLogo", "-NonInteractive",
+    "-NoLogo", "-NonInteractive", "-NoProfile",
     "-ExecutionPolicy RemoteSigned",
     "-Command",
     "[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();",
     "[Console]::InputEncoding=[Console]::OutputEncoding;",
     "$PSDefaultParameterValues['Out-File:Encoding']='utf8';",
-    "$PSStyle.OutputRendering='plaintext';",
+    "$PSStyle.OutputRendering='PlainText';",
     "Remove-Alias -Force -ErrorAction SilentlyContinue tee;",
 }, " ")
-vim.opt.shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode'
-vim.opt.shellpipe = '2>&1 | %%{ "$_" } | tee %s; exit $LastExitCode'
+vim.opt.shellredir = '2>&1 > %s'
+vim.opt.shellpipe = '2>&1 > %s'
 vim.opt.shellquote = ""
 vim.opt.shellxquote = ""
 
