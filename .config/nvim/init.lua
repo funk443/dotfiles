@@ -114,7 +114,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 -- Neovide config {{{
 
 if vim.g.neovide then
-    vim.o.guifont = "Roboto Mono,Noto Sans CJK TC:h30"
+    vim.o.guifont = "Roboto Mono:h14"
     vim.g.neovide_hide_mouse_when_typing = true
     vim.g.neovide_no_idle = false
     vim.g.neovide_input_ime = true
@@ -128,6 +128,9 @@ if vim.g.neovide then
     end)
     vim.keymap.set("n", "<C-->", function()
         change_scale_factor(1 / 1.25)
+    end)
+    vim.keymap.set("n", "<C-0>", function()
+        vim.g.neovide_scale_factor = 1.0
     end)
 end
 
