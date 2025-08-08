@@ -1,4 +1,4 @@
 [options]
 
 background = checks
-overlay_font = Roboto Mono:24
+overlay_font = Cascadia Code:24
