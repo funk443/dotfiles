@@ -5,7 +5,7 @@ exec mako
 exec fcitx5 -dr
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-font pango:Roboto 10
+font pango:Inter 10
 
 focus_follows_mouse no
 workspace_layout tabbed
@@ -36,9 +36,9 @@ output * bg ./desktop.jpg fill
 ### Idle configuration
 
 exec --no-startup-id swayidle -w \
-         timeout 300 'swaylock -f -c 000000 --font Roboto' \
+         timeout 300 'swaylock -f -c 000000 --font "Inter"' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000 --font Roboto'
+         before-sleep 'swaylock -f -c 000000 --font "Inter"'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -63,7 +63,7 @@ input "type:keyboard" {
 ### Key bindings
 
 set $term alacritty
-set $menu wmenu-run -f "Roboto Mono 10"
+set $menu wmenu-run -f "Cascadia Code 10"
 set $emacs emacsclient -a "emacs" -c
 
 bindsym $mod+Return exec $emacs

@@ -2,13 +2,13 @@
 
 (when (display-graphic-p)
   (set-face-attribute 'default nil
-                      :family "Roboto Mono"
+                      :family "Cascadia Code"
                       :height 200)
   (set-face-attribute 'fixed-pitch nil
-                      :family "Roboto Mono"
+                      :family "Cascadia Code"
                       :inherit 'default)
   (set-face-attribute 'variable-pitch nil
-                      :family "Roboto"
+                      :family "Inter"
                       :inherit 'default)
   (set-fontset-font nil 'han
                     (font-spec :family "Noto Sans CJK TC")
