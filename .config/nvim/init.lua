@@ -13,22 +13,6 @@ vim.opt.relativenumber = true
 vim.opt.formatoptions:append("mM")
 vim.opt.formatoptions:remove("t")
 
-vim.opt.shell = "pwsh.exe"
-vim.opt.shellcmdflag = table.concat({
-    "-NoLogo", "-NonInteractive", "-NoProfile",
-    "-ExecutionPolicy RemoteSigned",
-    "-Command",
-    "[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();",
-    "[Console]::InputEncoding=[Console]::OutputEncoding;",
-    "$PSDefaultParameterValues['Out-File:Encoding']='utf8';",
-    "$PSStyle.OutputRendering='PlainText';",
-    "Remove-Alias -Force -ErrorAction SilentlyContinue tee;",
-}, " ")
-vim.opt.shellredir = '2>&1 > %s'
-vim.opt.shellpipe = '2>&1 > %s'
-vim.opt.shellquote = ""
-vim.opt.shellxquote = ""
-
 vim.g.netrw_browsex_viewer = "xdg-open"
 vim.cmd.filetype("indent off")
 
