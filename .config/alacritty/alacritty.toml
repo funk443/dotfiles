@@ -1,22 +1,17 @@
 [font]
 
-normal = {family = "Cascadia Code"}
-size = 18
+normal = { family = "Cascadia Code" }
+size = 20
 
 [window]
 
+dimensions = { columns = 120, lines = 40 }
 dynamic_padding = true
 
 [keyboard]
 
 bindings = [
-    {key = "N", mods = "Control|Shift", action = "CreateNewWindow"}
-]
-
-[general]
-
-import = [
-    "~/dotfiles/.config/alacritty/theme.toml"
+    { key = "N", mods = "Control|Shift", action = "CreateNewWindow" }
 ]
 
 [mouse]
