@@ -11,7 +11,11 @@ dynamic_padding = true
 [keyboard]
 
 bindings = [
-    { key = "N", mods = "Control|Shift", action = "CreateNewWindow" }
+    { key = "N", mods = "Command", action = "CreateNewWindow" },
+    { key = "Space", mods = "Alt", action = "ToggleViMode" },
+
+    { key = "Right", mods = "Alt", chars = "\u001BF" },
+    { key = "Left", mods = "Alt", chars = "\u001BB" },
 ]
 
 [mouse]
