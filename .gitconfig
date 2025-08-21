@@ -1,6 +1,6 @@
 [user]
 
-    email = funk0980002@outlook.com
+    email = funk443@icloud.com
     name = CToID
 
 [init]
@@ -21,8 +21,3 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
-
-[core]
-
-    sshCommand = 'C:/Windows/System32/OpenSSH/ssh.exe'
-    autocrlf = yes
