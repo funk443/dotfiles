@@ -1,0 +1,56 @@
+{
+    "$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+    "CreationDate" : "2025-07-02T08:47:19.627-00:00",
+    "Sources" :
+    [
+        {
+            "Packages" :
+            [
+                {
+                    "PackageIdentifier" : "7zip.7zip"
+                },
+                {
+                    "PackageIdentifier" : "Git.Git"
+                },
+                {
+                    "PackageIdentifier" : "Mozilla.Firefox"
+                },
+                {
+                    "PackageIdentifier" : "VideoLAN.VLC"
+                },
+                {
+                    "PackageIdentifier" : "Neovim.Neovim"
+                },
+                {
+                    "PackageIdentifier" : "KeePassXCTeam.KeePassXC"
+                },
+                {
+                    "PackageIdentifier" : "Microsoft.PowerShell"
+                },
+                {
+                    "PackageIdentifier" : "OBSProject.OBSStudio"
+                },
+                {
+                    "PackageIdentifier" : "BurntSushi.ripgrep.MSVC"
+                },
+                {
+                    "PackageIdentifier" : "DenoLand.Deno"
+                },
+                {
+                    "PackageIdentifier" : "Fastfetch-cli.Fastfetch"
+                },
+                {
+                    "PackageIdentifier" : "Python.Python.3.12"
+                }
+            ],
+            "SourceDetails" :
+            {
+                "Argument" : "https://cdn.winget.microsoft.com/cache",
+                "Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+                "Name" : "winget",
+                "Type" : "Microsoft.PreIndexed.Package"
+            }
+        }
+    ],
+    "WinGetVersion" : "1.11.400"
+}

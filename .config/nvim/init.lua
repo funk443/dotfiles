@@ -21,16 +21,6 @@ vim.cmd.filetype("indent off")
 -- Plugin list {{{
 
 local plugins = {
-    {
-        "miikanissi/modus-themes.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-        config = function(_, opts)
-            require("modus-themes").setup(opts)
-            vim.cmd.colorscheme("modus")
-        end,
-    },
     { "junegunn/vim-easy-align", lazy = true, cmd = "EasyAlign", opts = {} },
 }
 
@@ -122,6 +112,9 @@ if vim.g.neovide then
     end)
     vim.keymap.set("n", "<C-->", function()
         change_scale_factor(1 / 1.25)
+    end)
+    vim.keymap.set("n", "<C-0>", function()
+        vim.g.neovide_scale_factor = 1.0
     end)
 end
 
