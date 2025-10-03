@@ -41,6 +41,20 @@ vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
 
 -- Autocmds {{{
 
+vim.filetype.add({
+    extension = {
+        ss = "scheme",
+        sls = "scheme",
+    },
+})
+vim.api.nvim_create_autocmd({ "FileType" }, {
+    pattern = { "lisp", "scheme" },
+    callback = function(ev)
+        vim.opt_local.tabstop = 2
+    end,
+    desc = "Adjust indent step to better match Lisp styles."
+})
+
 vim.api.nvim_create_autocmd({ "FileType" }, {
     pattern = { "go" },
     callback = function(ev)
