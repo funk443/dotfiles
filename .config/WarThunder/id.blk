@@ -176,6 +176,10 @@ controls{
       keyboardKey:i=16
     }
 
+    ID_SENSOR_DIRECTION_AXES_RESET{
+      keyboardKey:i=199
+    }
+
     ID_SENSOR_MODE_SWITCH{
       keyboardKey:i=56
       keyboardKey:i=18
@@ -187,11 +191,6 @@ controls{
     }
 
     ID_SENSOR_SCAN_PATTERN_SWITCH{}
-    ID_SENSOR_SWITCH{
-      keyboardKey:i=56
-      keyboardKey:i=19
-    }
-
     ID_SENSOR_TARGET_LOCK{
       keyboardKey:i=19
     }
@@ -310,6 +309,26 @@ controls{
 
     head_pos_x_rangeMax{}
     head_pos_x_rangeMin{}
+    head_pos_x_rangeSet{
+      keyboardKey:i=76
+    }
+
+    head_pos_y_rangeSet{
+      keyboardKey:i=76
+    }
+
+    head_pos_z_rangeSet{
+      keyboardKey:i=76
+    }
+
+    sensor_cue_z_rangeMax{
+      keyboardKey:i=201
+    }
+
+    sensor_cue_z_rangeMin{
+      keyboardKey:i=209
+    }
+
     throttle_rangeMax{
       keyboardKey:i=42
     }
