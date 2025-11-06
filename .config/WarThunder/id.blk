@@ -295,6 +295,22 @@ controls{
       mouseButton:i=1
     }
 
+    ailerons_rangeMax{
+      keyboardKey:i=32
+    }
+
+    ailerons_rangeMin{
+      keyboardKey:i=30
+    }
+
+    elevator_rangeMax{
+      keyboardKey:i=31
+    }
+
+    elevator_rangeMin{
+      keyboardKey:i=17
+    }
+
     gm_sight_distance_rangeMax{
       keyboardKey:i=201
     }
@@ -347,6 +363,22 @@ controls{
 
     vtol_rangeSet{
       keyboardKey:i=181
+    }
+
+    weapon_aim_heading_rangeMax{
+      keyboardKey:i=205
+    }
+
+    weapon_aim_heading_rangeMin{
+      keyboardKey:i=203
+    }
+
+    weapon_aim_pitch_rangeMax{
+      keyboardKey:i=200
+    }
+
+    weapon_aim_pitch_rangeMin{
+      keyboardKey:i=208
     }
   }
 
