@@ -48,7 +48,7 @@ setup_gtk_theme() {
 
 setup_fonts() {
     gsettings set org.gnome.desktop.interface font-name "Inter 12"
-    gsettings set org.gnome.desktop.interface monospace-font-name "Cascadia Code 12"
+    gsettings set org.gnome.desktop.interface monospace-font-name "Source Code Pro 12"
     gsettings set org.gnome.desktop.interface document-font-name "Libertinus Serif 12"
 }
 

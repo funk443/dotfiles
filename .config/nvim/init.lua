@@ -73,7 +73,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 -- Neovide config {{{
 
 if vim.g.neovide then
-    vim.o.guifont = "Cascadia Code,Noto Sans CJK TC:h30"
+    vim.o.guifont = "Source Code Pro,Noto Sans CJK TC:h30"
     vim.g.neovide_hide_mouse_when_typing = true
     vim.g.neovide_no_idle = false
     vim.g.neovide_input_ime = true

@@ -63,7 +63,7 @@ input "type:keyboard" {
 ### Key bindings
 
 set $term alacritty
-set $menu wmenu-run -f "Cascadia Code 10"
+set $menu wmenu-run -f "Source Code Pro 10"
 set $emacs emacsclient -a "emacs" -c
 
 bindsym $mod+Return exec $emacs

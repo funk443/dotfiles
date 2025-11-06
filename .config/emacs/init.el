@@ -2,10 +2,10 @@
 
 (when (display-graphic-p)
   (set-face-attribute 'default nil
-                      :family "Cascadia Code"
+                      :family "Source Code Pro"
                       :height 200)
   (set-face-attribute 'fixed-pitch nil
-                      :family "Cascadia Code"
+                      :family "Source Code Pro"
                       :inherit 'default)
   (set-face-attribute 'variable-pitch nil
                       :family "Inter"
