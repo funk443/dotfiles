@@ -404,6 +404,10 @@ controls{
       mouseAxisId:i=6
     }
 
+    sensor_cue_z{
+      kMul:r=0.2
+    }
+
     throttle{
       mouseAxisId:i=-1
       innerDeadzone:r=0.05
