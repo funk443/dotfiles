@@ -191,6 +191,11 @@ controls{
     }
 
     ID_SENSOR_SCAN_PATTERN_SWITCH{}
+    ID_SENSOR_SCAN_PATTERN_SWITCH{
+      keyboardKey:i=56
+      keyboardKey:i=32
+    }
+
     ID_SENSOR_TARGET_LOCK{
       keyboardKey:i=19
     }
