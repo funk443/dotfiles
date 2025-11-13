@@ -5,7 +5,7 @@ size = 16
 
 [window]
 
-dimensions = { columns = 120, lines = 40 }
+dimensions = { columns = 100, lines = 36 }
 dynamic_padding = true
 
 [keyboard]
