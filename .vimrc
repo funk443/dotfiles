@@ -2,7 +2,7 @@ vim9script
 set nocompatible
 
 set textwidth=80
-set formatoptions+=mM
+set formatoptions+=jmM
 set formatoptions-=t
 set nojoinspaces
 
@@ -21,7 +21,11 @@ set nostartofline
 set belloff=all
 set viminfo=
 
-set grepprg=rg\ --vimgrep\ -uu
+set grepprg=rg\ --vimgrep\
 
 autocmd BufWritePre * :%s/\s\+$//e
-autocmd BufEnter *.go :setl noexpandtab
+autocmd BufEnter *.go setl noexpandtab
+autocmd BufEnter *.ss,*.sls {
+    setl tabstop=2
+    setl lisp
+}
