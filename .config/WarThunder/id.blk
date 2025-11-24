@@ -208,6 +208,36 @@ controls{
       keyboardKey:i=41
     }
 
+    ID_SUSPENSION_CLEARANCE_DOWN{
+      keyboardKey:i=56
+      keyboardKey:i=200
+    }
+
+    ID_SUSPENSION_CLEARANCE_UP{
+      keyboardKey:i=56
+      keyboardKey:i=208
+    }
+
+    ID_SUSPENSION_PITCH_DOWN{
+      keyboardKey:i=200
+    }
+
+    ID_SUSPENSION_PITCH_UP{
+      keyboardKey:i=208
+    }
+
+    ID_SUSPENSION_RESET{
+      keyboardKey:i=82
+    }
+
+    ID_SUSPENSION_ROLL_DOWN{
+      keyboardKey:i=203
+    }
+
+    ID_SUSPENSION_ROLL_UP{
+      keyboardKey:i=205
+    }
+
     ID_SWITCH_SHOOTING_CYCLE_COUNTER_MEASURE{
       keyboardKey:i=56
       keyboardKey:i=47
@@ -326,6 +356,22 @@ controls{
 
     gm_sight_distance_rangeSet{
       keyboardKey:i=199
+    }
+
+    gm_steering_rangeMax{
+      keyboardKey:i=30
+    }
+
+    gm_steering_rangeMin{
+      keyboardKey:i=32
+    }
+
+    gm_throttle_rangeMax{
+      keyboardKey:i=17
+    }
+
+    gm_throttle_rangeMin{
+      keyboardKey:i=31
     }
 
     head_pos_x_rangeMax{}
