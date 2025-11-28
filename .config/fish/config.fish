@@ -21,7 +21,7 @@ else
         printf " in "
 
         set_color blue
-        printf "%s" "$(prompt_pwd --dir-length=5)"
+        printf "%s" "$(prompt_pwd --dir-length=8)"
         set_color normal
 
         printf "\n|-"
