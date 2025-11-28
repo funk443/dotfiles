@@ -64,6 +64,11 @@ function ls -w /usr/bin/ls -d "ls with some custom options."
     /usr/bin/ls -alh --color=auto $argv
 end
 
+# Bindings
+
+bind ctrl-w backward-kill-token
+bind alt-backspace backward-kill-word
+
 # Environmental variables.
 
 set -gx VISUAL nvim
