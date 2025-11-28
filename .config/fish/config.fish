@@ -1,5 +1,6 @@
 # Prompt and welcome message customization.
-if test "$TERM" = "dumb" 
+
+if test "$TERM" = "dumb"
     function fish_prompt
         printf '$ '
     end
@@ -58,25 +59,20 @@ else
 end
 
 # Aliases.
+
 function ls -w /usr/bin/ls -d "ls with some custom options."
-    /usr/bin/ls -Alh --color=auto $argv
-end
-
-function grep -w /usr/bin/grep -d "grep with color."
-    /usr/bin/grep --color=auto $argv
-end
-
-function kssh -w /usr/bin/ssh -d "ssh over kitten."
-    kitten ssh $argv
+    /usr/bin/ls -alh --color=auto $argv
 end
 
 # Environmental variables.
+
 set -gx VISUAL nvim
-set -gx XAPIAN_CJK_NGRAM 1
+set -gx EDITOR $VISUAL
 
 # Emacs vterm configuration.
 # Placed in here because files from conf.d is read before this file,
 # and the prompt defined in there will be overwritten.
+
 set -l vterm_fish_location "$(status dirname)/emacs-vterm.fish"
 if test "$INSIDE_EMACS" = "vterm"; and test -f "$vterm_fish_location"
     . "$vterm_fish_location"
