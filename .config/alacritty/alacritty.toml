@@ -17,3 +17,7 @@ bindings = [
 [mouse]
 
 hide_when_typing = true
+
+[terminal]
+
+shell = "fish"
