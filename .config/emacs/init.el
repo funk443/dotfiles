@@ -2,10 +2,10 @@
 
 (when (display-graphic-p)
   (set-face-attribute 'default nil
-                      :family "Source Code Pro"
+                      :family "Victor Mono"
                       :height 200)
   (set-face-attribute 'fixed-pitch nil
-                      :family "Source Code Pro"
+                      :family "Victor Mono"
                       :inherit 'default)
   (set-face-attribute 'variable-pitch nil
                       :family "Inter"
