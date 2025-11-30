@@ -56,14 +56,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     desc = "Adjust tabstop for some filetypes."
 })
 
-vim.api.nvim_create_autocmd({ "FileType" }, {
-    pattern = { "go" },
-    callback = function(ev)
-        vim.opt_local.expandtab = false
-    end,
-    desc = "Use tabs for indentation in Go files.",
-})
-
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     command = "%s/\\s\\+$//e",
     desc = "Remove trailing whitespaces before saving.",
