@@ -35,6 +35,7 @@ doc-debian
 dosfstools
 dpkg
 e2fsprogs
+ed
 fcitx5-chewing
 fd-find
 fdisk
