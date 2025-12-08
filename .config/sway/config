@@ -2,8 +2,8 @@ include /etc/sway/config.d/*
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec mako
+exec /usr/libexec/xfce-polkit
 exec fcitx5 -dr
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 font pango:Victor Mono 10
 
