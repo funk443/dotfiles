@@ -2,7 +2,14 @@
 
 set -xe
 
+name="wl-screenrec-input"
+
+if pactl list short modules | grep -q "$name"; then
+    echo Output already exists.
+    exit 0
+fi
+
 pactl load-module module-null-sink \
     media.class=Audio/Sink \
-    sink_name=wl-screenrec-input \
+    sink_name="$name" \
     channel_map=stereo
