@@ -2,7 +2,7 @@
 
 set -e
 
-recording_path="${HOME}/Videos/recordings"
+recording_path="${HOME}/Videos/Recordings"
 mkdir -p "${recording_path}"
 
 the_time="$(date +%Y%m%d-%H%M)"
