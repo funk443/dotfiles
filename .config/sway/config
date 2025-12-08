@@ -5,7 +5,7 @@ exec mako
 exec fcitx5 -dr
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-font pango:Inter 10
+font pango:Victor Mono 10
 
 focus_follows_mouse no
 workspace_layout tabbed
