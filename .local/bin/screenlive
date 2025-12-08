@@ -8,4 +8,7 @@ if [[ "$#" = "0" ]]; then
     exit 1
 fi
 
-wl-screenrec --no-damage --audio --low-power off --ffmpeg-muxer flv --bitrate "1 MB" --codec av1 --filename "$1"
+wl-screenrec --audio --audio-device wl-screenrec-input.monitor \
+    --no-damage --low-power off \
+    --ffmpeg-muxer flv --bitrate "1 MB" --codec av1 \
+    --filename "$1"
