@@ -62,11 +62,9 @@ input "type:keyboard" {
 
 ### Key bindings
 
-set $term alacritty
+set $term foot
 set $menu wmenu-run -f "Victor Mono 10"
-set $emacs emacsclient -a "emacs" -c
 
-bindsym $mod+Return exec $emacs
 bindsym $mod+t exec $term
 bindsym $mod+d exec $menu
 
