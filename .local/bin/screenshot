@@ -2,7 +2,7 @@
 
 set -e
 
-screenshot_path="${HOME}/Pictures/grim"
+screenshot_path="${HOME}/Pictures/Grim"
 mkdir -p "${screenshot_path}"
 
 the_time="$(date +%Y%m%d-%H%M%S)"
