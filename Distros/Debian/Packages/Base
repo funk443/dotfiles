@@ -191,11 +191,13 @@ pciutils
 perl
 perl-base
 pipewire-audio
+pkg-config
 polkitd
 popularity-contest
 procps
 pulseaudio-utils
 pulsemixer
+qpwgraph
 readline-common
 reportbug
 ripgrep
