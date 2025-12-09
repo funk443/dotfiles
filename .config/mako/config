@@ -1,2 +1,6 @@
 font=Victor Mono 10
 default-timeout=3000
+
+[mode=quiet]
+
+invisible=1
