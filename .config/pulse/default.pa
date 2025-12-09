@@ -1,1 +1,0 @@
-load-module module-null-sink media.class=Audio/Sink sink_name=wl-screenrec-input channel_map=stereo format=s32le
