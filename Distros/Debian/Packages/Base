@@ -94,6 +94,7 @@ libedit2
 libelf1t64
 libext2fs2t64
 libfdisk1
+libfuse2t64
 libgcc-s1
 libglib2.0-bin
 libgmp10
