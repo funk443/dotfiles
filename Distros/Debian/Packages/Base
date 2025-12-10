@@ -54,6 +54,9 @@ grim
 groff-base
 grub-common
 grub-efi-amd64
+gvfs
+gvfs-backends
+gvfs-fuse
 gzip
 hostname
 htop
@@ -216,6 +219,7 @@ sysvinit-utils
 tar
 task-english
 tasksel
+thunar
 tmux
 traceroute
 tree
