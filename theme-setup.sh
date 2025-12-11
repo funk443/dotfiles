@@ -47,9 +47,9 @@ setup_gtk_theme() {
 }
 
 setup_fonts() {
-    gsettings set org.gnome.desktop.interface font-name "Inter 12"
-    gsettings set org.gnome.desktop.interface monospace-font-name "Victor Mono 12"
-    gsettings set org.gnome.desktop.interface document-font-name "Libertinus Serif 12"
+    gsettings set org.gnome.desktop.interface font-name "IBM Plex Sans 12"
+    gsettings set org.gnome.desktop.interface monospace-font-name "IBM Plex Mono 12"
+    gsettings set org.gnome.desktop.interface document-font-name "IBM Plex Serif 12"
 }
 
 case "$1" in
