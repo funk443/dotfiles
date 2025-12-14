@@ -9,10 +9,6 @@
 
 [alias]
 
-    get-wtfpl-text = !curl -sL https://funk443.github.io/licenses/wtfpl/license.txt
-    get-wtfpl-notice = !curl -sL https://funk443.github.io/licenses/wtfpl/notice.txt
-    get-wtfpl-prog-notice = !curl -sL https://funk443.github.io/licenses/wtfpl/notice.prog.txt
-
     tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
 [filter "lfs"]
