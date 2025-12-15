@@ -8,7 +8,12 @@ if [[ "$#" = "0" ]]; then
     exit 1
 fi
 
+refresh_rate=60
+gop_size="$(($refresh_rate * 2))"
+
 wl-screenrec --audio --audio-device wl-screenrec-input.monitor \
-    --no-damage --low-power off \
+    --no-damage --low-power off --gop-size "$gop_size" \
+    --capture-backend wlr-screencopy \
+    --ffmpeg-encoder-options rc_mode=2 \
     --ffmpeg-muxer flv --bitrate "1 MB" --codec av1 \
     --filename "$1"
