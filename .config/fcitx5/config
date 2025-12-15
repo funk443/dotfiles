@@ -45,7 +45,7 @@ resetStateWhenFocusIn=No
 # Share Input State
 ShareInputState=All
 # Show preedit in application
-PreeditEnabledByDefault=True
+PreeditEnabledByDefault=False
 # Show Input Method Information when switch input method
 ShowInputMethodInformation=False
 # Show Input Method Information when changing focus
