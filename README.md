@@ -19,5 +19,5 @@ The script can do the following things for you:
   directory, then set it as icon theme.
 - Set default fonts for GTK applications.
 
-[Skewaita]: https://git.disroot.org/eudaimon/Skewaita
-[Oxylite]: https://github.com/mx-2/oxylite-icon-theme
+[Skewaita]: <https://git.disroot.org/eudaimon/Skewaita>
+[Oxylite]: <https://github.com/mx-2/oxylite-icon-theme>
