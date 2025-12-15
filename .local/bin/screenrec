@@ -9,6 +9,9 @@ the_time="$(date +%Y%m%d-%H%M)"
 the_format="mkv"
 filename="${the_time}.${the_format}"
 
+refresh_rate=60
+gop_size="$(($refresh_rate * 2))"
+
 i=1
 while [[ -f "${recording_path}/${filename}" ]]; do
     filename="${the_time}-${i}.${the_format}"
@@ -16,6 +19,6 @@ while [[ -f "${recording_path}/${filename}" ]]; do
 done
 
 wl-screenrec --audio --audio-device wl-screenrec-input.monitor \
-    --low-power off \
+    --low-power off --gop-size "$gop_size" \
     --codec av1 \
     --filename "${recording_path}/${filename}"
