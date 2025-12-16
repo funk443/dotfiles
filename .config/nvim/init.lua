@@ -37,11 +37,6 @@ vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, { noremap = true })
 vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, { noremap = true })
 vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, { noremap = true })
 
-vim.keymap.set("c", "<c-p>", "<Up>", { noremap = true })
-vim.keymap.set("c", "<c-n>", "<Down>", { noremap = true })
-vim.keymap.set("c", "<Up>", "<c-p>", { noremap = true })
-vim.keymap.set("c", "<Down>", "<c-n>", { noremap = true })
-
 -- }}}
 
 -- Autocmds {{{
