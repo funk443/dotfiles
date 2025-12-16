@@ -196,6 +196,10 @@ controls{
       keyboardKey:i=32
     }
 
+    ID_SENSOR_STABILIZATION_SWITCH{
+      keyboardKey:i=207
+    }
+
     ID_SENSOR_TARGET_LOCK{
       keyboardKey:i=19
     }
@@ -388,6 +392,22 @@ controls{
       keyboardKey:i=76
     }
 
+    sensor_cue_x_rangeMax{
+      keyboardKey:i=205
+    }
+
+    sensor_cue_x_rangeMin{
+      keyboardKey:i=203
+    }
+
+    sensor_cue_y_rangeMax{
+      keyboardKey:i=200
+    }
+
+    sensor_cue_y_rangeMin{
+      keyboardKey:i=208
+    }
+
     sensor_cue_z_rangeMax{
       keyboardKey:i=201
     }
@@ -417,18 +437,22 @@ controls{
     }
 
     weapon_aim_heading_rangeMax{
+      keyboardKey:i=157
       keyboardKey:i=205
     }
 
     weapon_aim_heading_rangeMin{
+      keyboardKey:i=157
       keyboardKey:i=203
     }
 
     weapon_aim_pitch_rangeMax{
+      keyboardKey:i=157
       keyboardKey:i=200
     }
 
     weapon_aim_pitch_rangeMin{
+      keyboardKey:i=157
       keyboardKey:i=208
     }
   }
@@ -448,10 +472,6 @@ controls{
 
     helicopter_zoom{
       mouseAxisId:i=6
-    }
-
-    sensor_cue_z{
-      kMul:r=0.2
     }
 
     throttle{
@@ -532,12 +552,14 @@ settings{
   aimTimeNonlinearityWalker:r=0
   aimTimeNonlinearityShip:r=0
   aimTimeNonlinearitySubmarine:r=0
+  aimTimeNonlinearityHuman:r=0
   aimAccelerationDelayAir:r=0.5
   aimAccelerationDelayHelicopter:r=0.5
   aimAccelerationDelayTank:r=0.5
   aimAccelerationDelayWalker:r=0.5
   aimAccelerationDelayShip:r=0.5
   aimAccelerationDelaySubmarine:r=0.5
+  aimAccelerationDelayHuman:r=0.5
   mouseZMultAir:r=1
   mouseZMultHelicopter:r=1
   mouseZMultTank:r=0.31
@@ -568,4 +590,5 @@ settings{
   forceGain:r=1
   cameraShakeMultiplier:r=1
   vrCameraShakeMultiplier:r=1
+  holdBtnToGrabHotas:b=no
 }
