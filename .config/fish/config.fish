@@ -60,8 +60,8 @@ end
 
 # Aliases.
 
-function ls -w /usr/bin/ls -d "ls with some custom options."
-    /usr/bin/ls -alh --color=auto $argv
+function ls -w /bin/ls -d "ls with some custom options."
+    /bin/ls -alh --color=auto $argv
 end
 
 # Bindings
