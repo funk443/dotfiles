@@ -136,6 +136,10 @@ controls{
     }
 
     ID_PLANE_SMOKE_SCREEN_GENERATOR{}
+    ID_RADAR_NEXT_IFF_FILTER_MODE{
+      keyboardKey:i=56
+      keyboardKey:i=31
+    }
     ID_RANGEFINDER{
       keyboardKey:i=19
     }
