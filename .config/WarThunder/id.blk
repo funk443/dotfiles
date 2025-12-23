@@ -140,6 +140,12 @@ controls{
       keyboardKey:i=56
       keyboardKey:i=31
     }
+
+    ID_RADAR_NEXT_IFF_FILTER_MODE_TANK{
+      keyboardKey:i=56
+      keyboardKey:i=31
+    }
+
     ID_RANGEFINDER{
       keyboardKey:i=19
     }
@@ -180,6 +186,11 @@ controls{
       keyboardKey:i=16
     }
 
+    ID_SENSOR_ACM_SWITCH_TANK{
+      keyboardKey:i=56
+      keyboardKey:i=16
+    }
+
     ID_SENSOR_DIRECTION_AXES_RESET{
       keyboardKey:i=199
     }
@@ -189,13 +200,28 @@ controls{
       keyboardKey:i=18
     }
 
+    ID_SENSOR_MODE_SWITCH_TANK{
+      keyboardKey:i=56
+      keyboardKey:i=18
+    }
+
     ID_SENSOR_RANGE_SWITCH{
+      keyboardKey:i=56
+      keyboardKey:i=17
+    }
+
+    ID_SENSOR_RANGE_SWITCH_TANK{
       keyboardKey:i=56
       keyboardKey:i=17
     }
 
     ID_SENSOR_SCAN_PATTERN_SWITCH{}
     ID_SENSOR_SCAN_PATTERN_SWITCH{
+      keyboardKey:i=56
+      keyboardKey:i=32
+    }
+
+    ID_SENSOR_SCAN_PATTERN_SWITCH_TANK{
       keyboardKey:i=56
       keyboardKey:i=32
     }
@@ -210,6 +236,11 @@ controls{
 
     ID_SENSOR_TARGET_LOCK_TANK{
       keyboardKey:i=29
+    }
+
+    ID_SENSOR_TYPE_SWITCH_TANK{
+      keyboardKey:i=56
+      keyboardKey:i=30
     }
 
     ID_SQUAD_TARGET_DESIGNATION{
