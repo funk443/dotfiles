@@ -178,6 +178,7 @@ mesa-utils
 mesa-va-drivers
 mesa-vulkan-drivers
 mount
+mpv
 nano
 ncurses-base
 ncurses-bin
@@ -233,7 +234,6 @@ util-linux-extra
 vainfo
 vim-common
 vim-tiny
-vlc
 wamerican
 waybar
 wget
