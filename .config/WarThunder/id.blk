@@ -78,7 +78,7 @@ controls{
     }
 
     ID_FIRE_GM_SPECIAL_GUN{
-      keyboardKey:i=58
+      keyboardKey:i=29
     }
 
     ID_FIRE_SECONDARY_HELICOPTER{
@@ -235,7 +235,7 @@ controls{
     }
 
     ID_SENSOR_TARGET_LOCK_TANK{
-      keyboardKey:i=29
+      keyboardKey:i=58
     }
 
     ID_SENSOR_TYPE_SWITCH_TANK{
@@ -385,6 +385,16 @@ controls{
       keyboardKey:i=17
     }
 
+    gm_sensor_cue_z_rangeMax{
+      keyboardKey:i=54
+      keyboardKey:i=201
+    }
+
+    gm_sensor_cue_z_rangeMin{
+      keyboardKey:i=54
+      keyboardKey:i=209
+    }
+
     gm_sight_distance_rangeMax{
       keyboardKey:i=201
     }
@@ -528,7 +538,6 @@ controls{
     USEROPT_ATGM_AIM_ZOOM_SENS_HELICOPTER:i=100
     USEROPT_FIX_GUN_IN_MOUSE_LOOK:b=no
     USEROPT_FREE_CAMERA_ZOOM_SPEED:i=50
-    USEROPT_GUNNER_VIEW_SENSE:i=100
     USEROPT_GUNNER_VIEW_ZOOM_SENS:i=100
     USEROPT_HOLD_BUTTON_FOR_TACTICAL_MAP:b=yes
     USEROPT_INVERTCAMERAY:i=0
@@ -538,11 +547,10 @@ controls{
     USEROPT_INVERTY_SPECTATOR:b=no
     USEROPT_INVERTY_SUBMARINE:b=no
     USEROPT_JOYFX:b=yes
-    USEROPT_MOUSE_SENSE:i=11
-    USEROPT_MOUSE_USAGE_NO_AIM:i=1
     USEROPT_SHIP_COMBINE_PRI_SEC_TRIGGERS:b=yes
     USEROPT_SINGLE_SHOT_BY_TURRET:b=yes
     USEROPT_WHEEL_CONTROL_SHIP:b=no
+    mouseJoystick:b=no
   }
 
   deviceMapping{}
@@ -558,9 +566,9 @@ settings{
   freeCameraInertia:r=1
   replayCameraWiggle:r=1
   zoomSens:r=0
-  mouseSens:r=0.22
+  mouseSens:r=0.5
   mouseAimSens:r=0.5
-  gunnerViewSens:r=1
+  gunnerViewSens:r=0.5
   gunnerViewZoomSens:r=1
   atgmAimSensHelicopter:r=1
   atgmAimZoomSensHelicopter:r=1
