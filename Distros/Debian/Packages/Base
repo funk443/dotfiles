@@ -15,7 +15,6 @@ build-essential
 busybox
 bzip2
 ca-certificates
-chromium
 console-setup
 coreutils
 cpio
@@ -42,6 +41,7 @@ fdisk
 ffmpeg
 file
 findutils
+firefox
 fish
 fonts-noto
 gcc-14-base
