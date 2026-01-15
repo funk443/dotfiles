@@ -301,6 +301,11 @@ controls{
       keyboardKey:i=49
     }
 
+    ID_TANK_SWITCH_FUSE_MODE{
+      keyboardKey:i=56
+      keyboardKey:i=33
+    }
+
     ID_TARGETING_HOLD_GM{}
     ID_TARGET_CAMERA{}
     ID_TARGET_CAMERA_HELICOPTER{}
