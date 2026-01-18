@@ -34,9 +34,7 @@
   :custom
   (tramp-remote-process-environment
    '("ENV=''" "TMOUT=0" "CDPATH=" "HISTORY=" "MAIL=" "MAILCHECK="
-     "MAILPATH=" "PAGER=cat" "autocorrect=" "correct="))
-  :config
-  (tramp-enable-method "run0"))
+     "MAILPATH=" "PAGER=cat" "autocorrect=" "correct=")))
 
 (use-package eglot
   :custom
@@ -49,48 +47,6 @@
 
 (use-package magit
   :ensure t)
-
-(use-package notmuch
-  :commands (notmuch)
-  :init
-  (add-to-list 'load-path "/usr/share/emacs/site-lisp")
-  :custom
-  (mail-specify-envelope-from t)
-  (mail-envelope-from 'header)
-  (message-signature "Best,\nID\n")
-  (notmuch-fcc-dirs nil)
-  (message-citation-line-function #'message-insert-formatted-citation-line)
-  (message-citation-line-format "\nOn %Y-%m-%d %R%z, %f wrote:\n")
-  (message-cite-reply-position 'below)
-  (send-mail-function 'sendmail-send-it)
-  (notmuch-saved-searches
-   '((:name "emacs-devel"
-            :query "tag:emacs-devel"
-            :sort-order newest-first)
-     (:name "inbox"
-            :query "tag:inbox"
-            :key "i"
-            :sort-order newest-first)
-     (:name "unread"
-            :query "tag:unread"
-            :key "u"
-            :sort-order newest-first)
-     (:name "flagged"
-            :query "tag:flagged"
-            :key "f"
-            :sort-order newest-first)
-     (:name "sent"
-            :query "tag:sent"
-            :key "t"
-            :sort-order newest-first)
-     (:name "drafts"
-            :query "tag:draft"
-            :key "d"
-            :sort-order newest-first)
-     (:name "all mail"
-            :query "*"
-            :key "a"
-            :sort-order newest-first))))
 
 (use-package treesit-auto
   :ensure t
