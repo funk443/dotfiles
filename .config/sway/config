@@ -1,7 +1,15 @@
 include /etc/sway/config.d/*
 
-exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
-exec dbus-update-activation-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
+exec systemctl --user import-environment \
+    WAYLAND_DISPLAY DISPLAY \
+    XDG_CURRENT_DESKTOP \
+    SWAYSOCK I3SOCK \
+    XCURSOR_SIZE XCURSOR_THEME
+exec dbus-update-activation-environment \
+    WAYLAND_DISPLAY DISPLAY \
+    XDG_CURRENT_DESKTOP \
+    SWAYSOCK I3SOCK \
+    XCURSOR_SIZE XCURSOR_THEME
 exec mako
 exec /usr/libexec/xfce-polkit
 exec fcitx5 -dr
@@ -37,9 +45,9 @@ output * bg ./desktop.jpg fill
 ### Idle configuration
 
 exec --no-startup-id swayidle -w \
-         timeout 300 'swaylock -f -c 000000 --font "IBM Plex Mono"' \
-         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000 --font "IBM Plex Mono"'
+    timeout 300 'swaylock -f -c 000000 --font "IBM Plex Mono"' \
+    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    before-sleep 'swaylock -f -c 000000 --font "IBM Plex Mono"'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -48,14 +56,14 @@ exec --no-startup-id swayidle -w \
 ### Input configuration
 
 input "type:pointer" {
-      accel_profile flat
-      pointer_accel 0
+    accel_profile flat
+    pointer_accel 0
 }
 
 input "type:keyboard" {
-      repeat_delay 250
-      repeat_rate 80
-      xkb_numlock enabled
+    repeat_delay 250
+    repeat_rate 80
+    xkb_numlock enabled
 }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -74,7 +82,10 @@ bindsym $mod+Shift+q kill
 floating_modifier $mod normal
 
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec swaynag \
+    -t warning \
+    -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' \
+    -B 'Yes, exit sway' 'swaymsg exit'
 
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
