@@ -240,6 +240,7 @@ wget
 whiptail
 wl-clipboard
 wtmpdb
+xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xfce-polkit
 xwayland
