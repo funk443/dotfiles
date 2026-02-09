@@ -2,7 +2,7 @@
     all: unset;
     border: none;
     border-radius: 0;
-    font-family: 'Roboto Mono';
+    font-family: 'Noto Sans Mono';
     font-size: 10pt;
     min-height: 0;
 }
