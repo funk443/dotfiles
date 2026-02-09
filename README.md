@@ -1,4 +1,7 @@
-# ID's GNU/Linux dotfiles
+---
+Title: ID's GNU/Linux dotfiles
+Author: CToID
+---
 
 My personal config files for various softwares, I hope you'll find it useful.
 
