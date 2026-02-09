@@ -14,7 +14,7 @@ exec mako
 exec /usr/libexec/xfce-polkit
 exec fcitx5 -dr
 
-font pango:Noto Sans Mono 10
+font pango:Roboto Mono 10
 
 focus_follows_mouse no
 workspace_layout tabbed
@@ -51,9 +51,9 @@ output HDMI-A-3 {
 ### Idle configuration
 
 exec --no-startup-id swayidle -w \
-    timeout 300 'swaylock -f -c 000000 --font "Noto Sans Mono"' \
+    timeout 300 'swaylock -f -c 000000 --font "Roboto Mono"' \
     timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    before-sleep 'swaylock -f -c 000000 --font "Noto Sans Mono"'
+    before-sleep 'swaylock -f -c 000000 --font "Roboto Mono"'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -78,7 +78,7 @@ input "type:keyboard" {
 ### Key bindings
 
 set $term foot
-set $menu wmenu-run -f "Noto Sans Mono 10"
+set $menu wmenu-run -f "Roboto Mono 10"
 
 bindsym $mod+t exec $term
 bindsym $mod+d exec $menu
