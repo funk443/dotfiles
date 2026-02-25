@@ -68,7 +68,6 @@ initramfs-tools
 installation-report
 iproute2
 iputils-ping
-keepassxc
 keyboard-configuration
 kmod
 krb5-locales
