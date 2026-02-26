@@ -37,8 +37,8 @@ vim.keymap.set("n", "<Leader>en", vim.diagnostic.goto_next, { noremap = true })
 vim.keymap.set("n", "<Leader>eN", vim.diagnostic.goto_prev, { noremap = true })
 vim.keymap.set("n", "<Leader>ee", vim.diagnostic.open_float, { noremap = true })
 
-vim.keymap.set("n", "<Leader>tt", ":bel term <Up>", { noremap = true })
-vim.keymap.set("n", "<Leader>tT", ":bel term ", { noremap = true })
+vim.keymap.set("n", "<Leader>tt", ":below term <Up>", { noremap = true })
+vim.keymap.set("n", "<Leader>tT", ":below term ", { noremap = true })
 
 -- }}}
 
