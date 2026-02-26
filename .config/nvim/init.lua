@@ -34,7 +34,7 @@ vim.keymap.set("n", "<C-h>", vim.lsp.buf.hover, { noremap = true })
 vim.keymap.set("i", "<C-h>", "<C-x><C-o>", { noremap = true })
 
 vim.keymap.set("n", "<Leader>en", vim.diagnostic.goto_next, { noremap = true })
-vim.keymap.set("n", "<Leader>ep", vim.diagnostic.goto_prev, { noremap = true })
+vim.keymap.set("n", "<Leader>eN", vim.diagnostic.goto_prev, { noremap = true })
 vim.keymap.set("n", "<Leader>ee", vim.diagnostic.open_float, { noremap = true })
 
 vim.keymap.set("n", "<Leader>tt", ":bel term <Up>", { noremap = true })
