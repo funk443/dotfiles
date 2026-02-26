@@ -20,7 +20,6 @@
                     (font-spec :family "Noto Sans CJK JP")
                     nil 'prepend))
 
-(setopt modus-themes-variable-pitch-ui t)
 (load-theme 'modus-vivendi t)
 
 (use-package package
