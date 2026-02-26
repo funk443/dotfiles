@@ -39,11 +39,6 @@
   :custom
   (eglot-autoshutdown t))
 
-(use-package vterm
-  :ensure t
-  :bind
-  ("<f6>" . vterm))
-
 (use-package magit
   :ensure t)
 
