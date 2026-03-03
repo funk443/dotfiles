@@ -64,6 +64,10 @@ function ls -w /usr/bin/ls -d "ls with some custom options."
     /usr/bin/ls -alh --color=auto $argv
 end
 
+function rm -w /usr/bin/rm -d "rm with some custom options."
+    /usr/bin/rm -I $argv
+end
+
 # Bindings
 
 bind ctrl-w backward-kill-token
