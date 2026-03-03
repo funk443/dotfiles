@@ -61,7 +61,7 @@ end
 # Aliases.
 
 function ls -w /usr/bin/ls -d "ls with some custom options."
-    /usr/bin/ls -alh --color=auto $argv
+    /usr/bin/ls -alh --color=auto --quoting-style=literal $argv
 end
 
 function rm -w /usr/bin/rm -d "rm with some custom options."
