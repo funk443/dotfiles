@@ -28,6 +28,7 @@ debconf-i18n
 debian-archive-keyring
 debian-faq
 debianutils
+dhcpcd
 diffutils
 dmidecode
 doc-debian
@@ -68,6 +69,7 @@ initramfs-tools
 installation-report
 iproute2
 iputils-ping
+iwd
 keyboard-configuration
 kmod
 krb5-locales
@@ -184,7 +186,6 @@ ncurses-term
 neovim
 netbase
 netcat-traditional
-network-manager
 nftables
 openssh-client
 openssl-provider-legacy
