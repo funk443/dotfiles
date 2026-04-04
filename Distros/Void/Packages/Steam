@@ -1,0 +1,11 @@
+libdrm-32bit
+libgcc-32bit
+libglvnd-32bit
+libstdc++-32bit
+libva-32bit
+mesa-dri-32bit
+mesa-vulkan-intel-32bit
+steam
+void-repo-multilib
+void-repo-multilib-nonfree
+vulkan-loader-32bit
