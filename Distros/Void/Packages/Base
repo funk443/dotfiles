@@ -41,6 +41,8 @@ noto-fonts-ttf-extra
 pipewire
 pulsemixer
 qbittorrent
+qt5-wayland
+qt6-wayland
 ripgrep
 slurp
 socklog-void
