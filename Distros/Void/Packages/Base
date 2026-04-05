@@ -1,3 +1,4 @@
+PopCorn
 Thunar
 Waybar
 base-devel
@@ -27,6 +28,7 @@ keepassxc
 libnotify
 linux-firmware
 linux6.19
+lm_sensors
 loupe
 mako
 mesa-demos
