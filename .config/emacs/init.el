@@ -70,7 +70,7 @@
 (keymap-global-unset "C-x C-z")
 (keymap-global-set   "<f5>" #'compile)
 
-;; Set indent offset of major modes here.
+;; Set indent offset of major modes here, so I can use the `tab-width` variable.
 (setopt tab-width 4
         go-ts-mode-indent-offset tab-width
         typescript-ts-mode-indent-offset tab-width
