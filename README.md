@@ -1,6 +1,6 @@
 ---
-Title: ID's GNU/Linux dotfiles
-Author: CToID
+title: ID's GNU/Linux dotfiles
+author: CToID
 ---
 
 My personal config files for various softwares, I hope you'll find it useful.
@@ -10,9 +10,11 @@ My personal config files for various softwares, I hope you'll find it useful.
 The deploy script for software configurations are yet to be written, so you'll
 have to resolve to manually symlink these files now.
 
-There is a convenience script `theme-setup.sh` for setup the GTK theme and fonts
-tho. For GTK theme, I use [Skewaita], which is already setup as a submodule of
-this repository. For icon theme, I use [Oxylite].
+There is a convenience script `Scripts/ThemeSetup.sh` for setup the GTK theme
+and fonts tho. It should work on most of the GNU/Linux distros.
+
+For GTK theme, I use [Skewaita], which is already setup as a submodule of this
+repository. For icon theme, I use [Oxylite].
 
 The script can do the following things for you:
 
