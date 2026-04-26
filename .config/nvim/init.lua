@@ -14,8 +14,6 @@ vim.opt.formatoptions:append("mM")
 vim.opt.formatoptions:remove("t")
 
 vim.g.netrw_browsex_viewer = "xdg-open"
-vim.cmd.filetype("indent off")
-
 
 -- }}}
 
@@ -38,7 +36,7 @@ vim.keymap.set("n", "<Leader>tT", ":below term ", { noremap = true })
 -- Other modules {{{
 
 require("plugins")
-require("filetypes")
+require("lisp")
 require("autocmds")
 
 if vim.g.neovide then
