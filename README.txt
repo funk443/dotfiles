@@ -1,11 +1,9 @@
----
-title: ID's GNU/Linux dotfiles
-author: CToID
----
+*README.txt*                                           ID's GNU/Linux dotfiles
 
 My personal config files for various softwares, I hope you'll find it useful.
 
-# Quickstart
+==============================================================================
+Quickstart
 
 The deploy script for software configurations are yet to be written, so you'll
 have to resolve to manually symlink these files now.
@@ -13,8 +11,8 @@ have to resolve to manually symlink these files now.
 There is a convenience script `Scripts/ThemeSetup.sh` for setup the GTK theme
 and fonts tho. It should work on most of the GNU/Linux distros.
 
-For GTK theme, I use [Skewaita], which is already setup as a submodule of this
-repository. For icon theme, I use [Oxylite].
+For GTK theme, I use |Skewaita|, which is already setup as a submodule of this
+repository. For icon theme, I use |Oxylite|.
 
 The script can do the following things for you:
 
@@ -24,5 +22,9 @@ The script can do the following things for you:
   directory, then set it as icon theme.
 - Set default fonts for GTK applications.
 
-[Skewaita]: <https://git.disroot.org/eudaimon/Skewaita>
-[Oxylite]: <https://github.com/mx-2/oxylite-icon-theme>
+REFERENCES
+
+- Skewaita: https://git.disroot.org/eudaimon/Skewaita *Skewaita*
+- Oxylite: https://github.com/mx-2/oxylite-icon-theme *Oxylite*
+
+vim:tw=78:ts=4:sw=0:sts=0:et:ft=help:norl:
