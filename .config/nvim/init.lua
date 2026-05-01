@@ -35,12 +35,12 @@ vim.keymap.set("n", "<Leader>tT", ":belowright term ", { noremap = true })
 
 -- Other modules {{{
 
-require("plugins")
-require("lisp")
-require("autocmds")
+require("Plugins")
+require("Lisp")
+require("AutoCmds")
 
 if vim.g.neovide then
-    require("neovide")
+    require("Neovide")
 end
 
 -- }}}
