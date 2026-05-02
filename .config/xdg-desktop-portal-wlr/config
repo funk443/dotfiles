@@ -2,3 +2,4 @@
 
 chooser_type=simple
 chooser_cmd=slurp -f 'Monitor: %o' -or
+max_fps=60
