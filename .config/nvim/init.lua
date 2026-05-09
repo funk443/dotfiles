@@ -33,6 +33,8 @@ vim.keymap.set("n", "<Leader>tT", ":belowright term ", { noremap = true })
 
 -- Other modules {{{
 
+require("VimDocToBBCode")
+
 require("Plugins")
 require("Lisp")
 require("AutoCmds")
