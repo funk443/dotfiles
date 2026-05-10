@@ -1,8 +1,8 @@
-*README.txt*                                           ID's GNU/Linux dotfiles
+*README.txt*                                             ID's GNU/Linux dotfiles
 
 My personal config files for various softwares, I hope you'll find it useful.
 
-==============================================================================
+================================================================================
 Quickstart
 
 The deploy script for software configurations are yet to be written, so you'll
@@ -17,10 +17,8 @@ Oxylite https://github.com/mx-2/oxylite-icon-theme.
 
 The script can do the following things for you:
 
-- Clone the Skewaita submodule, and set it up to MY taste, symlink it to the
-  standard XDG directory, then set it as the GTK theme.
-- Get the release of Oxylite, uncompress it, symlink it to the standard XDG
-  directory, then set it as icon theme.
-- Set default fonts for GTK applications.
-
-vim:tw=78:ts=4:sw=0:sts=0:et:ft=help:norl:
+    - Clone the Skewaita submodule, and set it up to MY taste, symlink it to the
+      standard XDG directory, then set it as the GTK theme.
+    - Get the release of Oxylite, uncompress it, symlink it to the standard XDG
+      directory, then set it as icon theme.
+    - Set default fonts for GTK applications.
