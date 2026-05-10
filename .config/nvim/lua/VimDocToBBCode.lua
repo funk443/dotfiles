@@ -114,6 +114,4 @@ function M.Generate(_)
     vim.api.nvim_set_current_buf(bbcodeBuf)
 end
 
-vim.api.nvim_create_user_command("VimDocToBBCode", M.Generate, {})
-
 return M
