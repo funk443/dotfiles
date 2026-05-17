@@ -2,6 +2,7 @@
 
     email = funk443@icloud.com
     name = CToID
+    signingKey = 63BDE2868CB949E6CB766698D5AFBA0F56335C9C
 
 [init]
 
@@ -17,3 +18,11 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+
+[commit]
+
+    gpgsign = true
+
+[tag]
+
+    gpgSign = true
