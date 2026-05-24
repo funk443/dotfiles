@@ -75,8 +75,8 @@ bind alt-backspace backward-kill-word
 
 # Environmental variables.
 
-set -gx VISUAL nvim
-set -gx EDITOR $VISUAL
+set -x VISUAL nvim
+set -x EDITOR $VISUAL
 
 # Emacs vterm configuration.
 # Placed in here because files from conf.d is read before this file,
