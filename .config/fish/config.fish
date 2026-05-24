@@ -77,6 +77,7 @@ bind alt-backspace backward-kill-word
 
 set -x VISUAL nvim
 set -x EDITOR $VISUAL
+set -x GPG_TTY (tty)
 
 # Emacs vterm configuration.
 # Placed in here because files from conf.d is read before this file,
