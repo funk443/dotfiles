@@ -12,5 +12,6 @@ iwd
 nanoklogd
 polkitd
 popcorn
+rtkit
 socklog-unix
 udevd

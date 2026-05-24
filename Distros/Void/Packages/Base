@@ -50,6 +50,7 @@ qpwgraph
 qt5-wayland
 qt6-wayland
 ripgrep
+rtkit
 slurp
 socklog-void
 sway
