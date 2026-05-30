@@ -13,6 +13,8 @@ vim.opt.relativenumber = true
 vim.opt.formatoptions:append("mB")
 vim.opt.formatoptions:remove("t")
 
+vim.cmd.filetype("indent off")
+
 -- }}}
 
 -- Keybindings {{{
