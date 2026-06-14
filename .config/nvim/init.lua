@@ -21,13 +21,6 @@ vim.cmd.filetype("indent off")
 
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<C-h>", vim.lsp.buf.hover, { noremap = true })
-vim.keymap.set("i", "<C-h>", "<C-x><C-o>", { noremap = true })
-
-vim.keymap.set("n", "<Leader>en", vim.diagnostic.goto_next, { noremap = true })
-vim.keymap.set("n", "<Leader>eN", vim.diagnostic.goto_prev, { noremap = true })
-vim.keymap.set("n", "<Leader>ee", vim.diagnostic.open_float, { noremap = true })
-
 vim.keymap.set("n", "<Leader>tt", ":belowright term <Up>", { noremap = true })
 vim.keymap.set("n", "<Leader>tT", ":belowright term ", { noremap = true })
 
