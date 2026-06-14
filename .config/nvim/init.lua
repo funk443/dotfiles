@@ -31,6 +31,10 @@ vim.keymap.set("n", "<Leader>ee", vim.diagnostic.open_float, { noremap = true })
 vim.keymap.set("n", "<Leader>tt", ":belowright term <Up>", { noremap = true })
 vim.keymap.set("n", "<Leader>tT", ":belowright term ", { noremap = true })
 
+vim.keymap.set("n", "<C-w>v", vim.cmd.split, { noremap = true })
+vim.keymap.set("n", "<C-w>b", vim.cmd.vsplit, { noremap = true })
+vim.keymap.set("n", "<C-w>s", "<C-w>b", { noremap = true })
+
 -- }}}
 
 -- Other modules {{{
