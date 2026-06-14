@@ -21,12 +21,12 @@ vim.cmd.filetype("indent off")
 
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<F5>", ":belowright term <Up>", { noremap = true })
-vim.keymap.set("n", "<Leader><F5>", ":belowright term ", { noremap = true })
+vim.keymap.set("n", "<F5>", ":belowright term <Up>")
+vim.keymap.set("n", "<Leader><F5>", ":belowright term ")
 
-vim.keymap.set("n", "<C-w>v", vim.cmd.split, { noremap = true })
-vim.keymap.set("n", "<C-w>b", vim.cmd.vsplit, { noremap = true })
-vim.keymap.set("n", "<C-w>s", "<C-w>b", { noremap = true })
+vim.keymap.set("n", "<C-w>v", vim.cmd.split)
+vim.keymap.set("n", "<C-w>b", vim.cmd.vsplit)
+vim.keymap.set("n", "<C-w>s", "<C-w>b")
 
 -- }}}
 
