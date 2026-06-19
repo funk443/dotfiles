@@ -16,8 +16,4 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/opt/go/bin:$PATH"
-
-export JAVA_HOME="/opt/jdk-25.0.2+10-jre"
-export PATH="$JAVA_HOME/bin:$PATH"
+export PATH="/opt/go/bin:$HOME/.local/bin:$PATH"
