@@ -31,7 +31,7 @@ def get_outputs(outputs: list) -> list[str]:
 
 def get_windows(root: dict) -> list[str]:
     def extract_nodes(node):
-        return node["nodes"]
+        return node["nodes"] + node["floating_nodes"]
 
     windows = []
     not_done = extract_nodes(root)
