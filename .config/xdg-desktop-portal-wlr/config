@@ -1,5 +1,5 @@
 [screencast]
 
 chooser_type=simple
-chooser_cmd=slurp -f 'Monitor: %o' -or
+chooser_cmd=python3 ~/dotfiles/.config/xdg-desktop-portal-wlr/xdpw-chooser.py
 max_fps=60
