@@ -29,12 +29,6 @@
      ("gnu"    . "https://elpa.gnu.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/"))))
 
-(use-package tramp
-  :custom
-  (tramp-remote-process-environment
-   '("ENV=''" "TMOUT=0" "CDPATH=" "HISTORY=" "MAIL=" "MAILCHECK="
-     "MAILPATH=" "PAGER=cat" "autocorrect=" "correct=")))
-
 (use-package eglot
   :custom
   (eglot-autoshutdown t))
