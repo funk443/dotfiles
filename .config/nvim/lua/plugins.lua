@@ -1,5 +1,5 @@
-local Plugins = {
+local plugins = {
     "https://github.com/junegunn/vim-easy-align",
 }
 
-vim.pack.add(Plugins)
+vim.pack.add(plugins)

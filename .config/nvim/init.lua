@@ -32,12 +32,12 @@ vim.keymap.set("n", "<C-w>s", "<C-w>b")
 
 -- Other modules {{{
 
-require("Plugins")
-require("Lisp")
-require("AutoCmds")
+require("plugins")
+require("lisp")
+require("autocmds")
 
 if vim.g.neovide then
-    require("Neovide")
+    require("neovide")
 end
 
 -- }}}
