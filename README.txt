@@ -8,7 +8,7 @@ Quickstart
 The deploy script for software configurations are yet to be written, so you'll
 have to resolve to manually symlink these files now.
 
-There is a convenience script `Scripts/ThemeSetup.sh` for setup the GTK theme
+There is a convenience script `Scripts/theme-setup.sh` for setup the GTK theme
 and fonts tho. It should work on most of the GNU/Linux distros.
 
 For GTK theme, I use Skewaita https://git.disroot.org/eudaimon/Skewaita, which
