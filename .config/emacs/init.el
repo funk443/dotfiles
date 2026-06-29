@@ -42,6 +42,9 @@
   :config
   (treesit-auto-add-to-auto-mode-alist))
 
+(use-package fd-dired
+  :ensure t)
+
 (defconst id/rubbish-dir (concat user-emacs-directory "rubbish"))
 (unless (file-directory-p id/rubbish-dir)
   (make-directory id/rubbish-dir))
@@ -80,7 +83,7 @@
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(package-selected-packages '(magit treesit-auto))
+ '(package-selected-packages '(fd-dired magit treesit-auto))
  '(save-interprogram-paste-before-kill t)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
