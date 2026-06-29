@@ -7,6 +7,9 @@
   (set-face-attribute 'fixed-pitch nil
                       :family "Roboto Mono"
                       :inherit 'default)
+  (set-face-attribute 'fixed-pitch-serif nil
+                      :family "Courier Prime Code"
+                      :inherit 'default)
   (set-face-attribute 'variable-pitch nil
                       :family "Roboto"
                       :inherit 'default)
