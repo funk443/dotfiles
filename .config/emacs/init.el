@@ -42,10 +42,10 @@
   :config
   (treesit-auto-add-to-auto-mode-alist))
 
-(defconst my-rubbish-dir (concat user-emacs-directory "rubbish"))
-(unless (file-directory-p my-rubbish-dir)
-  (make-directory my-rubbish-dir))
-(setopt backup-directory-alist `(("." . ,my-rubbish-dir)))
+(defconst id/rubbish-dir (concat user-emacs-directory "rubbish"))
+(unless (file-directory-p id/rubbish-dir)
+  (make-directory id/rubbish-dir))
+(setopt backup-directory-alist `(("." . ,id/rubbish-dir)))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 (add-hook 'text-mode-hook (lambda () (auto-fill-mode 1)))
