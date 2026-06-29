@@ -53,7 +53,7 @@
 
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
-(keymap-global-set   "<f5>" #'compile)
+(keymap-global-set "<f5>" #'compile)
 
 ;; Set indent offset of major modes here, so I can use the `tab-width` variable.
 (setopt tab-width 4
