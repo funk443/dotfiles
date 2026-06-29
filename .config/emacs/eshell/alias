@@ -1,0 +1,3 @@
+alias ff find-file $@*
+alias ls ls -alh $@*
+alias clear eshell/clear
