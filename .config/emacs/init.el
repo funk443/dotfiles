@@ -75,6 +75,7 @@
  '(dired-listing-switches "-alh")
  '(fill-column 80)
  '(frame-resize-pixelwise t)
+ '(grep-command "rg -nH --null -e ")
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
