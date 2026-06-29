@@ -8,6 +8,7 @@ bash-completion
 cronie
 dbus
 elogind
+emacs-pgtk
 fastfetch
 fcitx5
 fcitx5-chewing
@@ -57,7 +58,6 @@ sway
 swayidle
 swaylock
 terminus-font
-tmux
 tree
 tumbler
 void-docs
