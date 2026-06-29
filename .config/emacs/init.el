@@ -20,8 +20,6 @@
                     (font-spec :family "Noto Sans CJK JP")
                     nil 'prepend))
 
-(load-theme 'modus-vivendi t)
-
 (use-package package
   :custom
   (package-archives
@@ -68,6 +66,7 @@
  '(auth-source-save-behavior nil)
  '(column-number-mode t)
  '(current-language-environment "UTF-8")
+ '(custom-enabled-themes '(modus-vivendi))
  '(delete-selection-mode t)
  '(dired-dwim-target 'dired-dwim-target-next)
  '(dired-listing-switches "-alh")
