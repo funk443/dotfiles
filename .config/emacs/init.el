@@ -76,6 +76,9 @@
  '(delete-selection-mode t)
  '(dired-dwim-target 'dired-dwim-target-next)
  '(dired-listing-switches "-alh")
+ '(eshell-visual-commands
+   '("vi" "vim" "nvim" "screen" "tmux" "top" "htop" "less" "more" "lynx" "links"
+     "ncftp" "ncmpcpp" "mutt" "pine" "tin" "trn" "elm" "mpv"))
  '(fill-column 80)
  '(frame-resize-pixelwise t)
  '(grep-command "rg -nH --no-heading --null -e ")
