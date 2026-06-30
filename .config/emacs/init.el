@@ -88,6 +88,8 @@
  '(menu-bar-mode nil)
  '(package-selected-packages '(fd-dired magit treesit-auto))
  '(save-interprogram-paste-before-kill t)
+ '(savehist-additional-variables '(register-alist))
+ '(savehist-mode t)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(shell-command-prompt-show-cwd t)
