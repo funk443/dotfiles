@@ -82,6 +82,7 @@
  '(fill-column 80)
  '(frame-resize-pixelwise t)
  '(grep-command "rg -nH --no-heading --null -e ")
+ '(grep-use-null-device nil)
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
