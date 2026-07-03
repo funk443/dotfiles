@@ -91,4 +91,26 @@ up after the user logs out.")
 
 (id-set-fonts)
 
+;; WSLg breaks copy-paste from Emacs into Windows
+;; see: https://www.lukas-barth.net/blog/emacs-wsl-copy-clipboard/
+
+(defvar wl-copy-process nil)
+
+(defun wsl-copy (text)
+  (unless (and wl-copy-process (process-live-p wl-copy-process))
+    (setq wl-copy-process (make-process :name "wl-copy"
+                                        :buffer nil
+                                        :command '("wl-copy" "-f" "-n")
+                                        :connection-type 'pipe)))
+  (process-send-string wl-copy-process text)
+  (process-send-eof wl-copy-process))
+
+(defun wsl-paste ()
+  (if (and wl-copy-process (process-live-p wl-copy-process))
+      nil
+    (shell-command-to-string "wl-paste -n | tr -d \r")))
+
+(setq interprogram-cut-function #'wsl-copy
+      interprogram-paste-function #'wsl-paste)
+
 (put 'narrow-to-region 'disabled nil)
