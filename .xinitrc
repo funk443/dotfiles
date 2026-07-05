@@ -13,4 +13,8 @@ xset -dpms
 xset s off
 xset r rate 250 80
 
+xrandr --output HDMI-3 --primary --mode 2560x1440 --rate 120
+
+feh --bg-fill ~/dotfiles/.config/sway/void.png
+
 exec dbus-run-session i3
