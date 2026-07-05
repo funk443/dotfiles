@@ -1,25 +1,18 @@
 general {
-    output_format = "i3bar"
     colors = true
-    interval = 10
+    interval = 5
 }
 
 order += "volume master"
-order += "battery 0"
-order += "time"
+order += "load"
+order += "tztime local"
 
 volume master {
     format = "%volume"
-    format_muted = "MUTED"
-    device = "pulse"
-    mixer = "Master"
+    format_muted = "muted"
+    device = "default"
 }
 
-battery 0 {
-    format = "%status %percentage"
-    format_percentage = "%.00f%s"
-}
-
-time {
-    format = "%Y-%m-%d %a %H:%M:%S"
+tztime local {
+    format =  "%Y-%m-%d %a %H:%M:%S"
 }
