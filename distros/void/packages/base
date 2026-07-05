@@ -35,14 +35,7 @@ intel-ucode
 intel-video-accel
 iwd
 keepassxc
-libdrm-32bit
-libdrm-devel
-libgbm-devel
-libgcc-32bit
-libglvnd-32bit
 libnotify
-libstdc++-32bit
-libva-32bit
 linux-firmware
 linux7.1
 lm_sensors
@@ -50,9 +43,7 @@ loupe
 maim
 mesa-demos
 mesa-dri
-mesa-dri-32bit
 mesa-vulkan-intel
-mesa-vulkan-intel-32bit
 meson
 mpv
 neovim
@@ -70,7 +61,6 @@ qpwgraph
 ripgrep
 rtkit
 socklog-void
-steam
 terminus-font
 tree
 tumbler
@@ -80,7 +70,6 @@ void-repo-multilib
 void-repo-multilib-nonfree
 void-repo-nonfree
 vulkan-loader
-vulkan-loader-32bit
 wmenu
 xclip
 xdg-desktop-portal-gtk
