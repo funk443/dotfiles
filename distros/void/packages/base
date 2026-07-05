@@ -36,6 +36,8 @@ intel-ucode
 intel-video-accel
 iwd
 keepassxc
+libX11-devel
+libXft-devel
 libnotify
 linux-firmware
 linux7.1
@@ -79,7 +81,7 @@ xdg-utils
 xfce-polkit
 xlibre
 xmirror
-xterm
+xorgproto
 xtools
 xxd
 yt-dlp
