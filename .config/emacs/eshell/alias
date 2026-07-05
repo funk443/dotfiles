@@ -1,4 +1,5 @@
-alias vf find-file-read-only $@*
-alias clear eshell/clear
-alias ls ls -alh $@*
+alias nvim find-file $@*
 alias ff find-file $@*
+alias ls ls -alh $@*
+alias clear eshell/clear
+alias vf find-file-read-only $@*
