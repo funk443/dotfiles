@@ -50,6 +50,11 @@
   (make-directory id/rubbish-dir))
 (setopt backup-directory-alist `(("." . ,id/rubbish-dir)))
 
+(defun id/insert-tab (&optional arg)
+  "This is like Neovim's i_ctrl-t."
+  (interactive "P")
+  (insert-tab arg))
+
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 (add-hook 'text-mode-hook (lambda () (auto-fill-mode 1)))
 (add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
@@ -57,6 +62,7 @@
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
 (keymap-global-set "<f5>" #'compile)
+(keymap-global-set "M-i" #'id/insert-tab)
 
 ;; Set indent offset of major modes here, so I can use the `tab-width` variable.
 (setopt tab-width 4
