@@ -7,7 +7,6 @@ agetty-tty6
 cronie
 dbus
 dhcpcd
-elogind
 iwd
 nanoklogd
 polkitd
