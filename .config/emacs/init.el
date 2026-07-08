@@ -97,11 +97,12 @@ up after the user logs out.")
 (defvar wl-copy-process nil)
 
 (defun wsl-copy (text)
-  (unless (and wl-copy-process (process-live-p wl-copy-process))
-    (setq wl-copy-process (make-process :name "wl-copy"
-                                        :buffer nil
-                                        :command '("wl-copy" "-f" "-n")
-                                        :connection-type 'pipe)))
+  (when (and wl-copy-process (process-live-p wl-copy-process))
+    (kill-process wl-copy-process))
+  (setq wl-copy-process (make-process :name "wl-copy"
+                                      :buffer nil
+                                      :command '("wl-copy" "-f" "-n")
+                                      :connection-type 'pipe))
   (process-send-string wl-copy-process text)
   (process-send-eof wl-copy-process))
 
