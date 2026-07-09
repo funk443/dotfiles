@@ -37,11 +37,6 @@
 (use-package magit
   :ensure t)
 
-(use-package treesit-auto
-  :ensure t
-  :config
-  (treesit-auto-add-to-auto-mode-alist))
-
 (use-package fd-dired
   :ensure t)
 
@@ -93,7 +88,7 @@
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(package-selected-packages '(fd-dired magit treesit-auto))
+ '(package-selected-packages '(fd-dired magit))
  '(save-interprogram-paste-before-kill t)
  '(savehist-additional-variables '(register-alist))
  '(savehist-mode t)
@@ -102,6 +97,7 @@
  '(shell-command-prompt-show-cwd t)
  '(tool-bar-mode nil)
  '(tramp-use-connection-share nil)
+ '(treesit-enabled-modes t)
  '(which-key-mode t)
  '(x-select-enable-clipboard-manager nil))
 
