@@ -111,7 +111,7 @@ up after the user logs out.")
       nil
     (shell-command-to-string "wl-paste -n | tr -d \r")))
 
-(setq interprogram-cut-function #'wsl-copy
-      interprogram-paste-function #'wsl-paste)
+(setopt interprogram-cut-function #'wsl-copy
+        interprogram-paste-function #'wsl-paste)
 
 (put 'narrow-to-region 'disabled nil)
