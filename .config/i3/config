@@ -16,6 +16,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 set $mod Mod4
 floating_modifier $mod
 
+focus_follows_mouse no
+mouse_warping none
+
 tiling_drag modifier titlebar
 
 bindsym $mod+t exec i3-sensible-terminal
