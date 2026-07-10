@@ -88,6 +88,7 @@
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
+ '(minibuffer-visible-completions t)
  '(package-selected-packages '(fd-dired magit))
  '(save-interprogram-paste-before-kill t)
  '(savehist-additional-variables '(register-alist))
