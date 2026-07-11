@@ -1,24 +1,23 @@
 ;; -*- lexical-binding: t; -*-
 
-(when (display-graphic-p)
-  (set-face-attribute 'default nil
-                      :family "Roboto Mono"
-                      :height 200)
-  (set-face-attribute 'fixed-pitch nil
-                      :family "Roboto Mono"
-                      :inherit 'default)
-  (set-face-attribute 'variable-pitch nil
-                      :family "Roboto"
-                      :inherit 'default)
-  (set-fontset-font "fontset-default" 'han
-                    (font-spec :family "Noto Sans CJK TC")
-                    nil 'prepend)
-  (set-fontset-font "fontset-default" 'bopomofo
-                    (font-spec :family "Noto Sans CJK TC")
-                    nil 'prepend)
-  (set-fontset-font "fontset-default" 'kana
-                    (font-spec :family "Noto Sans CJK JP")
-                    nil 'prepend))
+(set-face-attribute 'default nil
+                    :family "Roboto Mono"
+                    :height 200)
+(set-face-attribute 'fixed-pitch nil
+                    :family "Roboto Mono"
+                    :inherit 'default)
+(set-face-attribute 'variable-pitch nil
+                    :family "Roboto"
+                    :inherit 'default)
+(set-fontset-font "fontset-default" 'han
+                  (font-spec :family "Noto Sans CJK TC")
+                  nil 'prepend)
+(set-fontset-font "fontset-default" 'bopomofo
+                  (font-spec :family "Noto Sans CJK TC")
+                  nil 'prepend)
+(set-fontset-font "fontset-default" 'kana
+                  (font-spec :family "Noto Sans CJK JP")
+                  nil 'prepend)
 
 (use-package package
   :custom
