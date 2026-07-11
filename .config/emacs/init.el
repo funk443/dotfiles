@@ -1,25 +1,5 @@
 ;; -*- lexical-binding: t; -*-
 
-(when (display-graphic-p)
-  (set-face-attribute 'default nil
-                      :family "Roboto Mono"
-                      :height 200)
-  (set-face-attribute 'fixed-pitch nil
-                      :family "Roboto Mono"
-                      :inherit 'default)
-  (set-face-attribute 'variable-pitch nil
-                      :family "Roboto"
-                      :inherit 'default)
-  (set-fontset-font "fontset-default" 'han
-                    (font-spec :family "Noto Sans CJK TC")
-                    nil 'prepend)
-  (set-fontset-font "fontset-default" 'bopomofo
-                    (font-spec :family "Noto Sans CJK TC")
-                    nil 'prepend)
-  (set-fontset-font "fontset-default" 'kana
-                    (font-spec :family "Noto Sans CJK JP")
-                    nil 'prepend))
-
 (use-package package
   :custom
   (package-archives
@@ -73,6 +53,16 @@ up after the user logs out.")
         typescript-ts-mode-indent-offset tab-width
         json-ts-mode-indent-offset tab-width)
 
+(set-fontset-font "fontset-default" 'han
+                  (font-spec :family "Noto Sans CJK TC")
+                  nil 'prepend)
+(set-fontset-font "fontset-default" 'bopomofo
+                  (font-spec :family "Noto Sans CJK TC")
+                  nil 'prepend)
+(set-fontset-font "fontset-default" 'kana
+                  (font-spec :family "Noto Sans CJK JP")
+                  nil 'prepend)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -116,4 +106,6 @@ up after the user logs out.")
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "#000000" :foreground "#ffffff" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 203 :width normal :foundry "GOOG" :family "Roboto Mono"))))
+ '(fixed-pitch ((t (:inherit default :family "Roboto Mono"))))
+ '(variable-pitch ((t (:inherit default :family "Roboto")))))
