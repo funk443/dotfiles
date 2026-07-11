@@ -13,13 +13,13 @@
   (set-face-attribute 'variable-pitch nil
                       :family "Roboto"
                       :inherit 'default)
-  (set-fontset-font nil 'han
+  (set-fontset-font "fontset-default" 'han
                     (font-spec :family "Noto Sans CJK TC")
                     nil 'prepend)
-  (set-fontset-font nil 'bopomofo
+  (set-fontset-font "fontset-default" 'bopomofo
                     (font-spec :family "Noto Sans CJK TC")
                     nil 'prepend)
-  (set-fontset-font nil 'kana
+  (set-fontset-font "fontset-default" 'kana
                     (font-spec :family "Noto Sans CJK JP")
                     nil 'prepend))
 
