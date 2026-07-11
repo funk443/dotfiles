@@ -40,12 +40,13 @@
 (use-package fd-dired
   :ensure t)
 
-(defconst id/rubbish-dir (concat user-emacs-directory "rubbish"))
-(unless (file-directory-p id/rubbish-dir)
-  (make-directory id/rubbish-dir))
-(setopt backup-directory-alist `(("." . ,id/rubbish-dir)))
+(defconst id-rubbish-dir (concat user-emacs-directory "rubbish")
+  "A directory for Emacs to dump all those backup files in.")
+(unless (file-directory-p id-rubbish-dir)
+  (make-directory id-rubbish-dir))
+(setopt backup-directory-alist `(("." . ,id-rubbish-dir)))
 
-(defun id/insert-tab (&optional arg)
+(defun id-insert-tab (&optional arg)
   "This is like Neovim's i_ctrl-t."
   (interactive "P")
   (insert-tab arg))
@@ -57,7 +58,7 @@
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
 (keymap-global-set "<f5>" #'compile)
-(keymap-global-set "M-i" #'id/insert-tab)
+(keymap-global-set "M-i" #'id-insert-tab)
 
 ;; Set indent offset of major modes here, so I can use the `tab-width` variable.
 (setopt tab-width 4
