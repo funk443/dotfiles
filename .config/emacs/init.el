@@ -70,7 +70,8 @@ up after the user logs out.")
 (setopt tab-width 4
         go-ts-mode-indent-offset tab-width
         typescript-ts-mode-indent-offset tab-width
-        json-ts-mode-indent-offset tab-width)
+        json-ts-mode-indent-offset tab-width
+        c-ts-mode-indent-offset tab-width)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
