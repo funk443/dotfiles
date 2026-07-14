@@ -30,6 +30,13 @@
   :custom
   (eglot-autoshutdown t))
 
+(use-package sly
+  :ensure t
+  :custom
+  (sly-command-switch-to-existing-lisp 'always)
+  (inferior-lisp-program "sbcl")
+  (common-lisp-hyperspec-root "https://funk443.github.io/CLHS/HyperSpec/"))
+
 (use-package magit
   :ensure t)
 
@@ -98,7 +105,7 @@ up after the user logs out.")
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
  '(minibuffer-visible-completions t)
- '(package-selected-packages '(fd-dired magit))
+ '(package-selected-packages '(fd-dired magit sly))
  '(require-final-newline t)
  '(save-interprogram-paste-before-kill t)
  '(savehist-additional-variables '(register-alist))
