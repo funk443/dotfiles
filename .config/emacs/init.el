@@ -32,10 +32,12 @@
 
 (use-package sly
   :ensure t
+  :config
+  (setq common-lisp-hyperspec-root "https://funk443.github.io/CLHS/HyperSpec/")
   :custom
   (sly-command-switch-to-existing-lisp 'always)
-  (inferior-lisp-program "sbcl")
-  (common-lisp-hyperspec-root "https://funk443.github.io/CLHS/HyperSpec/"))
+  (inferior-lisp-program "sbcl"))
+
 
 (use-package magit
   :ensure t)
