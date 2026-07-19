@@ -39,6 +39,10 @@
   (inferior-lisp-program "sbcl"))
 
 
+(use-package paredit
+  :ensure t
+  :hook (emacs-lisp-mode lisp-mode scheme-mode sly-mrepl-mode))
+
 (use-package magit
   :ensure t)
 
@@ -107,7 +111,7 @@ up after the user logs out.")
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
  '(minibuffer-visible-completions t)
- '(package-selected-packages '(fd-dired magit sly))
+ '(package-selected-packages '(fd-dired magit paredit sly))
  '(require-final-newline t)
  '(save-interprogram-paste-before-kill t)
  '(savehist-additional-variables '(register-alist))
