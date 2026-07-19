@@ -35,9 +35,13 @@
   :config
   (setq common-lisp-hyperspec-root "https://funk443.github.io/CLHS/HyperSpec/")
   :custom
-  (sly-command-switch-to-existing-lisp 'always)
-  (inferior-lisp-program "sbcl"))
+  (inferior-lisp-program "sbcl")
+  (sly-command-switch-to-existing-lisp 'always))
 
+(use-package sly-mrepl
+  :after sly
+  :bind (:map sly-mrepl-mode-map
+              ("C-<return>" . sly-mrepl-return)))
 
 (use-package paredit
   :ensure t
