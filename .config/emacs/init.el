@@ -45,6 +45,9 @@
 
 (use-package paredit
   :ensure t
+  :bind (:map paredit-mode-map
+              ("M-r" . move-to-window-line-top-bottom)
+              ("M-e" . paredit-raise-sexp))
   :hook (emacs-lisp-mode lisp-mode scheme-mode sly-mrepl-mode))
 
 (use-package magit
