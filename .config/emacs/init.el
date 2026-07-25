@@ -37,21 +37,21 @@
 (use-package fd-dired
   :ensure t)
 
-(defconst id-rubbish-dir (concat user-emacs-directory "rubbish")
+(defconst +id-rubbish-dir+ (concat user-emacs-directory "rubbish")
   "A directory for Emacs to dump all those backup files in.")
-(unless (file-directory-p id-rubbish-dir)
-  (make-directory id-rubbish-dir))
-(setopt backup-directory-alist `(("." . ,id-rubbish-dir)))
+(unless (file-directory-p +id-rubbish-dir+)
+  (make-directory +id-rubbish-dir+))
+(setopt backup-directory-alist `(("." . ,+id-rubbish-dir+)))
 
-(defconst id-socket-dir (concat user-emacs-directory "socket")
+(defconst +id-socket-dir+ (concat user-emacs-directory "socket")
   "A directory for Emacs server's socket.
 
 By default, the socket is placed in XDG_RUNTIME_DIR, which gets cleaned
 up after the user logs out.")
-(unless (file-directory-p id-socket-dir)
-  (make-directory id-socket-dir))
-(chmod id-socket-dir #o700)
-(setopt server-socket-dir id-socket-dir)
+(unless (file-directory-p +id-socket-dir+)
+  (make-directory +id-socket-dir+))
+(chmod +id-socket-dir+ #o700)
+(setopt server-socket-dir +id-socket-dir+)
 
 (defun id-insert-tab (&optional arg)
   "This is like Neovim's i_ctrl-t."
