@@ -1,24 +1,5 @@
 ;; -*- lexical-binding: t; -*-
 
-(set-face-attribute 'default nil
-                    :family "Roboto Mono"
-                    :height 200)
-(set-face-attribute 'fixed-pitch nil
-                    :family "Roboto Mono"
-                    :inherit 'default)
-(set-face-attribute 'variable-pitch nil
-                    :family "Roboto"
-                    :inherit 'default)
-(set-fontset-font nil 'han
-                  (font-spec :family "Noto Sans CJK TC")
-                  nil 'prepend)
-(set-fontset-font nil 'bopomofo
-                  (font-spec :family "Noto Sans CJK TC")
-                  nil 'prepend)
-(set-fontset-font nil 'kana
-                  (font-spec :family "Noto Sans CJK JP")
-                  nil 'prepend)
-
 (use-package package
   :custom
   (package-archives
@@ -77,9 +58,31 @@ up after the user logs out.")
   (interactive "P")
   (insert-tab arg))
 
+(defun id-set-fonts ()
+  (when (display-graphic-p nil)
+    (set-face-attribute 'default nil
+                        :family "Roboto Mono"
+                        :height 200)
+    (set-face-attribute 'fixed-pitch nil
+                        :family "Roboto Mono"
+                        :inherit 'default)
+    (set-face-attribute 'variable-pitch nil
+                        :family "Roboto"
+                        :inherit 'default)
+    (set-fontset-font nil 'han
+                      (font-spec :family "Noto Sans CJK TC")
+                      nil 'prepend)
+    (set-fontset-font nil 'bopomofo
+                      (font-spec :family "Noto Sans CJK TC")
+                      nil 'prepend)
+    (set-fontset-font nil 'kana
+                      (font-spec :family "Noto Sans CJK JP")
+                      nil 'prepend)))
+
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 (add-hook 'text-mode-hook (lambda () (auto-fill-mode 1)))
 (add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
+(add-hook 'server-after-make-frame-hook #'id-set-fonts)
 
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
@@ -92,6 +95,8 @@ up after the user logs out.")
         typescript-ts-indent-offset tab-width
         json-ts-indent-offset tab-width
         c-ts-indent-offset tab-width)
+
+(id-set-fonts)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
