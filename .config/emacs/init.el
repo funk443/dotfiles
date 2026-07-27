@@ -57,7 +57,7 @@ up after the user logs out.")
     (when (display-graphic-p nil)
       (set-face-attribute 'default nil
                           :family mono
-                          :height 200)
+                          :height 100)
       (set-face-attribute 'fixed-pitch nil
                           :family mono
                           :inherit 'default)
