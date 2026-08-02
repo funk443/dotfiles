@@ -1,5 +1,6 @@
 PS1='[\u@\h \W]\$ '
 
-PATH="/opt/go/bin:$HOME/.local/bin:$PATH"
+PATH="/opt/scheme/bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 
 export PATH
