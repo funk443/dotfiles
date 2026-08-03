@@ -27,6 +27,13 @@
 (use-package fd-dired
   :ensure t)
 
+(use-package mczy
+  :load-path "~/Documents/git/mczy"
+  :custom
+  (default-input-method "chinese-mczy")
+  (mczy-space-toggle nil)
+  (mczy-hide-cursor-while-composing t))
+
 (defconst +id-rubbish-dir+ (concat user-emacs-directory "rubbish")
   "A directory for Emacs to dump all those backup files in.")
 (unless (file-directory-p +id-rubbish-dir+)
