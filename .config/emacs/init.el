@@ -92,8 +92,6 @@ up after the user logs out.")
 ;; Set indent offset of major modes here, so I can use the `tab-width` variable.
 (setopt tab-width 4
         go-ts-mode-indent-offset tab-width
-        typescript-ts-indent-offset tab-width
-        json-ts-indent-offset tab-width
         c-ts-indent-offset tab-width)
 
 (id-set-fonts)
