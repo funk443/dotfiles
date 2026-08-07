@@ -11,19 +11,6 @@
   :custom
   (eglot-autoshutdown t))
 
-(use-package sly
-  :ensure t
-  :config
-  (setq common-lisp-hyperspec-root "https://funk443.github.io/CLHS/HyperSpec/")
-  :custom
-  (inferior-lisp-program "sbcl")
-  (sly-command-switch-to-existing-lisp 'always))
-
-(use-package sly-mrepl
-  :after sly
-  :bind (:map sly-mrepl-mode-map
-              ("C-<return>" . sly-mrepl-return)))
-
 (use-package paredit
   :ensure t
   :bind (:map paredit-mode-map
@@ -121,7 +108,7 @@ up after the user logs out.")
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
  '(minibuffer-visible-completions t)
- '(package-selected-packages '(fd-dired magit paredit sly))
+ '(package-selected-packages '(fd-dired magit paredit))
  '(require-final-newline t)
  '(save-interprogram-paste-before-kill t)
  '(savehist-additional-variables '(register-alist))
