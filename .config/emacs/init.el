@@ -104,17 +104,20 @@ up after the user logs out.")
 (defvar wl-copy-process nil)
 
 (defun wsl-copy (text)
-  (unless (process-live-p wl-copy-process)
-    (setq wl-copy-process
-          (make-process :name "wl-copy"
-                        :buffer nil
-                        :command '("wl-copy" "-n" "--type" "text/plain")
-                        :connection-type 'pipe)))
+  (when (process-live-p wl-copy-process)
+    (kill-process wl-copy-process))
+  (setq wl-copy-process
+        (make-process :name "wl-copy"
+                      :buffer nil
+                      :command '("wl-copy" "-n" "-f" "-t" "text/plain")
+                      :connection-type 'pipe))
   (process-send-string wl-copy-process text)
   (process-send-eof wl-copy-process))
 
 (defun wsl-paste ()
-  (shell-command-to-string "wl-paste -n | tr -d \r"))
+  (if (process-live-p wl-copy-process)
+      nil
+    (shell-command-to-string "wl-paste -n | tr -d \r")))
 
 (setopt interprogram-cut-function #'wsl-copy
         interprogram-paste-function #'wsl-paste)

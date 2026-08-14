@@ -32,6 +32,7 @@
  '(savehist-additional-variables '(register-alist))
  '(savehist-mode t)
  '(scroll-bar-mode nil)
+ '(select-active-regions nil)
  '(sentence-end-double-space nil)
  '(shell-command-prompt-show-cwd t)
  '(tool-bar-mode nil)
