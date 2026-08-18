@@ -110,7 +110,8 @@ up after the user logs out.")
         (make-process :name "wl-copy"
                       :buffer nil
                       :command '("wl-copy" "-n" "-f" "-t" "text/plain")
-                      :connection-type 'pipe))
+                      :connection-type 'pipe
+                      :noquery t))
   (process-send-string wl-copy-process text)
   (process-send-eof wl-copy-process))
 
