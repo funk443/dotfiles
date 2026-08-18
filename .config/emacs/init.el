@@ -49,25 +49,30 @@ up after the user logs out.")
   (insert-tab arg))
 
 (defun id-set-fonts ()
-  (when (display-graphic-p nil)
-    (set-face-attribute 'default nil
-                        :family "Roboto Mono"
-                        :height 200)
-    (set-face-attribute 'fixed-pitch nil
-                        :family "Roboto Mono"
-                        :inherit 'default)
-    (set-face-attribute 'variable-pitch nil
-                        :family "Roboto"
-                        :inherit 'default)
-    (set-fontset-font nil 'han
-                      (font-spec :family "Noto Sans CJK TC")
-                      nil 'prepend)
-    (set-fontset-font nil 'bopomofo
-                      (font-spec :family "Noto Sans CJK TC")
-                      nil 'prepend)
-    (set-fontset-font nil 'kana
-                      (font-spec :family "Noto Sans CJK JP")
-                      nil 'prepend)))
+  (let ((mono "Roboto Mono")
+        (sans "Roboto")
+        (serif "Roboto Serif")
+        (cjk-tc "Noto Sans CJK TC")
+        (cjk-jp "Noto Sans CJK JP"))
+    (when (display-graphic-p nil)
+      (set-face-attribute 'default nil
+                          :family mono
+                          :height 200)
+      (set-face-attribute 'fixed-pitch nil
+                          :family mono
+                          :inherit 'default)
+      (set-face-attribute 'variable-pitch nil
+                          :family sans
+                          :inherit 'default)
+      (set-fontset-font nil 'han
+                        (font-spec :family cjk-tc)
+                        nil 'prepend)
+      (set-fontset-font nil 'bopomofo
+                        (font-spec :family cjk-tc)
+                        nil 'prepend)
+      (set-fontset-font nil 'kana
+                        (font-spec :family cjk-jp)
+                        nil 'prepend))))
 
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 (add-hook 'text-mode-hook (lambda () (auto-fill-mode 1)))
