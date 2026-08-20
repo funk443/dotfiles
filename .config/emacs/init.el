@@ -77,6 +77,7 @@ up after the user logs out.")
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 (add-hook 'text-mode-hook (lambda () (auto-fill-mode 1)))
 (add-hook 'server-after-make-frame-hook #'id-set-fonts)
+(add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
 
 (keymap-global-unset "C-z")
 (keymap-global-unset "C-x C-z")
