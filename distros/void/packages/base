@@ -3,6 +3,7 @@ ImageMagick
 PopCorn
 Thunar
 Vulkan-Tools
+alacritty
 base-devel
 base-system
 bash-completion
@@ -11,7 +12,6 @@ dbus
 dmenu
 dunst
 elogind
-emacs-x11
 fastfetch
 fcitx5
 fcitx5-chewing
@@ -50,6 +50,7 @@ mesa-dri
 mesa-vulkan-intel
 meson
 mpv
+ncurses-term
 neovim
 noto-fonts-cjk
 noto-fonts-emoji
@@ -66,6 +67,7 @@ ripgrep
 rtkit
 socklog-void
 terminus-font
+tmux
 tree
 tumbler
 uv

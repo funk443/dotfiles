@@ -1,6 +1,10 @@
 # This adds italic capabilities to Tmux.
 #
 # Enable it with `tic tmux.terminfo`.
+#
+# Ncurses seems to have tmux-256color terminfo files built-in, just some distros
+# seem to package them into a separate package, so this file shouldn't be
+# neceseery.
 
 tmux-256color|Tmux with 256 colors,
     smso=\E[7m, rmso=\E[27m,
