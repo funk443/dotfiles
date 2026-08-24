@@ -33,7 +33,10 @@ vim.keymap.set("n", "<C-w>s", "<C-w>b")
 -- Other modules {{{
 
 require("plugins")
+
 require("lisp")
+require("js-ts")
+
 require("autocmds")
 
 if vim.g.neovide then
