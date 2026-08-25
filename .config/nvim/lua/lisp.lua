@@ -8,7 +8,7 @@ vim.filetype.add({
 vim.api.nvim_create_autocmd({ "FileType" }, {
     pattern = { "lisp", "scheme", "clojure" },
     callback = function(ev)
-        vim.opt_local.tabstop = 2
+        vim.bo.tabstop = 2
     end,
     desc = "Adjust tabstop for some filetypes."
 })

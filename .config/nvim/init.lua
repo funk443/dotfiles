@@ -2,16 +2,15 @@
 
 -- General configs {{{
 
-vim.opt.title = true
-vim.opt.textwidth = 80
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 0
-vim.opt.shiftround = true
-vim.opt.expandtab = true
-vim.opt.undofile = true
-vim.opt.relativenumber = true
-vim.opt.formatoptions:append("mB")
-vim.opt.formatoptions:remove("t")
+vim.o.title = true
+vim.o.textwidth = 80
+vim.o.tabstop = 4
+vim.o.shiftwidth = 0
+vim.o.shiftround = true
+vim.o.expandtab = true
+vim.o.undofile = true
+vim.o.relativenumber = true
+vim.o.formatoptions = "croqlmBj"
 
 vim.cmd.filetype("indent off")
 
@@ -35,7 +34,6 @@ vim.keymap.set("n", "<C-w>s", "<C-w>b")
 require("plugins")
 
 require("lisp")
-require("js-ts")
 
 require("autocmds")
 
