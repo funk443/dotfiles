@@ -3,7 +3,7 @@ exec --no-startup-id pipewire
 exec --no-startup-id dunst
 exec --no-startup-id /usr/libexec/xfce-polkit
 
-font pango:Roboto Mono 8
+font pango:Iosevka 8
 
 workspace_layout tabbed
 

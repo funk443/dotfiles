@@ -1,4 +1,4 @@
-font=Roboto Mono 10
+font=Iosevka 10
 default-timeout=3000
 
 on-button-middle=exec makoctl menu -n "$id" -- wmenu -p "Action: "
