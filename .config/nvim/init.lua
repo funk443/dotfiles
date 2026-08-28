@@ -32,6 +32,7 @@ vim.keymap.set("n", "<C-w>s", "<C-w>b")
 -- Other modules {{{
 
 require("plugins")
+vim.cmd.colorscheme("alabaster")
 
 require("lisp")
 
