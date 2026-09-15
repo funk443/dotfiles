@@ -21,13 +21,13 @@ else
         printf " in "
 
         set_color blue
-        printf "%s" "$(prompt_pwd --dir-length=8)"
+        printf "%s" (prompt_pwd --dir-length=8)
         set_color normal
 
         printf "\n|-"
 
         set_color yellow
-        printf "%s" "$(date +%H:%M)"
+        printf "%s" (date +%H:%M)
         set_color normal
 
         printf " "
@@ -83,7 +83,7 @@ set -x GPG_TTY (tty)
 # Placed in here because files from conf.d is read before this file,
 # and the prompt defined in there will be overwritten.
 
-set -l vterm_fish_location "$(status dirname)/emacs-vterm.fish"
+set -l vterm_fish_location (status dirname)/emacs-vterm.fish
 if test "$INSIDE_EMACS" = "vterm"; and test -f "$vterm_fish_location"
     . "$vterm_fish_location"
 end
