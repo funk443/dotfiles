@@ -11,6 +11,7 @@ vim.o.expandtab = true
 vim.o.undofile = true
 vim.o.relativenumber = true
 vim.o.formatoptions = "croqlmBj"
+vim.o.grepprg = "rg --vimgrep "
 
 vim.cmd.filetype("indent off")
 
