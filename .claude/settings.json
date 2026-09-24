@@ -11,5 +11,6 @@
   "timeFormat": "24-hour",
   "theme": "dark",
   "editorMode": "normal",
-  "autoCompactEnabled": true
+  "autoCompactEnabled": true,
+  "switchModelsOnFlag": false
 }
