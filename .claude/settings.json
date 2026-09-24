@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "defaultMode": "default"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "sh ~/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {},
+  "extraKnownMarketplaces": {},
+  "timeFormat": "24-hour",
+  "theme": "dark",
+  "editorMode": "normal",
+  "autoCompactEnabled": true
+}
