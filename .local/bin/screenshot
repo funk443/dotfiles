@@ -3,7 +3,7 @@
 set -e
 
 screenshot_path="${HOME}/Pictures/screenshots"
-mkdir -p "${screenshot_path}"
+mkdir -p "$screenshot_path"
 
 the_time="$(date +%Y%m%d-%H%M%S)"
 filename="${the_time}.png"
@@ -14,5 +14,8 @@ while [[ -f "${screenshot_path}/${filename}" ]]; do
 done
 
 filepath="${screenshot_path}/${filename}"
-maim | tee "$filepath" | xclip -i -selection clipboard -t image/png
+
+grim -c "$filepath"
+wl-copy <"$filepath"
+
 notify-send "Screenshot saved and copied."
