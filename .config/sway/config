@@ -49,7 +49,7 @@ exec --no-startup-id swayidle -w \
 
 input "type:pointer" {
     accel_profile flat
-    pointer_accel 0
+    pointer_accel -0.5
 }
 
 input "type:keyboard" {
