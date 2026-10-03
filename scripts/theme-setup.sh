@@ -47,9 +47,9 @@ setup_gtk_theme() {
 }
 
 setup_fonts() {
-    gsettings set org.gnome.desktop.interface font-name "Inter Variable 8"
-    gsettings set org.gnome.desktop.interface monospace-font-name "Iosevka 8"
-    gsettings set org.gnome.desktop.interface document-font-name "Libertinus Serif 8"
+    gsettings set org.gnome.desktop.interface font-name "Inter Variable 10"
+    gsettings set org.gnome.desktop.interface monospace-font-name "Iosevka 10"
+    gsettings set org.gnome.desktop.interface document-font-name "Libertinus Serif 10"
 }
 
 case "$1" in
