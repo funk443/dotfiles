@@ -60,7 +60,7 @@ input "type:keyboard" {
 
 ### Key bindings
 
-set $term foot
+set $term alacritty
 set $menu wmenu-run -f "Iosevka 10"
 
 bindsym $mod+t exec $term
