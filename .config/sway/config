@@ -19,7 +19,8 @@ xwayland enable
 for_window [shell="xwayland"] title_format "[X11] %title"
 for_window [all] inhibit_idle fullscreen
 
-set $mod Mod4 # Super key
+# Super key
+set $mod Mod4
 
 set $left h
 set $down j
