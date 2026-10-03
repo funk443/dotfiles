@@ -1,6 +1,9 @@
 #!/bin/sh
 
 eval $(ssh-agent -s)
-export XDG_CURRENT_DESKTOP=sway:wlroots
+
+XDG_CURRENT_DESKTOP=sway:wlroots
+
+export XDG_CURRENT_DESKTOP
 
 exec dbus-run-session -- sway
