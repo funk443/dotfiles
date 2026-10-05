@@ -87,7 +87,7 @@ if __name__ == "__main__":
         selections = "\n".join(get_windows(candidates))
 
     selection_result = subprocess.run(
-        ["wmenu", "-l", "5", "-p", "Thing to capture: "],
+        ["wmenu", "-l", "5", "-p", "Target: "],
         input=selections,
         capture_output=True,
         text=True,
