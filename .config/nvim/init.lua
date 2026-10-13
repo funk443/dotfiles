@@ -35,9 +35,8 @@ vim.keymap.set("n", "<C-w>s", "<C-w>b")
 require("plugins")
 vim.cmd.colorscheme("alabaster")
 
-require("lisp")
-
 require("autocmds")
+require("filetypes")
 
 if vim.g.neovide then
     require("neovide")
