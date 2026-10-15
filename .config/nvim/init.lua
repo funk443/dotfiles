@@ -1,6 +1,19 @@
--- vim: foldmethod=marker
+require("plugins")
+require("autocmds")
+require("filetypes")
 
--- General configs {{{
+if vim.g.neovide then
+    require("neovide")
+end
+
+vim.g.mapleader = " "
+
+vim.keymap.set("n", "<F5>", ":belowright term <Up>")
+vim.keymap.set("n", "<Leader><F5>", ":belowright term ")
+
+vim.keymap.set("n", "<C-w>v", vim.cmd.split)
+vim.keymap.set("n", "<C-w>b", vim.cmd.vsplit)
+vim.keymap.set("n", "<C-w>s", "<C-w>b")
 
 vim.o.title = true
 vim.o.textwidth = 80
@@ -14,32 +27,4 @@ vim.o.formatoptions = "croqlmBj"
 vim.o.grepprg = "rg --vimgrep "
 
 vim.cmd.filetype("indent off")
-
--- }}}
-
--- Keybindings {{{
-
-vim.g.mapleader = " "
-
-vim.keymap.set("n", "<F5>", ":belowright term <Up>")
-vim.keymap.set("n", "<Leader><F5>", ":belowright term ")
-
-vim.keymap.set("n", "<C-w>v", vim.cmd.split)
-vim.keymap.set("n", "<C-w>b", vim.cmd.vsplit)
-vim.keymap.set("n", "<C-w>s", "<C-w>b")
-
--- }}}
-
--- Other modules {{{
-
-require("plugins")
 vim.cmd.colorscheme("alabaster")
-
-require("autocmds")
-require("filetypes")
-
-if vim.g.neovide then
-    require("neovide")
-end
-
--- }}}
