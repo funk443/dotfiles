@@ -8,6 +8,7 @@
   },
   "enabledPlugins": {},
   "extraKnownMarketplaces": {},
+  "awaySummaryEnabled": false,
   "timeFormat": "24-hour",
   "theme": "dark",
   "editorMode": "normal",
