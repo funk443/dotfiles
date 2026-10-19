@@ -1,6 +1,6 @@
 {
   "permissions": {
-    "defaultMode": "default"
+    "defaultMode": "acceptEdits"
   },
   "statusLine": {
     "type": "command",
