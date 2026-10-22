@@ -5,8 +5,8 @@ vim.pack.add({
 
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<F5>", ":belowright term <Up>")
-vim.keymap.set("n", "<Leader><F5>", ":belowright term ")
+vim.keymap.set("n", "<F5>", ":hor abo te <Up>")
+vim.keymap.set("n", "<Leader><F5>", ":hor abo te ")
 
 vim.keymap.set("n", "<C-w>v", vim.cmd.split)
 vim.keymap.set("n", "<C-w>b", vim.cmd.vsplit)
