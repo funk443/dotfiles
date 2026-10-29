@@ -14,5 +14,6 @@
   "theme": "dark",
   "editorMode": "normal",
   "autoCompactEnabled": true,
-  "switchModelsOnFlag": false
+  "switchModelsOnFlag": false,
+  "terminalProgressBarEnabled": false
 }
