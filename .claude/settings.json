@@ -9,6 +9,7 @@
   "enabledPlugins": {},
   "extraKnownMarketplaces": {},
   "awaySummaryEnabled": false,
+  "askUserQuestionTimeout": "never",
   "timeFormat": "24-hour",
   "theme": "dark",
   "editorMode": "normal",
