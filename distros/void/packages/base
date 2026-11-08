@@ -1,7 +1,6 @@
 7zip
 ImageMagick
 PopCorn
-Thunar
 Vulkan-Tools
 Waybar
 acl-progs
@@ -21,8 +20,8 @@ fcitx5-gtk+3
 fcitx5-gtk4
 fd
 ffmpeg
-firefox
 fish-shell
+flatpak
 font-inter-variable
 font-iosevka
 fonts-roboto-ttf
@@ -36,14 +35,12 @@ htop
 intel-ucode
 intel-video-accel
 iwd
-keepassxc
 libX11-devel
 libXft-devel
 libnotify
 linux-firmware
 linux7.3
 lm_sensors
-loupe
 mako
 mesa-demos
 mesa-dri
@@ -57,13 +54,9 @@ noto-fonts-emoji
 noto-fonts-ttf
 noto-fonts-ttf-extra
 ntp
-obs
-pavucontrol
 pinentry-qt
 pipewire
 pulsemixer
-qbittorrent
-qpwgraph
 qt5-wayland
 qt6-wayland
 ripgrep
