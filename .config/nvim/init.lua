@@ -51,6 +51,8 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     desc = "Remove trailing whitespaces before saving.",
 })
 
+vim.g.clojure_align_subforms = 1
+
 vim.o.title = true
 vim.o.textwidth = 80
 vim.o.tabstop = 4
