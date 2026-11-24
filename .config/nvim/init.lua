@@ -3,6 +3,8 @@ vim.pack.add({
     "https://github.com/dchinmay2/alabaster.nvim",
 })
 
+vim.cmd.colorscheme("alabaster")
+
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<F5>", ":hor te <Up>")
@@ -61,7 +63,6 @@ vim.o.formatoptions = "croqlmBj"
 vim.o.grepprg = "rg --vimgrep "
 
 vim.cmd.filetype("indent off")
-vim.cmd.colorscheme("alabaster")
 
 if vim.g.neovide then
     vim.g.neovide_scale_factor = 1.0
