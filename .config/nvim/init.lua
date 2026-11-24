@@ -62,8 +62,6 @@ vim.o.relativenumber = true
 vim.o.formatoptions = "croqlmBj"
 vim.o.grepprg = "rg --vimgrep "
 
-vim.cmd.filetype("indent off")
-
 if vim.g.neovide then
     vim.g.neovide_scale_factor = 1.0
 
